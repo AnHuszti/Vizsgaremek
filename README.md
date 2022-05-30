@@ -39,7 +39,7 @@ A Telephelyek / Tagóvodák menüpontra kattintással megjelenik az összes tele
 > _Új tagóvoda adatai vehetők fel._
 
 **Elfogadási kritérium:**  
-- A kötelező adatok megadásával egy új tagóvoda adatait lehet felvinni, a módosítás megjelenik a listázó oldalon, létrejön az tagóvoda adatlapja.
+- A hozzáadás gombra kattintva, a kötelező adatok megadásával egy új tagóvoda adatait lehet felvinni, a módosítás megjelenik a listázó oldalon, létrejön az tagóvoda adatlapja.
 - Az oldalon lehetőség van visszanavigálni az összes tagóvodát listázó oldalra.
 ---
 
@@ -57,8 +57,18 @@ A Telephelyek / Tagóvodák menüpontra kattintással megjelenik az összes tele
 > _A tagóvoda törölhető._
 
 **Elfogadási kritérium:**  
-- A tagóvoda kiválasztásával törölhető a rekord.
+- Adott tagóvoda sorában található törlés gombra kattintva a rekord törölhető.
 - A törlést követően frissül a listaoldal, ahol a már törölt óvoda nem látható.
+
+---
+
+**5. agilis felhasználói történet:**
+
+> _A felvett adatok helyességének ellenőrzése automatikusan megtörténik._
+
+**Elfogadási kritérium:**  
+- Hibaüzenet jelzi, amennyiben nem megfelelő a formátum.
+- A hibaüzenet tartalmazza azt, hogy mi a megfelelő formátum.
 
 ---
 
@@ -85,7 +95,7 @@ Az Alkalmazottak menüpontra kattintással megjelennek az alkalmazottak adatai l
 > _Új alkalmazott adatai vehetők fel._
 
 **Elfogadási kritérium:**  
-- A kötelező adatok megadásával egy új alkalmazott adatait lehet felvinni, a módosítás megjelenik a listázó oldalon, létrejön az alkalmazott adatlapja.
+- A hozzáadás gombra kattintva, a kötelező adatok megadásával egy új alkalmazott adatait lehet felvinni, a módosítás megjelenik a listázó oldalon, létrejön az alkalmazott adatlapja.
 - Az oldalon lehetőség van visszanavigálni az összes alkalmazottat listázó oldalra.
 ---
 
@@ -103,7 +113,7 @@ Az Alkalmazottak menüpontra kattintással megjelennek az alkalmazottak adatai l
 > _Az alkalmazott törölhető._
 
 **Elfogadási kritérium:**  
-- Az alkalmazott kiválasztásával törölhető a rekord.
+- Adott alkalmazott sorában található törlés gombra kattintva a rekord törölhető.
 - A törlést követően frissül a listaoldal, ahol a már törölt személy nem látható.
 
 ---
@@ -128,7 +138,7 @@ A kategória kiválasztásával és a kulcsszónak megfelelően frissül a lista
 
 **7. agilis felhasználói történet:**
 
-> _Kategóriák szerint sorba rendezhetők az alkalmazottak._
+> _Tulajdonságok szerint sorba rendezhetők a rekordok._
 
 **Elfogadási kritérium:**  
 - A szám típusú adatok alapján növekvő és csökkenő sorrendbe lehet rendezni.
@@ -146,6 +156,15 @@ A kategória kiválasztásával és a kulcsszónak megfelelően frissül a lista
 
 ---
 
+**9. agilis felhasználói történet:**
+
+> _A felvett adatok helyességének ellenőrzése automatikusan megtörténik._
+
+**Elfogadási kritérium:**  
+- Hibaüzenet jelzi, amennyiben nem megfelelő a formátum.
+- A hibaüzenet tartalmazza azt, hogy mi a megfelelő formátum.
+
+---
 
 ## _**4. Az óvodai csoportok adatbázisa**_
 ---
@@ -174,7 +193,7 @@ Az aktuális tanév csoportjainak fő adatait jeleníti meg lista formátumban. 
 > _Új csoport adatai vehetők fel._
 
 **Elfogadási kritérium:**  
-- A kötelező adatok megadásával új csoportot lehet felvinni, a módosítás megjelenik a listázó oldalon, létrejön a csoport adatlapja.
+- A hozzáadás gombra kattintva, a kötelező adatok megadásával új csoportot lehet felvinni, a módosítás megjelenik a listázó oldalon, létrejön a csoport adatlapja.
 - Az oldalon lehetőség van az összes csoportot listázó oldalra visszanavigálni.
 
 ---
@@ -194,8 +213,18 @@ Az aktuális tanév csoportjainak fő adatait jeleníti meg lista formátumban. 
 > _A csoport törölhető._
 
 **Elfogadási kritérium:**  
-- A csoport kiválasztásával a rekord törölhető.
+- Adott csoport sorában található törlés gombra kattintva  a rekord törölhető.
 - A törlést követően frissül a listaoldal, ahol a törölt csoport már nem látható.
+
+---
+
+**6. agilis felhasználói történet:**
+
+> _A felvett adatok helyességének ellenőrzése automatikusan megtörténik._
+
+**Elfogadási kritérium:**  
+- Hibaüzenet jelzi, amennyiben nem megfelelő a formátum.
+- A hibaüzenet tartalmazza azt, hogy mi a megfelelő formátum.
 
 ---
 
@@ -212,7 +241,7 @@ Az aktuális tanévben az óvodába járó gyerekek fő adatait jeleníti meg li
 
 **2. agilis felhasználói történet:**
 
-> _Kategóriák szerint sorba rendezhetők a gyerekek._
+> _Tulajdonságok szerint sorba rendezhetők a rekordok._
 
 **Elfogadási kritérium:**  
 - A szám típusú adatok alapján növekvő és csökkenő sorrendbe lehet rendezni a rekordokat.
@@ -225,7 +254,7 @@ Az aktuális tanévben az óvodába járó gyerekek fő adatait jeleníti meg li
 > _Új gyerek adatai vehetők fel._
 
 **Elfogadási kritérium:**  
-- A kötelező adatok megadásával új gyereket lehet felvinni, a módosítás megjelenik a listázó oldalon, létrejön a gyerek adatlapja.
+- A hozzáadás gombra kattintva, a kötelező adatok megadásával új gyereket lehet felvinni, a módosítás megjelenik a listázó oldalon, létrejön a gyerek adatlapja.
 - Az oldalon lehetőség van az összes gyereket listázó oldalra visszanavigálni.
 
 ---
@@ -245,7 +274,7 @@ Az aktuális tanévben az óvodába járó gyerekek fő adatait jeleníti meg li
 > _A gyerek törölhető._
 
 **Elfogadási kritérium:**  
-- A gyerek kiválasztásával a rekord törölhető.
+- Adott gyerek sorában található törlés gombra kattintva a rekord törölhető.
 - A törlést követően frissül a listaoldal, ahol a törölt gyerek adatai már nem láthatók.
 
 ---
@@ -278,7 +307,7 @@ Az aloldal megjeleníti az összes különóra fő adatait lista formátumban. A
 > _Új különóra adatai vehetők fel._
 
 **Elfogadási kritérium:**  
-- A kötelező adatok megadásával egy új különóra adatait lehet felvinni, a módosítás megjelenik a listázó oldalon, létrejön a különóra adatlapja.
+- A hozzáadás gombra kattintva, a kötelező adatok megadásával egy új különóra adatait lehet felvinni, a módosítás megjelenik a listázó oldalon, létrejön a különóra adatlapja.
 - Az oldalon lehetőség van arra, hogy az összes különórát listázó oldalra navigáljon vissza az alkalmazás.
 
 ---
@@ -298,7 +327,7 @@ Az aloldal megjeleníti az összes különóra fő adatait lista formátumban. A
 > _A különóra törölhető._
 
 **Elfogadási kritérium:**  
-- A különórára kattintva a rekord törölhető.
+- Adott különóra sorában található törlés gombra kattintva a rekord törölhető.
 - A törlést követően frissül a listaoldal, ahol a már törölt rekord nem található.
 
 ---
@@ -314,7 +343,7 @@ A kategória kiválasztásával frissül a listaoldal, ahol csak a szűrt adatok
 
 **6. agilis felhasználói történet:**
 
-> _Kategóriák szerint sorba rendezhetők a különórák._
+> _Tulajdonságok szerint sorba rendezhetők a különórák._
 
 **Elfogadási kritérium:**  
 - A szám típusú adatok alapján növekvő és csökkenő sorrendbe lehet rendezni a rekordokat.
@@ -329,6 +358,16 @@ A kategória kiválasztásával frissül a listaoldal, ahol csak a szűrt adatok
 **Elfogadási kritérium:**  
 - A lapozó egyes oldalainak kiválasztásával az ott felsorolt rekordok láthatóak.
 - A rekordokat felsoroló előző és következő oldalakra is lehet navigálni.
+
+---
+
+**8. agilis felhasználói történet:**
+
+> _A felvett adatok helyességének ellenőrzése automatikusan megtörténik._
+
+**Elfogadási kritérium:**  
+- Hibaüzenet jelzi, amennyiben nem megfelelő a formátum.
+- A hibaüzenet tartalmazza azt, hogy mi a megfelelő formátum.
 
 ---
 
