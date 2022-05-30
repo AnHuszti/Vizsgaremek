@@ -2,7 +2,7 @@
 
 ## **Óvodai nyilvántartó**
 ---
----
+
 ## **1. Főoldal**
 ---
 
@@ -14,7 +14,7 @@
 Egy mobiloptimalizált, látványos felületen az óvoda központ lefontontosabb adatai olvashatók (Név, telephelyek, aktuális dolgozói létszám, aktuális gyerek létszám, illusztráció). A főoldalon megjelenő menüből lehet navigálni az aloldalakra.
 
 ---
----
+
 ## **2. Tagóvodák adatbázisa**
 ---
 
@@ -61,13 +61,12 @@ A Telephelyek / Tagóvodák menüpontra kattintással megjelenik az összes tele
 - A törlést követően frissül a listaoldal, ahol a már törölt óvoda nem látható.
 
 ---
----
+
 ## _**3. Alkalmazottak adatbázisa**_
 ---
 
 **1. agilis felhasználói történet:**
-> _Egy helyen olvashatók a pedagógusok, pedagógus munkáját segítő alkalmazottak adatai.
-._
+> _Egy helyen olvashatók a pedagógusok, pedagógus munkáját segítő alkalmazottak adatai._
 
 
 **Elfogadási kritérium:**  
@@ -162,7 +161,7 @@ Az aktuális tanév csoportjainak fő adatait jeleníti meg lista formátumban. 
 
 **2. agilis felhasználói történet:**
 
-> _ Kategóriák szerint sorba rendezhetők a csoportok._
+> _Kategóriák szerint sorba rendezhetők a csoportok._
 
 **Elfogadási kritérium:**  
 - A szám típusú adatok alapján növekvő és csökkenő sorrendbe lehet rendezni a rekordokat.
@@ -200,11 +199,6 @@ Az aktuális tanév csoportjainak fő adatait jeleníti meg lista formátumban. 
 
 ---
 
-
-
----
----
-
 ## _**5. Adott évben az óvodába járó gyerekek adatbázisa**_
 ---
 
@@ -218,7 +212,7 @@ Az aktuális tanévben az óvodába járó gyerekek fő adatait jeleníti meg li
 
 **2. agilis felhasználói történet:**
 
-> _ Kategóriák szerint sorba rendezhetők a gyerekek._
+> _Kategóriák szerint sorba rendezhetők a gyerekek._
 
 **Elfogadási kritérium:**  
 - A szám típusú adatok alapján növekvő és csökkenő sorrendbe lehet rendezni a rekordokat.
@@ -231,7 +225,7 @@ Az aktuális tanévben az óvodába járó gyerekek fő adatait jeleníti meg li
 > _Új gyerek adatai vehetők fel._
 
 **Elfogadási kritérium:**  
-- A kötelező adatok megadásával új gyereket lehet felvinni, a módosítás megjelenik a listázó oldalon, létrejön a csoport adatlapja.
+- A kötelező adatok megadásával új gyereket lehet felvinni, a módosítás megjelenik a listázó oldalon, létrejön a gyerek adatlapja.
 - Az oldalon lehetőség van az összes gyereket listázó oldalra visszanavigálni.
 
 ---
@@ -265,7 +259,7 @@ Az aktuális tanévben az óvodába járó gyerekek fő adatait jeleníti meg li
 - A hibaüzenet tartalmazza azt, hogy mi a megfelelő formátum.
 
 ---
----
+
 
 ## _**6. Különórák aloldala**_
 ---
@@ -295,7 +289,7 @@ Az aloldal megjeleníti az összes különóra fő adatait lista formátumban. A
 
 **Elfogadási kritérium:**  
 - A különórára kattintva a választott óra adatait lehet szerkeszteni, a módosítás megjelenik a listázó oldalon és a különóra adatlapján is
-- Az oldalon lehetőség van arra, hogy az összes különóra alkalmazás.
+- Az oldalon lehetőség van arra, hogy az összes különórát listázó oldalra navigáljon vissza az alkalmazás.
 
 ---
 
@@ -337,8 +331,8 @@ A kategória kiválasztásával frissül a listaoldal, ahol csak a szűrt adatok
 - A rekordokat felsoroló előző és következő oldalakra is lehet navigálni.
 
 ---
----
-## _**8. Bejelentkezési felület**_
+
+## _**7. Bejelentkezési felület**_
 ---
 
 **1. agilis felhasználói történet:**
@@ -350,8 +344,6 @@ A kategória kiválasztásával frissül a listaoldal, ahol csak a szűrt adatok
 - A profil nélküli felhasználóknak lehetőségük van regisztrálni, hogy ezt követően bejelentkezhessenek.
 
 ---
----
-
 
 ## _A projekt egyéb adatai:_
 
@@ -368,7 +360,6 @@ magas
 - Az aloldalak lista nézete mellett kártya nézet kialakítása.
 - Eseményeket tartalmazó aloldal létrehozása
 
----
 ---
 
 ## **Linkek:**  
