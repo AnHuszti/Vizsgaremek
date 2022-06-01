@@ -371,19 +371,6 @@ A kategória kiválasztásával frissül a listaoldal, ahol csak a szűrt adatok
 
 ---
 
-## _**7. Bejelentkezési felület**_
----
-
-**1. agilis felhasználói történet:**
-> _Az adminisztrációs felületre be lehet jelentkezni._
-
-**Elfogadási kritérium:**  
-
-- Az azonosító adatok megadásával be lehet jelentkezni a felületre.
-- A profil nélküli felhasználóknak lehetőségük van regisztrálni, hogy ezt követően bejelentkezhessenek.
-
----
-
 ## _A projekt egyéb adatai:_
 
 **Prioritás:**  
@@ -393,11 +380,11 @@ magas
 5 hét
 
 **További fejlesztési lehetőségek:**  
-- Hibaüzenetek megjelenítése (validálás).
 - A főoldalon statisztikák elhelyezése.
 - Az egyes aloldalakon statisztikák, kimutatások készítése a legfontosabb adatokból.
 - Az aloldalak lista nézete mellett kártya nézet kialakítása.
 - Eseményeket tartalmazó aloldal létrehozása
+- Bejelentkezési felület létrehozása.
 
 ---
 
