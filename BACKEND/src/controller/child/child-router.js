@@ -1,6 +1,6 @@
 const express = require('express')
-const Tagovoda = require('../../model/tagovoda')
-const controller = require('../base/controller')(Tagovoda)
+const Child = require('../../model/child.model')
+const controller = require('../base/base-controller')(Child)
 
 const router = express.Router()
 
@@ -8,3 +8,7 @@ const router = express.Router()
 router.get('/', (req, res, next) => {
     return controller.findAll(req, res, next)
 })
+
+
+
+module.exports = router

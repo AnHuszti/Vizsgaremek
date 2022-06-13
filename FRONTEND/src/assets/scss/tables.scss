@@ -1,0 +1,18 @@
+@use 'modules/colors';
+@use 'modules/fonts';
+
+.btn {
+
+    &__edit {
+        color: colors.$dark-font-color;
+    }
+
+    &__paginate {
+        color: colors.$active-font-color;
+    }
+}
+
+th {
+    //background-color: #fff !important;
+    border: none;
+}

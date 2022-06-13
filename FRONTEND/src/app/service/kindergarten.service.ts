@@ -1,6 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Kindergarten } from '../model/kindergarten';
 
 @Injectable({
@@ -8,39 +10,14 @@ import { Kindergarten } from '../model/kindergarten';
 })
 export class KindergartenService {
 
-  list: Kindergarten[] = [
-    {
-      _id: 'kg01',
-      name: '1',
-      address: '1111 Budapest, A utca 1',
-      employeesHeadcount: 16,
-      maxHeadcount: 50,
-      actualHeadcount: 30,
-      active: true
-    },
-    {
-      _id: 'kg02',
-      name: '2',
-      address: '1111 Budapest, B utca 2',
-      employeesHeadcount: 16,
-      maxHeadcount: 50,
-      actualHeadcount: 25,
-      active: true
-    },
-    {
-      _id: 'kg03',
-      name: '3',
-      address: '1111 Budapest, C utca 3',
-      employeesHeadcount: 16,
-      maxHeadcount: 50,
-      actualHeadcount: 40,
-      active: true
-    },
-  ]
+  apiUrl = environment.apiUrl;
 
-  constructor() { }
+  constructor(
+    private http: HttpClient 
+  ) { }
 
   getAll(): Observable<Kindergarten[]> {
-    return of(this.list)
+    return this.http.get<Kindergarten[]>(`${this.apiUrl}kindergartens`)
   }
 }
+

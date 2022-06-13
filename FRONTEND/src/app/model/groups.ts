@@ -2,10 +2,10 @@ export class Groups {
     _id: string = '';
     name: string = '';
     kindergarten: string = '';
-    ageGroup: string = '';
-    teacher1: string = '';
-    teacher2: string = '';
+    teacherFirst: string = '';
+    teacherSecond: string = '';
     nurse: string = '';
+    ageGroup: string = '';
     maxHeadcount: number = 0;
     actualHeadcount: number = 0;
     active: boolean = true

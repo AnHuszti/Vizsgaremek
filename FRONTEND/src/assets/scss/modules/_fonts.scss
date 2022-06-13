@@ -3,11 +3,20 @@ header h1 {
     font-size: 30px !important;
 }
 
+th {
+    font-family: myHeaderFont, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
 h1 {
     font-family: myH1Font, Helvetica, Arial, sans-serif;
     font-size: 40px !important;
 }
 
+h3, li, table {
+    font-family: myGeneralFont, Helvetica, Arial, sans-serif;
+    //font-size: 40px !important;
+}
 
 @font-face {
     font-family: myHeaderFont;
@@ -18,5 +27,11 @@ h1 {
 @font-face {
     font-family: myH1Font;
     src: url(../../fonts/Amatic_SC/AmaticSC-Bold.ttf);
+    //font-weight: 100;
+  }
+
+@font-face {
+    font-family: myGeneralFont;
+    src: url(../../fonts/Mulish-VariableFont_wght.ttf);
     //font-weight: 100;
   }

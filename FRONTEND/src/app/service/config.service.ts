@@ -23,16 +23,18 @@ export class ConfigService {
   kindergartenTableColumns: INgxTableColumn[] = [
     {key: '_id', title: '#'},
     {key: 'name', title: 'NÉV'},
-    {key: 'address', title: 'TELEPHELY'},
-    {key: 'employeesHeadcount', title: 'ALKALMAZOTTI LÉTSZÁM'},
-    {key: 'maxHeadcount', title: 'MAX LÉTSZÁM'},
-    {key: 'actualHeadcount', title: 'AKTUÁLIS LÉTSZÁM'},
-    {key: 'active', title: 'AKTÍV'},
+    {key: 'address', title: 'TELEPHELY'}, 
+    {key: 'numOfEmployees', title: 'ALKALMAZOTTAK SZÁMA'},
+    {key: 'numOfGroups', title: 'CSOPORTOK SZÁMA'},
+    {key: 'maxHeadcountOfChildren', title: 'MAX GYERMEK LÉTSZÁM'},
+    {key: 'actualHeadcountOfChildren', title: 'AKTUÁLIS GYERMEK LÉTSZÁM'},
+    //{key: 'active', title: 'AKTÍV'},
   ]
 
   employeeTableColumns: INgxTableColumn[] = [
     {key: '_id', title: '#'},
-    {key: 'name', title: 'NÉV'},
+    {key: 'surname', title: 'VEZETÉKNÉV'},
+    {key: 'firstname', title: 'KERESZTNÉV'},
     {key: 'position', title: 'MUNKAKÖR'},
     {key: 'kindergarten', title: 'TAGÓVODA'},
     {key: 'group', title: 'CSOPORT'},
@@ -45,8 +47,8 @@ export class ConfigService {
     {key: 'name', title: 'NÉV'},
     {key: 'kindergarten', title: 'TAGÓVODA'}, // inkább telephely???
     {key: 'ageGroup', title: 'KORCSOPORT'},
-    {key: 'teacher1', title: '1. NEVELŐ'},
-    {key: 'teacher2', title: '2. NEVELŐ'},
+    {key: 'teacherFirst', title: '1. NEVELŐ'},
+    {key: 'teacherSecond', title: '2. NEVELŐ'},
     {key: 'nurse', title: 'DAJKA'},
     {key: 'maxHeadcount', title: 'MAX LÉTSZÁM'},
     {key: 'actualHeadcount', title: 'AKTUÁLIS LÉTSZÁM'},
@@ -55,14 +57,15 @@ export class ConfigService {
   
   childrenTableColumns: INgxTableColumn[] = [
     {key: '_id', title: '#'},
-    {key: 'name', title: 'NÉV'},
+    {key: 'surname', title: 'VEZETÉKNÉV'},
+    {key: 'firstname', title: 'KERESZTNÉV'},
     {key: 'age', title: 'KOR'},
-    {key: 'mother', title: 'ANYA'},
-    {key: 'contact', title: 'KAPCSOLAT'},
     {key: 'kindergarten', title: 'TAGÓVODA'}, // inkább telephely???
     {key: 'group', title: 'CSOPORT'},
-    {key: 'specialClasses', title: 'KÜLÖNÓRÁK'},
-    {key: 'sign', title: 'JEL'},
+    {key: 'mothername', title: 'ANYA NEVE'},
+    {key: 'phone', title: 'TELEFON'},
+    //{key: 'specialClasses', title: 'KÜLÖNÓRÁK'},
+    {key: 'picture', title: 'JEL'},
     {key: 'active', title: 'AKTÍV'},  
   ]
   

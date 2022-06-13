@@ -1,5 +1,5 @@
 const express = require('express')
-const baseService = require('../base/service')
+const baseService = require('./base-service')
 
 module.exports = (model) => {
     const service = baseService(model)

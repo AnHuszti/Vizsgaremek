@@ -1,0 +1,83 @@
+ [
+    {
+        "name": "Alpha",
+        "address": "1111 Budapest, A utca 1.",
+        "numOfEmployees": 18,
+        "numOfGroups": 5,
+        "maxHeadcountOfChildren": 75,
+        "actualHeadcountOfChildren": 50
+    },
+    {
+        "name": "Beta",
+        "address": "1111 Budapest, B utca 2.",
+        "numOfEmployees": 15,
+        "numOfGroups": 4,
+        "maxHeadcountOfChildren": 60,
+        "actualHeadcountOfChildren": 45
+    },
+    {
+        "name": "Gamma",
+        "address": "1111 Budapest, G utca 3.",
+        "numOfEmployees": 17,
+        "numOfGroups": 5,
+        "maxHeadcountOfChildren": 75,
+        "actualHeadcountOfChildren": 55
+    },
+    {
+        "name": "Delta",
+        "address": "1111 Budapest, D utca 4.",
+        "numOfEmployees": 20,
+        "numOfGroups": 6,
+        "maxHeadcountOfChildren": 90,
+        "actualHeadcountOfChildren": 60
+    },
+    {
+        "name": "Epsilon",
+        "address": "1111 Budapest, E utca 5.",
+        "numOfEmployees": 17,
+        "numOfGroups": 5,
+        "maxHeadcountOfChildren": 75,
+        "actualHeadcountOfChildren": 50
+    },
+    {
+        "name": "Zéta",
+        "address": "1111 Budapest, Z utca 6.",
+        "numOfEmployees": 14,
+        "numOfGroups": 4,
+        "maxHeadcountOfChildren": 60,
+        "actualHeadcountOfChildren": 40
+    },
+    {
+        "name": "Théta",
+        "address": "1111 Budapest, T utca 7.",
+        "numOfEmployees": 20,
+        "numOfGroups": 6,
+        "maxHeadcountOfChildren": 90,
+        "actualHeadcountOfChildren": 55
+    },
+    {
+        "name": "Iota",
+        "address": "1111 Budapest, I utca 8.",
+        "numOfEmployees": 17,
+        "numOfGroups": 5,
+        "maxHeadcountOfChildren": 75,
+        "actualHeadcountOfChildren": 45
+    },
+    {
+        "name": "Kappa",
+        "address": "1111 Budapest, K utca 9.",
+        "numOfEmployees": 20,
+        "numOfGroups": 6,
+        "maxHeadcountOfChildren": 90,
+        "actualHeadcountOfChildren": 60
+    },
+    {
+        "name": "Lambda",
+        "address": "1111 Budapest, L utca 10.",
+        "numOfEmployees": 14,
+        "numOfGroups": 4,
+        "maxHeadcountOfChildren": 60,
+        "actualHeadcountOfChildren": 40
+    }
+]
+

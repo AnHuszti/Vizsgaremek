@@ -1,0 +1,1484 @@
+[
+    {
+        "surname": "Antal",
+        "firstname": "Anna",
+        "kindergarten": "Alpha",
+        "position": "óvópedagógus 1.",
+        "group": "Alpha Alma",
+        "skills": "zongora",
+        "active": true
+    },
+    {
+        "surname": "Áts",
+        "firstname": "Áron",
+        "kindergarten": "Alpha",
+        "position": "óvópedagógus 2.",
+        "group": "Alpha Alma",
+        "skills": "angol nyelv",
+        "active": true
+    },
+    {
+        "surname": "Asztalos",
+        "firstname": "Aranka",
+        "kindergarten": "Alpha",
+        "position": "dajka",
+        "group": "Alpha Alma",
+        "active": true
+    },
+    {
+        "surname": "Asztalos",
+        "firstname": "Anita",
+        "kindergarten": "Alpha",
+        "position": "óvópedagógus 1.",
+        "group": "Alpha Ananász",
+        "active": true
+    },
+    {
+        "surname": "Ádám",
+        "firstname": "Anna",
+        "kindergarten": "Alpha",
+        "position": "óvópedagógus 2.",
+        "group": "Alpha Ananász",
+        "skills": "sakk",
+        "active": true
+    },
+    {
+        "surname": "Álmos",
+        "firstname": "Ágnes",
+        "kindergarten": "Alpha",
+        "position": "dajka",
+        "group": "Alpha Ananász",
+        "skills": "német nyelv",
+        "active": true
+    },
+    {
+        "surname": "Adorján",
+        "firstname": "Annamária",
+        "kindergarten": "Alpha",
+        "position": "óvópedagógus 1.",
+        "group": "Alpha Avokádó",
+        "skills": "angol nyelv",
+        "active": true
+    },
+    {
+        "surname": "Almási",
+        "firstname": "Andor",
+        "kindergarten": "Alpha",
+        "position": "óvópedagógus 2.",
+        "group": "Alpha Avokádó",
+        "skills": "néptánc",
+        "active": true
+    },
+    {
+        "surname": "Antal",
+        "firstname": "Andrea",
+        "kindergarten": "Alpha",
+        "position": "dajka",
+        "group": "Alpha Avokádó",
+        "active": true
+    },
+    {
+        "surname": "Atom",
+        "firstname": "Antal",
+        "kindergarten": "Alpha",
+        "position": "óvópedagógus 1.",
+        "group": "Alpha Áfonya",
+        "skills": "pszichológia",
+        "active": true
+    },
+    {
+        "surname": "Arany",
+        "firstname": "Adrienn",
+        "kindergarten": "Alpha",
+        "position": "óvópedagógus 2.",
+        "group": "Alpha Áfonya",
+        "skills": "programozás",
+        "active": true
+    },
+    {
+        "surname": "Ajtósi",
+        "firstname": "Ada",
+        "kindergarten": "Alpha",
+        "position": "dajka",
+        "group": "Alpha Áfonya",
+        "active": true
+    },
+    {
+        "surname": "Acél",
+        "firstname": "Alexa",
+        "kindergarten": "Alpha",
+        "position": "óvópedagógus 1.",
+        "group": "Alpha Articsóka",
+        "skills": "francia nyelv",
+        "active": true
+    },
+    {
+        "surname": "Ágh",
+        "firstname": "Ágota",
+        "kindergarten": "Alpha",
+        "position": "óvópedagógus 2.",
+        "group": "Alpha Articsóka",
+        "active": true
+    },
+    {
+        "surname": "Alga",
+        "firstname": "Abigél",
+        "kindergarten": "Alpha",
+        "position": "dajka",
+        "group": "Alpha Articsóka",
+        "skills": "jelnyelv",
+        "active": true
+    },
+    {
+        "surname": "Ács",
+        "firstname": "Ágnes",
+        "kindergarten": "Alpha",
+        "position": "pedagógiai asszisztens",
+        "active": true
+    },
+    {
+        "surname": "Ádám",
+        "firstname": "Ábrahám",
+        "kindergarten": "Alpha",
+        "position": "pedagógiai asszisztens",
+        "active": false
+    },
+    {
+        "surname": "Ács",
+        "firstname": "Alex",
+        "kindergarten": "Alpha",
+        "position": "pszichológus",
+        "skills": "jelnyelv",
+        "active": true
+    },
+    {
+        "surname": "Budai",
+        "firstname": "Bea",
+        "kindergarten": "Beta",
+        "position": "óvópedagógus 1.",
+        "group": "Beta Bálna",
+        "skills": "sakk",
+        "active": true
+    },
+    {
+        "surname": "Bodor",
+        "firstname": "Bori",
+        "kindergarten": "Beta",
+        "position": "óvópedagógus 2.",
+        "group": "Beta Bálna",
+        "skills": "angol nyelv",
+        "active": true
+    },
+    {
+        "surname": "Benke",
+        "firstname": "Bianka",
+        "kindergarten": "Beta",
+        "position": "dajka",
+        "group": "Beta Bálna",
+        "active": true
+    },
+    {
+        "surname": "Bálint",
+        "firstname": "Bálint",
+        "kindergarten": "Beta",
+        "position": "óvópedagógus 1.",
+        "group": "Beta Borz",
+        "active": true
+    },
+    {
+        "surname": "Bán",
+        "firstname": "Boróka",
+        "kindergarten": "Beta",
+        "position": "óvópedagógus 2.",
+        "group": "Beta Borz",
+        "skills": "sakk",
+        "active": true
+    },
+    {
+        "surname": "Bíró",
+        "firstname": "Beatrix",
+        "kindergarten": "Beta",
+        "position": "dajka",
+        "group": "Beta Borz",
+        "skills": "német nyelv",
+        "active": true
+    },
+    {
+        "surname": "Bánk",
+        "firstname": "Bán",
+        "kindergarten": "Beta",
+        "position": "óvópedagógus 1.",
+        "group": "Beta Bagoly",
+        "skills": "angol nyelv",
+        "active": true
+    },
+    {
+        "surname": "Bon",
+        "firstname": "Bori",
+        "kindergarten": "Beta",
+        "position": "óvópedagógus 2.",
+        "group": "Beta Bagoly",
+        "skills": "néptánc",
+        "active": true
+    },
+    {
+        "surname": "Bokor",
+        "firstname": "Bella",
+        "kindergarten": "Beta",
+        "position": "dajka",
+        "group": "Beta Bagoly",
+        "active": true
+    },
+    {
+        "surname": "Bezzeg",
+        "firstname": "Barbara",
+        "kindergarten": "Beta",
+        "position": "óvópedagógus 1.",
+        "group": "Beta Bogár",
+        "skills": "pszichológia",
+        "active": true
+    },
+    {
+        "surname": "Bor",
+        "firstname": "Bála",
+        "kindergarten": "Beta",
+        "position": "óvópedagógus 2.",
+        "group": "Beta Bogár",
+        "skills": "programozás",
+        "active": true
+    },
+    {
+        "surname": "Benedek",
+        "firstname": "Bíbor",
+        "kindergarten": "Beta",
+        "position": "dajka",
+        "group": "Beta Bogár",
+        "active": true
+    },
+    {
+        "surname": "Bán",
+        "firstname": "Bambi",
+        "kindergarten": "Beta",
+        "position": "óvópedagógus 1.",
+        "active": false
+    },
+    {
+        "surname": "Bátor",
+        "firstname": "Bibiána",
+        "kindergarten": "Beta",
+        "position": "pedagógiai asszisztens",
+        "skills": "elsősegély",
+        "active": true
+    },
+    {
+        "surname": "Béke",
+        "firstname": "Béla",
+        "kindergarten": "Beta",
+        "position": "pszichológus",
+        "active": true
+    },
+    {
+        "surname": "Gábor",
+        "firstname": "Gizella",
+        "kindergarten": "Gamma",
+        "position": "óvópedagógus 1.",
+        "group": "Gamma Galamb",
+        "active": true
+    },
+    {
+        "surname": "Goór",
+        "firstname": "Géza",
+        "kindergarten": "Gamma",
+        "position": "óvópedagógus 2.",
+        "group": "Gamma Galamb",
+        "skills": "programozás",
+        "active": true
+    },
+    {
+        "surname": "Galamb",
+        "firstname": "Gitta",
+        "kindergarten": "Gamma",
+        "position": "dajka",
+        "group": "Gamma Galamb",
+        "skills": "origami",
+        "active": true
+    },
+    {
+        "surname": "Gémes",
+        "firstname": "Gerda",
+        "kindergarten": "Gamma",
+        "position": "óvópedagógus 1.",
+        "group": "Gamma Gazella",
+        "skills": "zongora",
+        "active": true
+    },
+    {
+        "surname": "Gall",
+        "firstname": "Gemma",
+        "kindergarten": "Gamma",
+        "position": "óvópedagógus 2.",
+        "group": "Gamma Gazella",
+        "skills": "francia nyelv",
+        "active": true
+    },
+    {
+        "surname": "Gellért",
+        "firstname": "Gabriella",
+        "kindergarten": "Gamma",
+        "position": "dajka",
+        "group": "Gamma Gazella",
+        "skills": "német nyelv",
+        "active": true
+    },
+    {
+        "surname": "Gara",
+        "firstname": "Glória",
+        "kindergarten": "Gamma",
+        "position": "óvópedagógus 1.",
+        "group": "Gamma Gekkó",
+        "skills": "néptánc",
+        "active": true
+    },
+    {
+        "surname": "Gál",
+        "firstname": "Georgina",
+        "kindergarten": "Gamma",
+        "position": "óvópedagógus 2.",
+        "group": "Gamma Gekkó",
+        "skills": "go",
+        "active": true
+    },
+    {
+        "surname": "Gere",
+        "firstname": "Grácia",
+        "kindergarten": "Gamma",
+        "position": "dajka",
+        "group": "Gamma Gekkó",
+        "active": true
+    },
+    {
+        "surname": "Gordon",
+        "firstname": "Gréta",
+        "kindergarten": "Gamma",
+        "position": "óvópedagógus 1.",
+        "group": "Gamma Gepárd",
+        "skills": "elsősegély",
+        "active": true
+    },
+    {
+        "surname": "Gregor",
+        "firstname": "Golda",
+        "kindergarten": "Gamma",
+        "position": "óvópedagógus 2.",
+        "group": "Gamma Gepárd",
+        "skills": "népzene",
+        "active": true
+    },
+    {
+        "surname": "Gold",
+        "firstname": "Gabriella",
+        "kindergarten": "Gamma",
+        "position": "dajka",
+        "group": "Gamma Gepárd",
+        "skills": "francia nyelv",
+        "active": true
+    },
+    {
+        "surname": "Gondi",
+        "firstname": "Gusztáv",
+        "kindergarten": "Gamma",
+        "position": "óvópedagógus 1.",
+        "group": "Gamma Görény",
+        "active": true
+    },
+    {
+        "surname": "Gábor",
+        "firstname": "Genovéva",
+        "kindergarten": "Gamma",
+        "position": "óvópedagógus 2.",
+        "group": "Gamma Görény",
+        "skills": "görög nyelv",
+        "active": true
+    },
+    {
+        "surname": "Göndör",
+        "firstname": "Gizella",
+        "kindergarten": "Gamma",
+        "position": "dajka",
+        "group": "Gamma Görény",
+        "skills": "hegedű",
+        "active": true
+    },
+    {
+        "surname": "Germán",
+        "firstname": "Günter",
+        "kindergarten": "Gamma",
+        "position": "pedagógiai asszisztens",
+        "skills": "német nyelv",
+        "active": true
+    },
+    {
+        "surname": "Gróf",
+        "firstname": "Georgina",
+        "kindergarten": "Gamma",
+        "position": "pszichológus",
+        "active": true
+    },
+    {
+        "surname": "Ducki",
+        "firstname": "Donáld",
+        "kindergarten": "Delta",
+        "position": "óvópedagógus 1.",
+        "group": "Delta Dongó",
+        "active": true
+    },
+    {
+        "surname": "Denke",
+        "firstname": "Döníz",
+        "kindergarten": "Delta",
+        "position": "óvópedagógus 2.",
+        "group": "Delta Dongó",
+        "skills": "sakk",
+        "active": true
+    },
+    {
+        "surname": "Diós",
+        "firstname": "Dása",
+        "kindergarten": "Delta",
+        "position": "dajka",
+        "group": "Delta Dongó",
+        "active": true
+    },
+    {
+        "surname": "Dán",
+        "firstname": "Debóra",
+        "kindergarten": "Delta",
+        "position": "óvópedagógus 1.",
+        "group": "Delta Degu",
+        "skills": "jóga",
+        "active": true
+    },
+    {
+        "surname": "Dell",
+        "firstname": "Dina",
+        "kindergarten": "Delta",
+        "position": "óvópedagógus 2.",
+        "group": "Delta Degu",
+        "skills": "spanyol nyelv",
+        "active": true
+    },
+    {
+        "surname": "Diós",
+        "firstname": "Ditta",
+        "kindergarten": "Delta",
+        "position": "dajka",
+        "group": "Delta Degu",
+        "skills": "origami",
+        "active": true
+    },
+    {
+        "surname": "Dénes",
+        "firstname": "Diána",
+        "kindergarten": "Delta",
+        "position": "óvópedagógus 1.",
+        "group": "Delta Denevér",
+        "skills": "balett",
+        "active": true
+    },
+    {
+        "surname": "Deme",
+        "firstname": "Dária",
+        "kindergarten": "Delta",
+        "position": "óvópedagógus 2.",
+        "group": "Delta Denevér",
+        "skills": "zongora",
+        "active": true
+    },
+    {
+        "surname": "Dombos",
+        "firstname": "Dalma",
+        "kindergarten": "Delta",
+        "position": "dajka",
+        "group": "Delta Denevér",
+        "skills": "angol nyelv",
+        "active": true
+    },
+    {
+        "surname": "Daru",
+        "firstname": "Dorka",
+        "kindergarten": "Delta",
+        "position": "óvópedagógus 1.",
+        "group": "Delta Dino",
+        "active": true
+    },
+    {
+        "surname": "Darvas",
+        "firstname": "Dávid",
+        "kindergarten": "Delta",
+        "position": "óvópedagógus 2.",
+        "group": "Delta Dino",
+        "skills": "karate",
+        "active": true
+    },
+    {
+        "surname": "Deli",
+        "firstname": "Dézi",
+        "kindergarten": "Delta",
+        "position": "dajka",
+        "group": "Delta Dino",
+        "active": true
+    },
+    {
+        "surname": "Don",
+        "firstname": "Dénes",
+        "kindergarten": "Delta",
+        "position": "óvópedagógus 1.",
+        "group": "Delta Delfin",
+        "skills": "go",
+        "active": true
+    },
+    {
+        "surname": "Dalos",
+        "firstname": "Dominika",
+        "kindergarten": "Delta",
+        "position": "óvópedagógus 2.",
+        "group": "Delta Delfin",
+        "skills": "népzene",
+        "active": true
+    },
+    {
+        "surname": "Deres",
+        "firstname": "Ditta",
+        "kindergarten": "Delta",
+        "position": "dajka",
+        "group": "Delta Delfin",
+        "skills": "néptánc",
+        "active": true
+    },
+    {
+        "surname": "Dúró",
+        "firstname": "Dolly",
+        "kindergarten": "Delta",
+        "position": "óvópedagógus 1.",
+        "group": "Delta Darázs",
+        "active": true
+    },
+    {
+        "surname": "Dér",
+        "firstname": "Dóra",
+        "kindergarten": "Delta",
+        "position": "óvópedagógus 2.",
+        "group": "Delta Darázs",
+        "skills": "origami",
+        "active": true
+    },
+    {
+        "surname": "Dán",
+        "firstname": "Daniella",
+        "kindergarten": "Delta",
+        "position": "dajka",
+        "group": "Delta Darázs",
+        "active": true
+    },
+    {
+        "surname": "Dolgos",
+        "firstname": "Donna",
+        "kindergarten": "Delta",
+        "position": "pedagógiai asszisztens",
+        "skills": "virágkötés",
+        "active": true
+    },
+    {
+        "surname": "Dávid",
+        "firstname": "Detti",
+        "kindergarten": "Delta",
+        "position": "pszichológus",
+        "skills": "kerámia",
+        "active": true
+    },
+    {
+        "surname": "Elek",
+        "firstname": "Emese",
+        "kindergarten": "Epsilon",
+        "position": "óvópedagógus 1.",
+        "group": "Epsilon Ebihal",
+        "skills": "jóga",
+        "active": true
+    },
+    {
+        "surname": "Erős",
+        "firstname": "Ede",
+        "kindergarten": "Epsilon",
+        "position": "óvópedagógus 2.",
+        "group": "Epsilon Ebihal",
+        "skills": "karate",
+        "active": true
+    },
+    {
+        "surname": "Epres",
+        "firstname": "Edina",
+        "kindergarten": "Epsilon",
+        "position": "dajka",
+        "group": "Epsilon Ebihal",
+        "active": true
+    },
+    {
+        "surname": "Elekes",
+        "firstname": "Eszter",
+        "kindergarten": "Epsilon",
+        "position": "óvópedagógus 1.",
+        "group": "Epsilon Egér",
+        "skills": "jóga",
+        "active": true
+    },
+    {
+        "surname": "Ezer",
+        "firstname": "Elza",
+        "kindergarten": "Epsilon",
+        "position": "óvópedagógus 2.",
+        "group": "Epsilon Egér",
+        "active": true
+    },
+    {
+        "surname": "Ember",
+        "firstname": "Ella",
+        "kindergarten": "Epsilon",
+        "position": "dajka",
+        "group": "Epsilon Egér",
+        "skills": "balett",
+        "active": true
+    },
+    {
+        "surname": "Egres",
+        "firstname": "Emma",
+        "kindergarten": "Epsilon",
+        "position": "óvópedagógus 1.",
+        "group": "Epsilon Elefánt",
+        "skills": "zongora",
+        "active": true
+    },
+    {
+        "surname": "Elem",
+        "firstname": "Elek",
+        "kindergarten": "Epsilon",
+        "position": "óvópedagógus 2.",
+        "group": "Epsilon Elefánt",
+        "skills": "angol nyelv",
+        "active": true
+    },
+    {
+        "surname": "Elekes",
+        "firstname": "Emília",
+        "kindergarten": "Epsilon",
+        "position": "dajka",
+        "group": "Epsilon Elefánt",
+        "skills": "jelnyelv",
+        "active": true
+    },
+    {
+        "surname": "Eke",
+        "firstname": "Edit",
+        "kindergarten": "Epsilon",
+        "position": "óvópedagógus 1.",
+        "group": "Epsilon Emu",
+        "skills": "balett",
+        "active": true
+    },
+    {
+        "surname": "Előd",
+        "firstname": "Emil",
+        "kindergarten": "Epsilon",
+        "position": "óvópedagógus 2.",
+        "group": "Epsilon Emu",
+        "skills": "népzene",
+        "active": true
+    },
+    {
+        "surname": "Erdei",
+        "firstname": "Edna",
+        "kindergarten": "Epsilon",
+        "position": "dajka",
+        "group": "Epsilon Emu",
+        "active": true
+    },
+    {
+        "surname": "Egerszegi",
+        "firstname": "Egon",
+        "kindergarten": "Epsilon",
+        "position": "óvópedagógus 1.",
+        "group": "Epsilon Ezüstróka",
+        "skills": "go",
+        "active": true
+    },
+    {
+        "surname": "Első",
+        "firstname": "Elena",
+        "kindergarten": "Epsilon",
+        "position": "óvópedagógus 2.",
+        "group": "Epsilon Ezüstróka",
+        "skills": "hegedű",
+        "active": true
+    },
+    {
+        "surname": "Egyed",
+        "firstname": "Emőke",
+        "kindergarten": "Epsilon",
+        "position": "dajka",
+        "group": "Epsilon Ezüstróka",
+        "skills": "német nyelv",
+        "active": true
+    },
+    {
+        "surname": "Eliot",
+        "firstname": "Elen",
+        "kindergarten": "Epsilon",
+        "position": "pedagógiai asszisztens",
+        "skills": "jóga",
+        "active": true
+    },
+    {
+        "surname": "Eiffel",
+        "firstname": "Etel",
+        "kindergarten": "Epsilon",
+        "position": "pszichológus",
+        "active": true
+    },
+    {
+        "surname": "Zápor",
+        "firstname": "Zita",
+        "kindergarten": "Zéta",
+        "position": "óvópedagógus 1.",
+        "group": "Zéta Zebra",
+        "skills": "zongora",
+        "active": true
+    },
+    {
+        "surname": "Zengő",
+        "firstname": "Zoé",
+        "kindergarten": "Zéta",
+        "position": "óvópedagógus 2.",
+        "group": "Zéta Zebra",
+        "active": true
+    },
+    {
+        "surname": "Zápor",
+        "firstname": "Zelma",
+        "kindergarten": "Zéta",
+        "position": "dajka",
+        "group": "Zéta Zebra",
+        "skills": "népzene",
+        "active": true
+    },
+    {
+        "surname": "Zöld",
+        "firstname": "Zille",
+        "kindergarten": "Zéta",
+        "position": "óvópedagógus 1.",
+        "group": "Zéta Zerge",
+        "skills": "hegedű",
+        "active": true
+    },
+    {
+        "surname": "Zúgó",
+        "firstname": "Zorka",
+        "kindergarten": "Zéta",
+        "position": "óvópedagógus 2.",
+        "group": "Zéta Zerge",
+        "skills": "balett",
+        "active": true
+    },
+    {
+        "surname": "Zoltán",
+        "firstname": "Zóra",
+        "kindergarten": "Zéta",
+        "position": "dajka",
+        "group": "Zéta Zerge",
+        "skills": "zongora",
+        "active": true
+    },
+    {
+        "surname": "Zala",
+        "firstname": "Zoltán",
+        "kindergarten": "Zéta",
+        "position": "óvópedagógus 1.",
+        "group": "Zéta Zöldike",
+        "active": true
+    },
+    {
+        "surname": "Zord",
+        "firstname": "Zuárd",
+        "kindergarten": "Zéta",
+        "position": "óvópedagógus 2.",
+        "group": "Zéta Zöldike",
+        "skills": "pszichológia",
+        "active": true
+    },
+    {
+        "surname": "Zéta",
+        "firstname": "Zelda",
+        "kindergarten": "Zéta",
+        "position": "dajka",
+        "group": "Zéta Zöldike",
+        "skills": "francia nyelv",
+        "active": true
+    },
+    {
+        "surname": "Zeke",
+        "firstname": "Zénó",
+        "kindergarten": "Zéta",
+        "position": "óvópedagógus 1.",
+        "group": "Zéta Zebu",
+        "skills": "sakk",
+        "active": true
+    },
+    {
+        "surname": "Zelk",
+        "firstname": "Zoltán",
+        "kindergarten": "Zéta",
+        "position": "óvópedagógus 2.",
+        "group": "Zéta Zebu",
+        "skills": "népzene",
+        "active": true
+    },
+    {
+        "surname": "Zebulon",
+        "firstname": "Zille",
+        "kindergarten": "Zéta",
+        "position": "dajka",
+        "group": "Zéta Zebu",
+        "active": true
+    },
+    {
+        "surname": "Zong",
+        "firstname": "Zora",
+        "kindergarten": "Zéta",
+        "position": "pedagógiai asszisztens",
+        "active": true
+    },
+    {
+        "surname": "Zen",
+        "firstname": "Zalán",
+        "kindergarten": "Zéta",
+        "position": "pszichológus",
+        "skills": "jóga",
+        "active": true
+    },
+    {
+        "surname": "Teke",
+        "firstname": "Titanilla",
+        "kindergarten": "Théta",
+        "position": "óvópedagógus 1.",
+        "group": "Théta Tatu",
+        "skills": "kerámia",
+        "active": true
+    },
+    {
+        "surname": "Tollas",
+        "firstname": "Tina",
+        "kindergarten": "Théta",
+        "position": "óvópedagógus 2.",
+        "group": "Théta Tatu",
+        "skills": "jóga",
+        "active": true
+    },
+    {
+        "surname": "Tolmács",
+        "firstname": "Tímea",
+        "kindergarten": "Théta",
+        "position": "dajka",
+        "group": "Théta Tatu",
+        "skills": "angol nyelv",
+        "active": true
+    },
+    {
+        "surname": "Tar",
+        "firstname": "Tamara",
+        "kindergarten": "Théta",
+        "position": "óvópedagógus 1.",
+        "group": "Théta Teknős",
+        "skills": "Zongora",
+        "active": true
+    },
+    {
+        "surname": "Till",
+        "firstname": "Tilla",
+        "kindergarten": "Théta",
+        "position": "óvópedagógus 2.",
+        "group": "Théta Teknős",
+        "skills": "jelnyelv",
+        "active": true
+    },
+    {
+        "surname": "Tábori",
+        "firstname": "Tánya",
+        "kindergarten": "Théta",
+        "position": "dajka",
+        "group": "Théta Teknős",
+        "active": true
+    },
+    {
+        "surname": "Timon",
+        "firstname": "Tímea",
+        "kindergarten": "Théta",
+        "position": "óvópedagógus 1.",
+        "group": "Théta Tigris",
+        "skills": "aerobik",
+        "active": true
+    },
+    {
+        "surname": "Terv",
+        "firstname": "Teréz",
+        "kindergarten": "Théta",
+        "position": "óvópedagógus 2.",
+        "group": "Théta Tigris",
+        "skills": "német nyelv",
+        "active": true
+    },
+    {
+        "surname": "Teleki",
+        "firstname": "Tekla",
+        "kindergarten": "Théta",
+        "position": "dajka",
+        "group": "Théta Tigris",
+        "skills": "hegedű",
+        "active": true
+    },
+    {
+        "surname": "Tóth",
+        "firstname": "Tea",
+        "kindergarten": "Théta",
+        "position": "óvópedagógus 1.",
+        "group": "Théta Teve",
+        "skills": "kerámia",
+        "active": true
+    },
+    {
+        "surname": "Teleki",
+        "firstname": "Tamás",
+        "kindergarten": "Théta",
+        "position": "óvópedagógus 2.",
+        "group": "Théta Teve",
+        "skills": "francia nyelv",
+        "active": true
+    },
+    {
+        "surname": "Tild",
+        "firstname": "Tilda",
+        "kindergarten": "Théta",
+        "position": "dajka",
+        "group": "Théta Teve",
+        "active": true
+    },
+    {
+        "surname": "Toldi",
+        "firstname": "Tádé",
+        "kindergarten": "Théta",
+        "position": "óvópedagógus 1.",
+        "group": "Théta Tücsök",
+        "skills": "hegedű",
+        "active": true
+    },
+    {
+        "surname": "Tamási",
+        "firstname": "Tamara",
+        "kindergarten": "Théta",
+        "position": "óvópedagógus 2.",
+        "group": "Théta Tücsök",
+        "active": true
+    },
+    {
+        "surname": "Temes",
+        "firstname": "Teri",
+        "kindergarten": "Théta",
+        "position": "dajka",
+        "group": "Théta Tücsök",
+        "skills": "orosz nyelv",
+        "active": true
+    },
+    {
+        "surname": "Tavi",
+        "firstname": "Tina",
+        "kindergarten": "Théta",
+        "position": "óvópedagógus 1.",
+        "group": "Théta Tacskó",
+        "skills": "túravezetés",
+        "active": true
+    },
+    {
+        "surname": "Tisza",
+        "firstname": "Telma",
+        "kindergarten": "Théta",
+        "position": "óvópedagógus 2.",
+        "group": "Théta Tacskó",
+        "skills": "német nyelv",
+        "active": true
+    },
+    {
+        "surname": "Tarka",
+        "firstname": "Tímea",
+        "kindergarten": "Théta",
+        "position": "dajka",
+        "group": "Théta Tacskó",
+        "active": true
+    },
+    {
+        "surname": "Törpe",
+        "firstname": "Tünde",
+        "kindergarten": "Théta",
+        "position": "pedagógiai asszisztens",
+        "skills": "zongora",
+        "active": true
+    },
+    {
+        "surname": "Tar",
+        "firstname": "Tina",
+        "kindergarten": "Théta",
+        "position": "pszichológus",
+        "active": true
+    },
+    {
+        "surname": "Jakab",
+        "firstname": "Jamina",
+        "kindergarten": "Iota",
+        "position": "óvópedagógus 1.",
+        "group": "Iota Jázmin",
+        "skills": "zongora",
+        "active": true
+    },
+    {
+        "surname": "Jin",
+        "firstname": "Jana",
+        "kindergarten": "Iota",
+        "position": "óvópedagógus 2.",
+        "group": "Iota Jázmin",
+        "skills": "jóga",
+        "active": true
+    },
+    {
+        "surname": "Jár",
+        "firstname": "Júnó",
+        "kindergarten": "Iota",
+        "position": "dajka",
+        "group": "Iota Jázmin",
+        "skills": "angol nyelv",
+        "active": true
+    },
+    {
+        "surname": "Javas",
+        "firstname": "Jutta",
+        "kindergarten": "Iota",
+        "position": "óvópedagógus 1.",
+        "group": "Iota Jegenye",
+        "skills": "karate",
+        "active": true
+    },
+    {
+        "surname": "Júdás",
+        "firstname": "Judit",
+        "kindergarten": "Iota",
+        "position": "óvópedagógus 2.",
+        "group": "Iota Jegenye",
+        "skills": "balett",
+        "active": true
+    },
+    {
+        "surname": "Jós",
+        "firstname": "Johanna",
+        "kindergarten": "Iota",
+        "position": "dajka",
+        "group": "Iota Jegenye",
+        "skills": "hegedű",
+        "active": true
+    },
+    {
+        "surname": "Jedi",
+        "firstname": "Jolán",
+        "kindergarten": "Iota",
+        "position": "óvópedagógus 1.",
+        "group": "Iota Jukka",
+        "skills": "túravezetés",
+        "active": true
+    },
+    {
+        "surname": "József",
+        "firstname": "Janka",
+        "kindergarten": "Iota",
+        "position": "óvópedagógus 2.",
+        "group": "Iota Jukka",
+        "skills": "zongora",
+        "active": true
+    },
+    {
+        "surname": "Jel",
+        "firstname": "Jutka",
+        "kindergarten": "Iota",
+        "position": "dajka",
+        "group": "Iota Jukka",
+        "skills": "aerobik",
+        "active": true
+    },
+    {
+        "surname": "Jegyes",
+        "firstname": "Jakab",
+        "kindergarten": "Iota",
+        "position": "óvópedagógus 1.",
+        "group": "Iota Japánbirs",
+        "skills": "sakk",
+        "active": true
+    },
+    {
+        "surname": "Joó",
+        "firstname": "Julianna",
+        "kindergarten": "Iota",
+        "position": "óvópedagógus 2.",
+        "group": "Iota Japánbirs",
+        "skills": "néptánc",
+        "active": true
+    },
+    {
+        "surname": "Jedlik",
+        "firstname": "Józsa",
+        "kindergarten": "Iota",
+        "position": "dajka",
+        "group": "Iota Japánbirs",
+        "active": true
+    },
+    {
+        "surname": "Jankó",
+        "firstname": "Jónás",
+        "kindergarten": "Iota",
+        "position": "óvópedagógus 1.",
+        "group": "Iota Juhar",
+        "skills": "programozás",
+        "active": true
+    },
+    {
+        "surname": "Jeges",
+        "firstname": "Júlia",
+        "kindergarten": "Iota",
+        "position": "óvópedagógus 2.",
+        "group": "Iota Juhar",
+        "skills": "jóga",
+        "active": true
+    },
+    {
+        "surname": "Jávor",
+        "firstname": "Judit",
+        "kindergarten": "Iota",
+        "position": "dajka",
+        "group": "Iota Juhar",
+        "active": true
+    },
+    {
+        "surname": "Jelki",
+        "firstname": "Jutka",
+        "kindergarten": "Iota",
+        "position": "pedagógiai asszisztens",
+        "active": true
+    },
+    {
+        "surname": "Jég",
+        "firstname": "József",
+        "kindergarten": "Iota",
+        "position": "pszichológus",
+        "skills": "angol nyelv",
+        "active": true
+    },
+    {
+        "surname": "Ködös",
+        "firstname": "Kamilla",
+        "kindergarten": "Kappa",
+        "position": "óvópedagógus 1.",
+        "group": "Kappa Kenguru",
+        "skills": "francia nyelv",
+        "active": true
+    },
+    {
+        "surname": "Káró",
+        "firstname": "Kinga",
+        "kindergarten": "Kappa",
+        "position": "óvópedagógus 2.",
+        "group": "Kappa Kenguru",
+        "skills": "tűzzománc",
+        "active": true
+    },
+    {
+        "surname": "Kovács",
+        "firstname": "Kata",
+        "kindergarten": "Kappa",
+        "position": "dajka",
+        "group": "Kappa Kenguru",
+        "skills": "népzene",
+        "active": true
+    },
+    {
+        "surname": "Kezes",
+        "firstname": "Kenéz",
+        "kindergarten": "Kappa",
+        "position": "óvópedagógus 1.",
+        "group": "Kappa Kakadu",
+        "skills": "Zongora",
+        "active": true
+    },
+    {
+        "surname": "Kelemen",
+        "firstname": "Katalin",
+        "kindergarten": "Kappa",
+        "position": "óvópedagógus 2.",
+        "group": "Kappa Kakadu",
+        "skills": "kerámia",
+        "active": true
+    },
+    {
+        "surname": "Korong",
+        "firstname": "Klotild",
+        "kindergarten": "Kappa",
+        "position": "dajka",
+        "group": "Kappa Kakadu",
+        "active": true
+    },
+    {
+        "surname": "Kele",
+        "firstname": "Kitty",
+        "kindergarten": "Kappa",
+        "position": "óvópedagógus 1.",
+        "group": "Kappa Kivi",
+        "skills": "német nyelv",
+        "active": true
+    },
+    {
+        "surname": "Kovács",
+        "firstname": "Karina",
+        "kindergarten": "Kappa",
+        "position": "óvópedagógus 2.",
+        "group": "Kappa Kivi",
+        "skills": "pszichológia",
+        "active": true
+    },
+    {
+        "surname": "Kakas",
+        "firstname": "Kata",
+        "kindergarten": "Kappa",
+        "position": "dajka",
+        "group": "Kappa Kivi",
+        "skills": "elsősegély",
+        "active": true
+    },
+    {
+        "surname": "Kerge",
+        "firstname": "Kinga",
+        "kindergarten": "Kappa",
+        "position": "óvópedagógus 1.",
+        "group": "Kappa Kakas",
+        "skills": "jóga",
+        "active": true
+    },
+    {
+        "surname": "Kerti",
+        "firstname": "Kornél",
+        "kindergarten": "Kappa",
+        "position": "óvópedagógus 2.",
+        "group": "Kappa Kakas",
+        "skills": "francia nyelv",
+        "active": true
+    },
+    {
+        "surname": "Kováts",
+        "firstname": "Korina",
+        "kindergarten": "Kappa",
+        "position": "dajka",
+        "group": "Kappa Kakas",
+        "active": true
+    },
+    {
+        "surname": "Kende",
+        "firstname": "Kunigunda",
+        "kindergarten": "Kappa",
+        "position": "óvópedagógus 1.",
+        "group": "Kappa Kagyló",
+        "skills": "német nyelv",
+        "active": true
+    },
+    {
+        "surname": "Komoly",
+        "firstname": "Karola",
+        "kindergarten": "Kappa",
+        "position": "óvópedagógus 2.",
+        "group": "Kappa Kagyló",
+        "skills": "orosz nyelv",
+        "active": true
+    },
+    {
+        "surname": "Kér",
+        "firstname": "Kincső",
+        "kindergarten": "Kappa",
+        "position": "dajka",
+        "group": "Kappa Kagyló",
+        "active": true
+    },
+    {
+        "surname": "Kelet",
+        "firstname": "Kóra",
+        "kindergarten": "Kappa",
+        "position": "óvópedagógus 1.",
+        "group": "Kappa Kaméleon",
+        "skills": "tűzzománc",
+        "active": true
+    },
+    {
+        "surname": "Kél",
+        "firstname": "Kálmán",
+        "kindergarten": "Kappa",
+        "position": "óvópedagógus 2.",
+        "group": "Kappa Kaméleon",
+        "skills": "karate",
+        "active": true
+    },
+    {
+        "surname": "Kertes",
+        "firstname": "Kinga",
+        "kindergarten": "Kappa",
+        "position": "dajka",
+        "group": "Kappa Kaméleon",
+        "active": true
+    },
+    {
+        "surname": "Kálmán",
+        "firstname": "Kata",
+        "kindergarten": "Kappa",
+        "position": "pedagógiai asszisztens",
+        "skills": "túravezetés",
+        "active": true
+    },
+    {
+        "surname": "Kőműves",
+        "firstname": "Kelemen",
+        "kindergarten": "Kappa",
+        "position": "pszichológus",
+        "skills": "balett",
+        "active": true
+    },
+    {
+        "surname": "Látó",
+        "firstname": "Lili",
+        "kindergarten": "Lambda",
+        "position": "óvópedagógus 1.",
+        "group": "Lambda Láma",
+        "skills": "balett",
+        "active": true
+    },
+    {
+        "surname": "Lovas",
+        "firstname": "Leila",
+        "kindergarten": "Lambda",
+        "position": "óvópedagógus 2.",
+        "group": "Lambda Láma",
+        "skills": "sakk",
+        "active": true
+    },
+    {
+        "surname": "Látó",
+        "firstname": "Lujza",
+        "kindergarten": "Lambda",
+        "position": "dajka",
+        "group": "Lambda Láma",
+        "skills": "hegedű",
+        "active": true
+    },
+    {
+        "surname": "Latin",
+        "firstname": "Lilla",
+        "kindergarten": "Lambda",
+        "position": "óvópedagógus 1.",
+        "group": "Lambda Leguán",
+        "skills": "jóga",
+        "active": true
+    },
+    {
+        "surname": "Lenti",
+        "firstname": "László",
+        "kindergarten": "Lambda",
+        "position": "óvópedagógus 2.",
+        "group": "Lambda Leguán",
+        "skills": "angol nyelv",
+        "active": true
+    },
+    {
+        "surname": "Lengő",
+        "firstname": "Lenke",
+        "kindergarten": "Lambda",
+        "position": "dajka",
+        "group": "Lambda Leguán",
+        "active": true
+    },
+    {
+        "surname": "Lill",
+        "firstname": "Luca",
+        "kindergarten": "Lambda",
+        "position": "óvópedagógus 1.",
+        "group": "Lambda Lepke",
+        "skills": "népzene",
+        "active": true
+    },
+    {
+        "surname": "Luc",
+        "firstname": "Levente",
+        "kindergarten": "Lambda",
+        "position": "óvópedagógus 2.",
+        "group": "Lambda Lepke",
+        "skills": "túravezetés",
+        "active": true
+    },
+    {
+        "surname": "Lajos",
+        "firstname": "Léna",
+        "kindergarten": "Lambda",
+        "position": "dajka",
+        "group": "Lambda Lepke",
+        "active": true
+    },
+    {
+        "surname": "Lan",
+        "firstname": "Liza",
+        "kindergarten": "Lambda",
+        "position": "óvópedagógus 1.",
+        "group": "Lambda Lazac",
+        "skills": "tűzzománc",
+        "active": true
+    },
+    {
+        "surname": "Leiter",
+        "firstname": "Leila",
+        "kindergarten": "Lambda",
+        "position": "óvópedagógus 2.",
+        "group": "Lambda Lazac",
+        "skills": "go",
+        "active": true
+    },
+    {
+        "surname": "László",
+        "firstname": "Lola",
+        "kindergarten": "Lambda",
+        "position": "dajka",
+        "group": "Lambda Lazac",
+        "active": true
+    },
+    {
+        "surname": "Lakos",
+        "firstname": "Lajos",
+        "kindergarten": "Lambda",
+        "position": "pedagógiai asszisztens",
+        "skills": "jelnyelv",
+        "active": true
+    },
+    {
+        "surname": "Lábas",
+        "firstname": "Linda",
+        "kindergarten": "Lambda",
+        "position": "pszichológus",
+        "skills": "bűvészet",
+        "active": true
+    }
+]
+
+

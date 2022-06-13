@@ -1,0 +1,57 @@
+<h3 class="mt-3">Szerkesztés</h3>
+
+<form>
+    <div class="row">
+        <div class="col">
+            <label for="surname" class="form-label">Vezetéknév</label>
+            <input type="text" class="form-control" placeholder="Vezetéknév" aria-label="surname" id="surname">
+        </div>
+        <div class="col">
+            <label for="firstname" class="form-label">Keresztnév</label>
+            <input type="text" class="form-control" placeholder="Keresztnév" aria-label="firstname" id="firstname">
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="age" class="form-label">Kor</label>
+        <input type="email" class="form-control" placeholder="Kor" id="age" aria-describedby="emailHelp">
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+            <label for="kindergarten" class="form-label">Tagóvoda</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected></option>
+                <option value="Alpha">Alpha</option>
+                <option value="Beta">Beta</option>
+                <option value="Gamma">Gamma</option>
+                <option value="Delta">Delta</option>
+                <option value="Epsilon">Epsilon</option>
+                <option value="Zéta">Zéta</option>
+                <option value="Théta">Théta</option>
+                <option value="Iota">Iota</option>
+                <option value="Kappa">Kappa</option>
+                <option value="Lambda">Lambda</option>
+            </select>
+        </div>
+        <div class="col mb-3">
+            <label for="group" class="form-label">Csoport</label>
+            <input type="text" class="form-control" placeholder="Csoport" aria-label="group" id="group">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="mothername" class="form-label">Anya neve</label>
+            <input type="text" class="form-control" placeholder="Anya neve" aria-label="surname" id="mothername">
+        </div>
+        <div class="col">
+            <label for="phone" class="form-label">Telefon</label>
+            <input type="text" class="form-control" placeholder="Telefon" aria-label="phone" id="phone">
+        </div>
+    </div>
+    <div class="my-3 form-check">
+        <input type="checkbox" class="form-check-input" id="active">
+        <label class="form-check-label" for="active">Aktív</label>
+    </div>
+    <button type="submit" class="btn btn-success">Mentés</button>
+</form>
+
+<ngx-edit-form></ngx-edit-form>
