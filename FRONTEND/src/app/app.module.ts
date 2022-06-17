@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -44,7 +45,8 @@ import { EditFormModule } from './edit-form/edit-form.module';
     BrowserAnimationsModule,
     DataTableModule,
     HttpClientModule,
-    EditFormModule
+    EditFormModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

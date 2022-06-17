@@ -1,13 +1,16 @@
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+<div class="container bg__tables">
+    <div class="bg__opaque">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Különórák</h1>
 </div>
 
-<h3>Különórák listája</h3>
-
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
     <div class="btn-toolbar mb-2 mb-md-0">
-        <button type="button" class="btn btn-sm btn-outline-secondary" [routerLink]="['/', 'kulonora', 0 ]">Új különóra</button>
+        <button type="button" class="btn-sm btn__new btn-outline-light" [routerLink]="['/kulonora/edit', 0 ]">Új különóra</button>
     </div>
 </div>
 
-<ngx-data-table  *ngIf="list$ | async as list" [columns]="columns" [list]="list"></ngx-data-table>
+<ngx-data-table  *ngIf="list$ | async as list" [columns]="columns" [list]="list"
+(onEdit)="jumpToEdit($event)"></ngx-data-table>
+    </div>
+</div>

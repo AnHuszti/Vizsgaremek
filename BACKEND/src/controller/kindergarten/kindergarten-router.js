@@ -8,6 +8,14 @@ const router = express.Router()
 router.get('/', (req, res, next) => {
     return controller.findAll(req, res, next)
 })
+//get one
+router.get('/:id', (req, res, next) => {
+    return controller.findOne(req, res, next)
+})
+// Patch
+router.patch('/:id', (req, res, next) => {
+    return controller.updateOne(req, res, next)
+})
 // Create
 router.post('/', (req, res, next) => {
     return controller.create(req, res, next)

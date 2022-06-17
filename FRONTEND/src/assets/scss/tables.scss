@@ -1,14 +1,53 @@
 @use 'modules/colors';
 @use 'modules/fonts';
 
+.bg {
+
+    &__tables {
+        background: url(../images/table_background.png);
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position-y: -20px;
+
+        @media screen and (min-width: 992px){
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position-x: -10px;
+            background-position-y: -30px
+        }
+    }
+
+    &__opaque {
+            background-color: #ffffff80;
+    }
+
+    &__forms {
+        background: url(../images/PikPng.com_watercolor-splash-png_1788599.png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media screen and (min-width: 992px){
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position-y: 10px
+        }
+    }
+}
+
 .btn {
 
-    &__edit {
+    &__edit, &__new {
         color: colors.$dark-font-color;
     }
 
     &__paginate {
         color: colors.$active-font-color;
+    }
+
+    &__save {
+        background-color: colors.$light-bg-color;
+        color: colors.$dark-font-color;
     }
 }
 
@@ -16,3 +55,8 @@ th {
     //background-color: #fff !important;
     border: none;
 }
+
+/* .img {
+    &__sign {
+    }
+} */

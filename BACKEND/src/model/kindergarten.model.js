@@ -1,9 +1,16 @@
 const mongoose = require('mongoose')
+// const idValidator = require('mongoose-id-validator')
+
 
 const KindergartenSchema = mongoose.Schema({
     name: {
         type: String,
         required: true,
+        validate: {
+            validator: function(v) {
+                return /^[a-űA-Ű \-\.]{5,25}$/.test(v)
+            }
+        }
     },
     address: {
         type: String,

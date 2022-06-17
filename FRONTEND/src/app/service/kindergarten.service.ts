@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Kindergarten } from '../model/kindergarten';
@@ -18,6 +17,10 @@ export class KindergartenService {
 
   getAll(): Observable<Kindergarten[]> {
     return this.http.get<Kindergarten[]>(`${this.apiUrl}kindergartens`)
+  }
+
+  getOne(id: string): Observable<Kindergarten> {
+    return this.http.get<Kindergarten>(`${this.apiUrl}kindergartens/${id}`)
   }
 }
 

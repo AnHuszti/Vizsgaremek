@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Employee } from '../model/employee';
@@ -18,5 +17,9 @@ export class EmployeeService {
 
   getAll(): Observable<Employee[]> {
     return this.http.get<Employee[]>(`${this.apiUrl}employees`)
+  }
+
+  getOne(id: string): Observable<Employee> {
+    return this.http.get<Employee>(`${this.apiUrl}employees/${id}`)
   }
 }

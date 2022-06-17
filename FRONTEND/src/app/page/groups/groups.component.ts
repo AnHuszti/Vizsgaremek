@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Group } from 'src/app/model/group';
 import { ConfigService } from 'src/app/service/config.service';
 import { GroupsService } from 'src/app/service/groups.service';
 
@@ -15,10 +17,14 @@ export class GroupsComponent implements OnInit {
 
   constructor(
     private config: ConfigService,
-    private groupsService: GroupsService
+    private groupsService: GroupsService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
   }
 
+  jumpToEdit(group: Group): void {
+    this.router.navigate(['/csoport/edit', group._id])
+  }
 }

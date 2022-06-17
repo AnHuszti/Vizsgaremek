@@ -1,3 +1,5 @@
+import { Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
@@ -18,9 +20,11 @@ export class NgxDataTableComponent<T extends {[x: string]: any}> implements OnIn
   // Columns
   @Input() columns: INgxTableColumn[] = []
 
+  @Output() onEdit: EventEmitter<T> = new EventEmitter()
+
   pageSize: number = 20
 
-  startSlice: number = 0
+  startSlice: number = 0 
   
   endSlice: number = 20
 
@@ -42,6 +46,10 @@ export class NgxDataTableComponent<T extends {[x: string]: any}> implements OnIn
     this.page = pageNum
     this.startSlice = this.pageSize * (pageNum - 1)
     this.endSlice = this.startSlice + this.pageSize
+  }
+
+  raiseEdit(entity: T): void {
+    this.onEdit.emit(entity)
   }
 
 }

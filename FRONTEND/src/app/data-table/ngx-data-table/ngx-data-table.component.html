@@ -1,40 +1,46 @@
-<div class="table-responsive">
-    <table class="table table-secondary table-striped table-sm">
+
+    <div class="table-responsive">
+      <table class="table table-light table-striped table-sm">
         <thead>
-            <tr>
-                <th *ngFor="let col of columns" scope="col">
-                    {{ col.title }}
-                </th>
-            </tr>
+          <tr>
+            <th *ngFor="let col of columns" scope="col">
+              {{ col.title }}
+            </th>
+            <th></th>
+          </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let row of list | slice:startSlice:endSlice">
-                <td *ngFor="let col of columns">
-                    {{ row[col.key]}}
-                </td>
-                <td>
-                        <button type="submit" class="btn__edit btn-sm btn-outline-light" >Szerk.</button>
-                        <button type="button" class="btn-sm btn-danger">Törlés</button>
-                </td>
-            </tr>
+          <tr *ngFor="let row of list | slice:startSlice:endSlice">
+            <td *ngFor="let col of columns">
+              {{ row[col.key]}}
+            </td>
+            <td>
+              <div class="btn-group">
+                <button type="submit" class="btn__edit btn-sm btn-outline-light"
+                  (click)="raiseEdit(row)">Szerk.</button>
+                <button type="button" class="btn-sm btn-danger">Törlés</button>
+              </div>
+            </td>
+          </tr>
         </tbody>
-    </table>
-</div>
+      </table>
+    </div>
 
-<nav aria-label="Page navigation example">
-    <ul class="pagination mt-4">
-      <li class="page-item">
-        <button class="page-link btn__paginate" (click)="jumpToPage(page-1)" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-        </button>
-      </li>
-      <li *ngFor="let pageNum of pageList" class="page-item">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination mt-4">
+        <li class="page-item">
+          <button class="page-link btn__paginate" (click)="jumpToPage(page-1)" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </button>
+        </li>
+        <li *ngFor="let pageNum of pageList" class="page-item">
           <button class="page-link btn__paginate" (click)="jumpToPage(pageNum)">{{ pageNum }}</button>
         </li>
-      <li class="page-item">
-        <button class="page-link btn__paginate" (click)="jumpToPage(page+1)" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-        </button>
-      </li>
-    </ul>
-  </nav>
+        <li class="page-item">
+          <button class="page-link btn__paginate" (click)="jumpToPage(page+1)" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  

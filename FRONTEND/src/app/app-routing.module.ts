@@ -22,7 +22,7 @@ const routes: Routes = [
     component: KindergartenComponent
   },
   {
-    path: 'tagovoda/:id',
+    path: 'tagovoda/edit/:id',
     component: EditKindergartenComponent,
   },
   {
@@ -30,7 +30,7 @@ const routes: Routes = [
     component: EmployeeComponent
   },
   {
-    path: 'alkalmazott/:id',
+    path: 'alkalmazott/edit/:id',
     component: EditEmployeeComponent,
   },
   {
@@ -38,7 +38,7 @@ const routes: Routes = [
     component: GroupsComponent
   },
   {
-    path: 'csoport/:id',
+    path: 'csoport/edit/:id',
     component: EditGroupComponent,
   },
   {
@@ -46,7 +46,7 @@ const routes: Routes = [
     component: ChildrenComponent
   },
   {
-    path: 'gyermek/:id',
+    path: 'gyermek/edit/:id',
     component: EditChildComponent,
   },
   {
@@ -54,7 +54,7 @@ const routes: Routes = [
     component: SpecialClassesComponent
   },
   {
-    path: 'kulonora/:id',
+    path: 'kulonora/edit/:id',
     component: EditSpecialClassComponent,
   },
 ];

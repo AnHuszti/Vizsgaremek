@@ -1,1 +1,54 @@
-<p>edit-kindergarten works!</p>
+<div class="container bg__forms vh-100">
+    <h3 class="mt-4">Szerkesztés</h3>
+    
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-2">
+            <div class="">
+                <img class="" src="" alt="picture" srcset="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <form *ngIf="kindergarten$ | async as kindergarten">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="name" class="form-label">Név</label>
+                        <input [(ngModel)]="kindergarten['name']" name="name" type="text" class="form-control"
+                            placeholder="Név" aria-label="name" id="name">
+                    </div>
+                    <div class="col">
+                        <label for="address" class="form-label">Cím</label>
+                        <input [(ngModel)]="kindergarten['address']" name="address" type="text" class="form-control"
+                            placeholder="Cím" aria-label="address" id="address">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="numOfEmployees" class="form-label">Alkalmazottak száma</label>
+                        <input [(ngModel)]="kindergarten['numOfEmployees']" name="numOfEmployees" type="number" class="form-control" placeholder="Alkalmazottak száma"
+                        id="numOfEmployees">
+                    </div>
+                    <div class="col">
+                        <label for="numOfGroups" class="form-label">Csoportok száma</label>
+                        <input [(ngModel)]="kindergarten['numOfGroups']" name="numOfGroups" type="number" class="form-control" placeholder="Csoportok száma"
+                        id="numOfGroups">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col">
+                        <label for="maxHeadcountOfChildren" class="form-label">Max gyermek létszám</label>
+                        <input [(ngModel)]="kindergarten['maxHeadcountOfChildren']" name="maxHeadcountOfChildren" type="number" class="form-control" placeholder="Max gyermek létszám"
+                        id="maxHeadcountOfChildren">
+                    </div>
+                    <div class="col">
+                        <label for="actualHeadcountOfChildren" class="form-label">Csoportok száma</label>
+                        <input [(ngModel)]="kindergarten['actualHeadcountOfChildren']" name="actualHeadcountOfChildren" type="number" class="form-control" placeholder="Csoportok száma"
+                        id="actualHeadcountOfChildren">
+                    </div>
+                </div>
+                <button type="submit" class="btn-sm btn-outline-light btn__save mb-5">Mentés</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <ngx-edit-form></ngx-edit-form> -->

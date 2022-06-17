@@ -1,1 +1,91 @@
-<p>edit-group works!</p>
+<div class="container bg__forms vh-100">
+    <h3 class="mt-4">Szerkesztés</h3>
+    
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-2">
+            <div class="">
+                <img class="" src="" alt="picture" srcset="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <form *ngIf="group$ | async as group">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="name" class="form-label">Név</label>
+                        <input [(ngModel)]="group['name']" name="name" type="text" class="form-control"
+                            placeholder="Név" aria-label="name" id="name">
+                    </div>
+                    <div class="col">
+                        <label for="kindergarten" class="form-label">Tagóvoda</label>
+                        <select [(ngModel)]="group['kindergarten']" name="kindergarten" class="form-select"
+                            aria-label="Default select example">
+                            <option selected></option>
+                            <option value="Alpha">Alpha</option>
+                            <option value="Beta">Beta</option>
+                            <option value="Gamma">Gamma</option>
+                            <option value="Delta">Delta</option>
+                            <option value="Epsilon">Epsilon</option>
+                            <option value="Zéta">Zéta</option>
+                            <option value="Théta">Théta</option>
+                            <option value="Iota">Iota</option>
+                            <option value="Kappa">Kappa</option>
+                            <option value="Lambda">Lambda</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="agegroup" class="form-label">Korcsoport</label>
+                        <select [(ngModel)]="group['ageGroup']" name="agegroup" class="form-select"
+                            aria-label="Default select example">
+                            <option selected></option>
+                            <option value="kiscsoport">kiscsoport</option>
+                            <option value="középső csoport">középső csoport</option>
+                            <option value="nagycsoport">nagycsoport</option>
+                            <option value="vegyes">vegyes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="teacherFirst" class="form-label">1. Nevelő</label>
+                        <input [(ngModel)]="group['teacherFirst']" name="teacherFirst" type="text" class="form-control" placeholder="1. Nevelő"
+                        id="teacherFirst">
+                    </div>
+                    <div class="col">
+                        <label for="teacherSecond" class="form-label">2. Nevelő</label>
+                        <input [(ngModel)]="group['teacherSecond']" name="teacherSecond" type="text" class="form-control" placeholder="2. Nevelő"
+                        id="teacherSecond">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="nurse" class="form-label">Dajka</label>
+                        <input [(ngModel)]="group['nurse']" name="nurse" type="text" class="form-control" placeholder="Dajka"
+                        id="nurse">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="maxHeadcount" class="form-label">Max. létszám</label>
+                        <input [(ngModel)]="group['maxHeadcount']" name="maxHeadcount" type="number" class="form-control" placeholder="Max. létszám"
+                        id="maxHeadcount">
+                    </div>
+                    <div class="col">
+                        <label for="actualHeadcount" class="form-label">Aktuális létszám</label>
+                        <input [(ngModel)]="group['actualHeadcount']" name="actualHeadcount" type="number" class="form-control" placeholder="Aktuális létszám"
+                        id="actualHeadcount">
+                    </div>
+                </div>
+                <div class="my-3 form-check">
+                    <input [(ngModel)]="group['active']" name="active" type="checkbox" class="form-check-input"
+                        id="active">
+                    <label class="form-check-label" for="active">Aktív</label>
+                </div>
+                <button type="submit" class="btn-sm btn-outline-light btn__save mb-5">Mentés</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <ngx-edit-form></ngx-edit-form> -->

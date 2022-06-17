@@ -8,12 +8,17 @@ th {
     font-size: 20px;
 }
 
-h1 {
+h1, h3 {
     font-family: myH1Font, Helvetica, Arial, sans-serif;
     font-size: 40px !important;
 }
 
-h3, li, table {
+button {
+    font-family: myH1Font, Helvetica, Arial, sans-serif;
+    font-size: 20px !important;
+}
+
+li, table, form {
     font-family: myGeneralFont, Helvetica, Arial, sans-serif;
     //font-size: 40px !important;
 }

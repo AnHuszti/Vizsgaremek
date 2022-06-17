@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Employee } from 'src/app/model/employee';
 import { ConfigService } from 'src/app/service/config.service';
 import { EmployeeService } from 'src/app/service/employee.service';
 
@@ -18,9 +20,13 @@ export class EmployeeComponent implements OnInit {
   constructor(
     private config: ConfigService,
     private employeeService: EmployeeService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
   }
 
+  jumpToEdit(employee: Employee): void {
+    this.router.navigate(['/alkalmazott/edit', employee._id])
+  }
 }

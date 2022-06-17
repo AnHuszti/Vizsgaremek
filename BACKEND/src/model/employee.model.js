@@ -1,17 +1,6 @@
 const mongoose = require('mongoose')
 
 const EmployeeSchema = mongoose.Schema({
-    surname: String,
-    firstname: String,
-    kindergarten: String,
-    position: String,
-    group: String,
-    skills: String,
-    active: Boolean
-}, {
-    timeStamps: true
-})
-/* const EmployeeSchema = mongoose.Schema({
     surname: {
         type: String,
         required: true,
@@ -39,7 +28,10 @@ const EmployeeSchema = mongoose.Schema({
     active: {
         type: Boolean,
         default: true,
-    },
-}) */
+    }, 
+}, {
+    timestamps: true
+}
+)
 
 module.exports = mongoose.model('Employee', EmployeeSchema)

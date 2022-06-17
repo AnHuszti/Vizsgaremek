@@ -1,4 +1,4 @@
-export class Groups {
+export class Group {
     _id: string = '';
     name: string = '';
     kindergarten: string = '';

@@ -1,1 +1,71 @@
-<p>edit-employee works!</p>
+<div class="container bg__forms vh-100">
+    <h3 class="mt-4">Szerkesztés</h3>
+    
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-2">
+            <div class="">
+                <img class="" src="" alt="picture" srcset="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <form *ngIf="employee$ | async as employee">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="surname" class="form-label">Vezetetéknév</label>
+                        <input [(ngModel)]="employee['surname']" name="surname" type="text" class="form-control"
+                            placeholder="Vezetetéknév" aria-label="surname" id="surname">
+                    </div>
+                    <div class="col">
+                        <label for="firstname" class="form-label">Keresztnév</label>
+                        <input [(ngModel)]="employee['firstname']" name="firstname" type="text" class="form-control"
+                            placeholder="Keresztnév" aria-label="firstname" id="firstname">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="position" class="form-label">Munkakör</label>
+                        <input [(ngModel)]="employee['position']" name="position" type="text" class="form-control" placeholder="Munkakör"
+                        id="position">
+                    </div>
+                    <div class="col">
+                        <label for="skills" class="form-label">Egyéb kompertenciák</label>
+                        <input [(ngModel)]="employee['skills']" name="skills" type="text" class="form-control" placeholder="Egyéb kompertenciák"
+                        id="skills">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="kindergarten" class="form-label">Tagóvoda</label>
+                        <select [(ngModel)]="employee['kindergarten']" name="kindergarten" class="form-select"
+                            aria-label="Default select example">
+                            <option selected></option>
+                            <option value="Alpha">Alpha</option>
+                            <option value="Beta">Beta</option>
+                            <option value="Gamma">Gamma</option>
+                            <option value="Delta">Delta</option>
+                            <option value="Epsilon">Epsilon</option>
+                            <option value="Zéta">Zéta</option>
+                            <option value="Théta">Théta</option>
+                            <option value="Iota">Iota</option>
+                            <option value="Kappa">Kappa</option>
+                            <option value="Lambda">Lambda</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="group" class="form-label">Csoport</label>
+                        <input [(ngModel)]="employee['group']" name="group" type="text" class="form-control" placeholder="Csoport"
+                        id="group">
+                    </div>
+                </div>
+                <div class="my-3 form-check">
+                    <input [(ngModel)]="employee['active']" name="active" type="checkbox" class="form-check-input"
+                        id="active">
+                    <label class="form-check-label" for="active">Aktív</label>
+                </div>
+                <button type="submit" class="btn-sm btn-outline-light btn__save mb-5">Mentés</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <ngx-edit-form></ngx-edit-form> -->
