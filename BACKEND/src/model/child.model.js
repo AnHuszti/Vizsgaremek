@@ -6,6 +6,11 @@ const ChildSchema = mongoose.Schema({
     surname: {
         type: String,
         required: true,
+        validate: {
+            validator: function(value) {
+                return /^[a-űA-Ű \-\.]{5,25}$/.test(value)
+            }
+        }
     },
     firstname: {
         type: String,
@@ -14,6 +19,7 @@ const ChildSchema = mongoose.Schema({
     kindergarten: {
         type: String,
         required: true,
+        enum: ["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zéta", "Théta", "Iota", "Kappa", "Lambda"],
     },
     /* group: {
         type: mongoose.Schema.Types.ObjectId,

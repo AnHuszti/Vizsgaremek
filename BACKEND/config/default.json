@@ -2,6 +2,6 @@
     "database": {
         "user": "dbUser",
         "pass": "SFYyPNUtcFEVYDnX",
-        "host": "projectcluster.rrbspej.mongodb.net/?retryWrites=true&w=majority"
+        "host": "projectcluster.rrbspej.mongodb.net/KindergartenDB?retryWrites=true&w=majority"
     }
 }

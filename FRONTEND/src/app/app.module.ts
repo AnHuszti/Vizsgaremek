@@ -21,6 +21,8 @@ import { EditKindergartenComponent } from './page/edit-kindergarten/edit-kinderg
 import { EditEmployeeComponent } from './page/edit-employee/edit-employee.component';
 import { EditSpecialClassComponent } from './page/edit-special-class/edit-special-class.component';
 import { EditFormModule } from './edit-form/edit-form.module';
+import { FileUploaderComponent } from './common/file-uploader/file-uploader.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { EditFormModule } from './edit-form/edit-form.module';
     EditGroupComponent,
     EditKindergartenComponent,
     EditEmployeeComponent,
-    EditSpecialClassComponent 
+    EditSpecialClassComponent,
+    FileUploaderComponent 
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,12 @@ import { EditFormModule } from './edit-form/edit-form.module';
     DataTableModule,
     HttpClientModule,
     EditFormModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      positionClass: 'toast-bottom-full-width',
+      preventDuplicates: true,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,8 +4,8 @@ import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 export interface INgxTableColumn {
-  title: string, //header
-  key: string    //datakey
+    title: string, //header
+    key: string    //datakey
 }
 
 @Component({
@@ -21,6 +21,9 @@ export class NgxDataTableComponent<T extends {[x: string]: any}> implements OnIn
   @Input() columns: INgxTableColumn[] = []
 
   @Output() onEdit: EventEmitter<T> = new EventEmitter()
+  
+  @Output() onDelete: EventEmitter<T> = new EventEmitter()
+
 
   pageSize: number = 20
 
@@ -29,6 +32,9 @@ export class NgxDataTableComponent<T extends {[x: string]: any}> implements OnIn
   endSlice: number = 20
 
   page: number = 1
+
+  /* sorterKey: string = 'title';
+  sorterDirection: number = 1; */
 
   //entity: string = 
 
@@ -52,4 +58,8 @@ export class NgxDataTableComponent<T extends {[x: string]: any}> implements OnIn
     this.onEdit.emit(entity)
   }
 
+  deleteRow(entity: T): void {
+    this.onDelete.emit(entity)
+  }
+ 
 }

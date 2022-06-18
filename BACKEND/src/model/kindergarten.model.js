@@ -7,8 +7,8 @@ const KindergartenSchema = mongoose.Schema({
         type: String,
         required: true,
         validate: {
-            validator: function(v) {
-                return /^[a-űA-Ű \-\.]{5,25}$/.test(v)
+            validator: function(value) {
+                return /^[a-űA-Ű]{2,25}$/.test(value)
             }
         }
     },

@@ -6,9 +6,17 @@ module.exports = (model) => {
             const newEntity = new model(body);
             const error = newEntity.validateSync();
             if (!error) {
-                await newEntity.save()
-                const updatedEntity = await model.findById(id)
-                return updatedEntity
+                return model.findByIdAndUpdate(id, body, {new: true})
+            }
+            throw new Error(error)
+        },
+        createOne: async (body) => {
+            //console.log(body);
+            const newEntity = new model(body);
+            const error = newEntity.validateSync();
+            if (!error) {
+                console.log(newEntity);
+                return newEntity.save()
             }
             throw new Error(error)
         },

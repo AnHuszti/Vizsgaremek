@@ -1,0 +1,7 @@
+{
+    "database": {
+        "user": "dbUser",
+        "pass": "SFYyPNUtcFEVYDnX",
+        "host": "projectcluster.rrbspej.mongodb.net/?retryWrites=true&w=majority"
+    }
+}

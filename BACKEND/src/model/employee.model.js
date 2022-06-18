@@ -29,6 +29,9 @@ const EmployeeSchema = mongoose.Schema({
         type: Boolean,
         default: true,
     }, 
+    image: {
+        type: String
+    }
 }, {
     timestamps: true
 }

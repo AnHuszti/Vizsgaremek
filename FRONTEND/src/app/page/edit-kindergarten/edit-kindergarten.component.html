@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <form *ngIf="kindergarten$ | async as kindergarten">
+            <form (ngSubmit)="onSave(kindergarten)" *ngIf="kindergarten$ | async as kindergarten">
                 <div class="row mb-3">
                     <div class="col">
                         <label for="name" class="form-label">Név</label>
@@ -40,12 +40,15 @@
                         id="maxHeadcountOfChildren">
                     </div>
                     <div class="col">
-                        <label for="actualHeadcountOfChildren" class="form-label">Csoportok száma</label>
-                        <input [(ngModel)]="kindergarten['actualHeadcountOfChildren']" name="actualHeadcountOfChildren" type="number" class="form-control" placeholder="Csoportok száma"
+                        <label for="actualHeadcountOfChildren" class="form-label">Aktuális létszám</label>
+                        <input [(ngModel)]="kindergarten['actualHeadcountOfChildren']" name="actualHeadcountOfChildren" type="number" class="form-control" placeholder="Aktuális létszám"
                         id="actualHeadcountOfChildren">
                     </div>
                 </div>
-                <button type="submit" class="btn-sm btn-outline-light btn__save mb-5">Mentés</button>
+                <button type="submit" class="btn-sm w-100 btn-outline-light btn__save mb-5">
+                    Mentés
+                    <i class="fas fa-save    "></i>
+                </button>
             </form>
         </div>
     </div>

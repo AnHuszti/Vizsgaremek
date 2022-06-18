@@ -6,5 +6,6 @@ export class Employee {
     kindergarten: string = '';
     group?: string = '';
     skills?: string = '';
-    active: boolean = true
+    active: boolean = true;
+    image?: string = ''
 }

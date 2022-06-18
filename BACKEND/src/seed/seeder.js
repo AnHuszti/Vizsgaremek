@@ -1,13 +1,13 @@
 const fsp = require('fs').promises;
 const { join } = require('path');
-const KindergartenModel = require('../model/kindergarten.model');
+const GroupModel = require('../model/group.model');
 
 ( async () => {
-    const kindergartenJson = await fsp.readFile(
-        join(__dirname, 'kindergarten.json'),
+    const groupJson = await fsp.readFile(
+        join(__dirname, 'groups.json'),
         'utf8',
     );
-    const kindergartens = JSON.parse(kindergartenJson);
-    console.log(kindergartens);
-    return await KindergartenModel.insertMany(kindergartens);
+    const groups = JSON.parse(groupJson);
+    //console.log(groups);
+    return await GroupModel.insertMany(groups);
 })();

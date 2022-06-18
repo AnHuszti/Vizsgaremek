@@ -21,7 +21,7 @@ export class ConfigService {
   ]
 
   kindergartenTableColumns: INgxTableColumn[] = [
-    {key: '_id', title: '#'},
+    //{key: '_id', title: '#'},
     {key: 'name', title: 'NÉV'},
     {key: 'address', title: 'TELEPHELY'}, 
     {key: 'numOfEmployees', title: 'ALKALMAZOTTAK SZÁMA'},
@@ -32,7 +32,7 @@ export class ConfigService {
   ]
 
   employeeTableColumns: INgxTableColumn[] = [
-    {key: '_id', title: '#'},
+    // {key: '_id', title: '#'},
     {key: 'surname', title: 'VEZETÉKNÉV'},
     {key: 'firstname', title: 'KERESZTNÉV'},
     {key: 'position', title: 'MUNKAKÖR'},
@@ -43,7 +43,7 @@ export class ConfigService {
   ]
 
   groupsTableColumns: INgxTableColumn[] = [
-    {key: '_id', title: '#'},
+    // {key: '_id', title: '#'},
     {key: 'name', title: 'NÉV'},
     {key: 'kindergarten', title: 'TAGÓVODA'}, // inkább telephely???
     {key: 'ageGroup', title: 'KORCSOPORT'},
@@ -56,7 +56,7 @@ export class ConfigService {
   ]
   
   childrenTableColumns: INgxTableColumn[] = [
-    {key: '_id', title: '#'},
+    // {key: '_id', title: '#'},
     {key: 'surname', title: 'VEZETÉKNÉV'},
     {key: 'firstname', title: 'KERESZTNÉV'},
     {key: 'age', title: 'KOR'},
@@ -70,7 +70,7 @@ export class ConfigService {
   ]
   
   specialClassesTableColumns: INgxTableColumn[] = [
-    {key: '_id', title: '#'},
+    // {key: '_id', title: '#'},
     {key: 'name', title: 'NÉV'},
     // {key: 'specification', title: 'SPECIFIKÁCIÓ'}, maybe unnecessary
     {key: 'level', title: 'SZINT'},
