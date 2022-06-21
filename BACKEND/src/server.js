@@ -6,6 +6,10 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const fileUpload = require('express-fileupload')
 const {join} = require('path')
+const swaggerUi = require('swagger-ui-express')
+const YAML = require('yamljs')
+
+const swaggerDocument = YAML.load('./docs/swagger.yaml')
 
 //mongoose.Promise = global.Promise -> talán nem kell
 
@@ -35,6 +39,8 @@ app.use(cors()) // connect from other domain
 app.use(express.static('public'))
 app.use(bodyParser.json())
 
+const authenticateJwt = require('./module/auth/authenticate')
+
 /* //upload files
 app.use(fileUpload())
 app.post('/upload', (req, res) => {
@@ -57,16 +63,22 @@ app.post('/upload', (req, res) => {
 }) */
 
 //Children
-app.use('/children', require('./controller/child/child-router'))
+app.use('/children', authenticateJwt, require('./controller/child/child-router'))
 
 //Employees
-app.use('/employees', require('./controller/employee/employee-router'))
+app.use('/employees', authenticateJwt, require('./controller/employee/employee-router'))
 
 //Groups
-app.use('/groups', require('./controller/group/group-router'))
+app.use('/groups', authenticateJwt, require('./controller/group/group-router'))
 
 //Kindergartens
-app.use('/kindergartens', require('./controller/kindergarten/kindergarten-router'))
+app.use('/kindergartens', authenticateJwt, require('./controller/kindergarten/kindergarten-router'))
+
+//Login
+app.use('/login', require('./controller/login/login-router'))
+
+//Swagger
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 //Home
 app.use('/', (req, res) => {

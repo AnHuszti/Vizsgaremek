@@ -19,12 +19,12 @@
                 <button type="submit" class="btn__edit btn-sm btn-outline-light"
                   (click)="raiseEdit(row)">
                   Szerk.
-                  <i class="fas fa-eye    "></i>
+                  <!-- <i class="fas fa-eye    "></i> -->
                 </button>
                 <button type="button" class="btn-sm btn-danger"
                 (click)="deleteRow(row)">
                   Törlés
-                  <i class="fas fa-trash" aria-hidden="true"></i>
+                  <!-- <i class="fas fa-trash" aria-hidden="true"></i> -->
                 </button>
               </div>
             </td>
@@ -36,15 +36,15 @@
     <nav aria-label="Page navigation example">
       <ul class="pagination mt-4">
         <li class="page-item">
-          <button class="page-link btn__paginate" (click)="jumpToPage(page-1)" aria-label="Previous">
+          <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(page-1)" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
           </button>
         </li>
         <li *ngFor="let pageNum of pageList" class="page-item">
-          <button class="page-link btn__paginate" (click)="jumpToPage(pageNum)">{{ pageNum }}</button>
+          <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(pageNum)">{{ pageNum }}</button>
         </li>
         <li class="page-item">
-          <button class="page-link btn__paginate" (click)="jumpToPage(page+1)" aria-label="Next">
+          <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(page+1)" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
           </button>
         </li>

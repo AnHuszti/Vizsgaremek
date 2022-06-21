@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,9 @@ import { EditSpecialClassComponent } from './page/edit-special-class/edit-specia
 import { EditFormModule } from './edit-form/edit-form.module';
 import { FileUploaderComponent } from './common/file-uploader/file-uploader.component';
 import { ToastrModule } from 'ngx-toastr';
+import { LoginComponent } from './page/login/login.component';
+import { JwtInterceptor } from './service/jwt.interceptor';
+import { AuthService } from './service/auth.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,8 @@ import { ToastrModule } from 'ngx-toastr';
     EditKindergartenComponent,
     EditEmployeeComponent,
     EditSpecialClassComponent,
-    FileUploaderComponent 
+    FileUploaderComponent,
+    LoginComponent 
   ],
   imports: [
     BrowserModule,
@@ -50,13 +54,23 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     EditFormModule,
     FormsModule,
+    ReactiveFormsModule,
     ToastrModule.forRoot({
       timeOut: 4000,
       positionClass: 'toast-bottom-full-width',
       preventDuplicates: true,
     })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      deps: [
+        AuthService,
+      ],
+      multi: true // more interceptor possible
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

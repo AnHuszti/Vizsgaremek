@@ -11,11 +11,16 @@ import { EditKindergartenComponent } from './page/edit-kindergarten/edit-kinderg
 import { EditGroupComponent } from './page/edit-group/edit-group.component';
 import { EditEmployeeComponent } from './page/edit-employee/edit-employee.component';
 import { EditSpecialClassComponent } from './page/edit-special-class/edit-special-class.component';
+import { LoginComponent } from './page/login/login.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'tagovodak',

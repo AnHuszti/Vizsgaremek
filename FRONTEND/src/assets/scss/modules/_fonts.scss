@@ -4,8 +4,8 @@ header h1 {
 }
 
 th {
-    font-family: myHeaderFont, Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-family: myGeneralFont, Helvetica, Arial, sans-serif;
+    font-size: 12px;
 }
 
 h1, h3 {
@@ -15,7 +15,7 @@ h1, h3 {
 
 button {
     font-family: myH1Font, Helvetica, Arial, sans-serif;
-    font-size: 20px !important;
+    font-size: 18px !important;
 }
 
 li, table, form {
@@ -37,6 +37,6 @@ li, table, form {
 
 @font-face {
     font-family: myGeneralFont;
-    src: url(../../fonts/Mulish-VariableFont_wght.ttf);
+    src: url(../../fonts/Barlow/Barlow-Light.ttf);
     //font-weight: 100;
   }

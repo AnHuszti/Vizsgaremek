@@ -130,9 +130,9 @@
   background-color: colors.$light-bg-color;
   
   &-brand {
+    box-shadow: inset -1px 0 0 colors.$light-bg-color-alfa; // 0, 0, 0, 0.25 
     padding-top: .75rem;
     padding-bottom: .75rem;
-    box-shadow: inset -1px 0 0 colors.$light-bg-color-alfa; // 0, 0, 0, 0.25 
 
     &-logo {
       color: colors.$light-font-color;
