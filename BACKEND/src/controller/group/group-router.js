@@ -1,6 +1,6 @@
 const express = require('express')
 const Group = require('../../model/group.model')
-const controller = require('../base/base-controller')(Group)
+const controller = require('../base/base-controller')(Group, ['kindergarten'])
 
 const router = express.Router()
 

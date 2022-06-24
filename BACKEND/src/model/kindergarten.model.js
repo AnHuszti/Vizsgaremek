@@ -50,6 +50,8 @@ const KindergartenSchema = mongoose.Schema({
             ref: 'Group'
         }
     ]
+}, {
+    timestamps: true
 })
 
 module.exports = mongoose.model('Kindergarten', KindergartenSchema)
