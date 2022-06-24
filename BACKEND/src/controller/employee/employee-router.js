@@ -1,6 +1,6 @@
 const express = require('express')
 const Employee = require('../../model/employee.model')
-const controller = require('../base/base-controller')(Employee)
+const controller = require('../base/base-controller')(Employee, ['kindergartens'])
 
 const router = express.Router()
 

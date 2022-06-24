@@ -32,6 +32,24 @@ const KindergartenSchema = mongoose.Schema({
         type: Number,
         required: true,
     },
+    employees: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Employee'
+        }
+    ],
+    children: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Child'
+        }
+    ],
+    groups: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Group'
+        }
+    ]
 })
 
 module.exports = mongoose.model('Kindergarten', KindergartenSchema)

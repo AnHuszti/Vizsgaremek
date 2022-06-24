@@ -118,6 +118,118 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /employees:
+    get:
+      description: Return a list of employees
+      security: 
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Success
+          content: 
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Employee'
+    post:
+      description: Creates a new employee
+      security: 
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Employee'
+      responses:
+        '201':
+          description: Employee has been created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /employees/{_id}:
+    get:
+      description: Get an employee
+      security: 
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content: 
+            application/json:
+              schema: 
+                type: object
+                items: 
+                  $ref: '#/components/schemas/Employee'
+        '404':
+          description: Employee based on id isn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    patch:
+      description: Updates a Employee
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Employee'
+      responses:
+        '200':
+          description: Employee has been updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Employee'
+        '501':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      description: Removes an employee
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Employee has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+        '404':
+          description: Employee based on id isn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   securitySchemes:
     bearerAuth:
@@ -141,9 +253,11 @@ components:
         firstname: 
           type: string
         kindergarten: 
-          type: string
+          type: mongoose.Schema.Types.ObjectId
+          ref: 'Kindergarten'
         group: 
-          type: string
+          type: mongoose.Schema.Types.ObjectId
+          ref: 'Group'
         age:
           type: number
         mothername: 
@@ -151,6 +265,32 @@ components:
         phone:
           type: string
         picture:
+          type: string
+        active: 
+          type: boolean
+    Employee:
+      type: object
+      required:
+        - surname
+        - firstname
+        - kindergarten
+        - position
+      properties:
+        surname: 
+          type: string
+        firstname: 
+          type: string
+        kindergarten: 
+          type: mongoose.Schema.Types.ObjectId
+          ref: 'Kindergarten'
+        position:
+          type: string
+        group: 
+          type: mongoose.Schema.Types.ObjectId
+          ref: 'Group'
+        skills: 
+          type: string
+        image:
           type: string
         active: 
           type: boolean

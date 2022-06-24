@@ -7,13 +7,17 @@
 
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
             <div class="btn-toolbar mb-2 mb-md-0">
-                <button type="button" class="btn-sm btn__new btn-outline-light" (click)="jumpToEdit(new)">Új <!-- [routerLink]="['/gyermek/edit', 0 ]" -->
+                <button type="button" class="btn-sm btn__new btn-outline-light" [routerLink]="['/gyermek/edit', 0 ]">Új <!--(click)="jumpToEdit(new)"  -->
                     gyermek</button>
             </div>
         </div>
 
         <ngx-data-table *ngIf="list$ | async as list" [columns]="columns" [list]="list" (onEdit)="jumpToEdit($event)">
         </ngx-data-table>
+
+        <pre>{{kindergartens$ | async | json}}</pre>
+        <pre> {{groups$ | async | json}}</pre>
+       
 
     </div>
 </div>

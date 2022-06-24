@@ -7,9 +7,14 @@ const GroupSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    kindergarten: {
+    /* kindergarten: {
         type: String,
         required: true,
+    }, */
+    kindergarten: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Kindergarten',
+        reqired: true
     },
     teacherFirst: {
         type: String,
@@ -27,6 +32,11 @@ const GroupSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    /* ageGroup: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'AgeGroup',
+        reqired: true
+    }, */
     maxHeadcount: {
         type: Number,
         required: true,
@@ -39,12 +49,18 @@ const GroupSchema = mongoose.Schema({
         type: Boolean,
         default: true,
     },
-    /* children: [
+    children: [
         {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Child'
         }
-    ] */
+    ],
+    employees: [
+        {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Employee'
+        }
+    ]
 }, {
     timeStamps: true
 })

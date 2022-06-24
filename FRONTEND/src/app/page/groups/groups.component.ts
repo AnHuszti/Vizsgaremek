@@ -27,4 +27,17 @@ export class GroupsComponent implements OnInit {
   jumpToEdit(group: Group): void {
     this.router.navigate(['/csoport/edit', group._id])
   }
+
+  deleteEntity(group: Group): void {
+    if (group['_id']) {
+      this.groupsService.delete(group['_id']).subscribe({
+        next: ()  => {
+          //this.messageService.showDelete(`${group['name']} csoport törölve`)
+          this.list$ = this.groupsService.getAll()
+        },
+        error: err => console.error(err)
+        //alert      
+      })
+    }
+  }
 }

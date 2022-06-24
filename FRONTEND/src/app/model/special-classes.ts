@@ -1,5 +1,5 @@
 export class SpecialClasses {
-    _id: string = '';
+    _id?: string = '';
     name: string = '';
     //specification?: string =''; maybe unnecessary
     level?: string = '';

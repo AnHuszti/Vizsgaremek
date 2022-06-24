@@ -32,14 +32,16 @@ export class KindergartenComponent implements OnInit {
   }
 
   deleteEntity(kindergarten: Kindergarten): void {
-    this.kindergartenService.delete(kindergarten['_id']).subscribe({
-      next: ()  => {
-        this.messageService.showDelete(`${kindergarten['name']} tagóvoda törölve`)
-        this.list$ = this.kindergartenService.getAll()
-      },
-      error: err => console.error(err)
-      //alert      
-    })
+    if (kindergarten['_id']) {
+      this.kindergartenService.delete(kindergarten['_id']).subscribe({
+        next: ()  => {
+          this.messageService.showDelete(`${kindergarten['name']} tagóvoda törölve`)
+          this.list$ = this.kindergartenService.getAll()
+        },
+        error: err => console.error(err)
+        //alert      
+      })
+    }
   }
 
 }

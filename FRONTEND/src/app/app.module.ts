@@ -12,7 +12,7 @@ import { HomeComponent } from './page/home/home.component';
 import { KindergartenComponent } from './page/kindergarten/kindergarten.component';
 import { EmployeeComponent } from './page/employee/employee.component';
 import { GroupsComponent } from './page/groups/groups.component';
-import { ChildrenComponent } from './page/children/children.component';
+import { ChildComponent } from './page/child/child.component';
 import { SpecialClassesComponent } from './page/special-classes/special-classes.component';
 import { DataTableModule } from './data-table/data-table.module';
 import { EditChildComponent } from './page/edit-child/edit-child.component';
@@ -22,6 +22,8 @@ import { EditEmployeeComponent } from './page/edit-employee/edit-employee.compon
 import { EditSpecialClassComponent } from './page/edit-special-class/edit-special-class.component';
 import { EditFormModule } from './edit-form/edit-form.module';
 import { FileUploaderComponent } from './common/file-uploader/file-uploader.component';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './page/login/login.component';
 import { JwtInterceptor } from './service/jwt.interceptor';
@@ -36,7 +38,7 @@ import { AuthService } from './service/auth.service';
     KindergartenComponent,
     EmployeeComponent,
     GroupsComponent,
-    ChildrenComponent,
+    ChildComponent,
     SpecialClassesComponent,
     EditChildComponent,
     EditGroupComponent,
@@ -54,6 +56,7 @@ import { AuthService } from './service/auth.service';
     HttpClientModule,
     EditFormModule,
     FormsModule,
+    FontAwesomeModule,
     ReactiveFormsModule,
     ToastrModule.forRoot({
       timeOut: 4000,

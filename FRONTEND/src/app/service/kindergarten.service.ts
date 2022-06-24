@@ -3,19 +3,22 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Kindergarten } from '../model/kindergarten';
+import { BaseService } from './base.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class KindergartenService {
+export class KindergartenService extends BaseService<Kindergarten> {
 
-  apiUrl = environment.apiUrl;
+  //apiUrl = environment.apiUrl;
 
   constructor(
-    private http: HttpClient 
-  ) { }
+    http: HttpClient 
+  ) {
+    super(http, 'kindergartens')
+  }
 
-  create(entity: Kindergarten): Observable<Kindergarten> {
+  /* create(entity: Kindergarten): Observable<Kindergarten> {
     console.log(`3.log: ${entity['_id']}`)
     const newEntity = {
       name: entity['name'], 
@@ -26,9 +29,9 @@ export class KindergartenService {
       actualHeadcountOfChildren: entity['actualHeadcountOfChildren']
     }
     return this.http.post<Kindergarten>(`${this.apiUrl}kindergartens`, newEntity)
-  }
+  } */
 
-  getAll(): Observable<Kindergarten[]> {
+  /* getAll(): Observable<Kindergarten[]> {
     return this.http.get<Kindergarten[]>(`${this.apiUrl}kindergartens`)
   }
 
@@ -45,6 +48,6 @@ export class KindergartenService {
   delete(id: string): Observable<Kindergarten> {
     console.log(id);
     return this.http.delete<Kindergarten>(`${this.apiUrl}kindergartens/${id}`)
-  }
+  } */
 }
 

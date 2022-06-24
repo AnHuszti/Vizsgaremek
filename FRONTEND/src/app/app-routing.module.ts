@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeeComponent } from './page/employee/employee.component';
 import { GroupsComponent } from './page/groups/groups.component';
-import { ChildrenComponent } from './page/children/children.component';
+import { ChildComponent } from './page/child/child.component';
 import { HomeComponent } from './page/home/home.component';
 import { SpecialClassesComponent } from './page/special-classes/special-classes.component';
 import { KindergartenComponent } from './page/kindergarten/kindergarten.component';
@@ -48,7 +48,7 @@ const routes: Routes = [
   },
   {
     path: 'gyerekek',
-    component: ChildrenComponent
+    component: ChildComponent
   },
   {
     path: 'gyermek/edit/:id',

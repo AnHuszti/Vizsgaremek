@@ -63,16 +63,16 @@ app.post('/upload', (req, res) => {
 }) */
 
 //Children
-app.use('/children', authenticateJwt, require('./controller/child/child-router'))
+app.use('/children', /* authenticateJwt, */ require('./controller/child/child-router'))
 
 //Employees
-app.use('/employees', authenticateJwt, require('./controller/employee/employee-router'))
+app.use('/employees', /* authenticateJwt,  */require('./controller/employee/employee-router'))
 
 //Groups
-app.use('/groups', authenticateJwt, require('./controller/group/group-router'))
+app.use('/groups', /* authenticateJwt, */ require('./controller/group/group-router'))
 
 //Kindergartens
-app.use('/kindergartens', authenticateJwt, require('./controller/kindergarten/kindergarten-router'))
+app.use('/kindergartens', /* authenticateJwt, */ require('./controller/kindergarten/kindergarten-router'))
 
 //Login
 app.use('/login', require('./controller/login/login-router'))

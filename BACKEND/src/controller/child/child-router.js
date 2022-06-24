@@ -1,6 +1,6 @@
 const express = require('express')
 const Child = require('../../model/child.model')
-const controller = require('../base/base-controller')(Child)
+const controller = require('../base/base-controller')(Child, ['kindergartens'])
 
 const router = express.Router()
 
@@ -14,6 +14,7 @@ router.get('/:id', (req, res, next) => {
 })
 // Patch
 router.patch('/:id', (req, res, next) => {
+    console.log(`router: ${req.body.kindergarten} ${req.body.surname}`);
     return controller.updateOne(req, res, next)
 })
 // Create

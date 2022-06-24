@@ -8,9 +8,9 @@ const router = express.Router();
 //post
 router.post('/', async (req, res, next) => {
     /* const newUser = new User({
-        email: 'test@test.hu',
-        lastName: 'Test',
-        firstName: 'Elek',
+        email: 'teszt@teszt.hu',
+        lastName: 'Teszt',
+        firstName: 'Elemér',
         password: 'eztestpw'
     })
 
@@ -20,7 +20,7 @@ router.post('/', async (req, res, next) => {
         res.statusCode = 401
         res.json({error: 'Adatbázis hiba!'})
     }
-    return res.json({message: 'user created'}); */
+    return res.json({message: 'user created'});  */
 
     const { email, password } = req.body
     const user = await User.findOne({email})

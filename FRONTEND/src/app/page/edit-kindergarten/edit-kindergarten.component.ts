@@ -52,6 +52,7 @@ export class EditKindergartenComponent implements OnInit {
     console.log(`2. log: ${kindergarten['_id']}`)
     if (!kindergarten['_id']) {
       this.isNewEntity = true
+      kindergarten['_id'] = undefined
       this.kindergartenService.create(kindergarten).subscribe({
         next: newKindergarten => this.router.navigate(['/tagovodak']),
         error: err => console.error(err)

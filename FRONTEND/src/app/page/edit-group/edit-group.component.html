@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <form *ngIf="group$ | async as group">
+            <form (ngSubmit)="onSave(group)" *ngIf="group$ | async as group">
                 <div class="row mb-3">
                     <div class="col">
                         <label for="name" class="form-label">Név</label>
@@ -19,17 +19,8 @@
                         <label for="kindergarten" class="form-label">Tagóvoda</label>
                         <select [(ngModel)]="group['kindergarten']" name="kindergarten" class="form-select"
                             aria-label="Default select example">
-                            <option selected></option>
-                            <option value="Alpha">Alpha</option>
-                            <option value="Beta">Beta</option>
-                            <option value="Gamma">Gamma</option>
-                            <option value="Delta">Delta</option>
-                            <option value="Epsilon">Epsilon</option>
-                            <option value="Zéta">Zéta</option>
-                            <option value="Théta">Théta</option>
-                            <option value="Iota">Iota</option>
-                            <option value="Kappa">Kappa</option>
-                            <option value="Lambda">Lambda</option>
+                            <option selected>Válassz Óvodát!</option>
+                            <option *ngFor="let kindergarten of kindergartens$ | async" [value]="kindergarten['_id']"> {{ kindergarten.name}} </option>
                         </select>
                     </div>
                 </div>
@@ -82,7 +73,10 @@
                         id="active">
                     <label class="form-check-label" for="active">Aktív</label>
                 </div>
-                <button type="submit" class="btn-sm btn-outline-light btn__save mb-5">Mentés</button>
+                <button type="submit" class="btn-sm w-100 btn-outline-light btn__save mb-5">
+                    <span>Mentés </span>
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                </button>
             </form>
         </div>
     </div>

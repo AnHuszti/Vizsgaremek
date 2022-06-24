@@ -1,13 +1,15 @@
 module.exports = (model) => {
     return {
-        findAll: () => model.find({}),
+        findAll: () => model.find({}) ,
         findOne: (id) => model.findById(id),
         updateOne: async (id, body) => {
             const newEntity = new model(body);
             const error = newEntity.validateSync();
             if (!error) {
+                console.log(newEntity)
                 return model.findByIdAndUpdate(id, body, {new: true})
             }
+            console.log(error);
             throw new Error(error)
         },
         createOne: async (body) => {
@@ -16,7 +18,8 @@ module.exports = (model) => {
             const error = newEntity.validateSync();
             if (!error) {
                 console.log(newEntity);
-                return newEntity.save()
+                const saved = await newEntity.save()
+                return model.findById(saved._id)
             }
             throw new Error(error)
         },

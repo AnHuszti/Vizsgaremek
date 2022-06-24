@@ -12,6 +12,7 @@ const UserSchema = mongoose.Schema({
     },
     lastName: String,
     firstName: String,
+    //role: Number
 })
 
 UserSchema.plugin(require('mongoose-bcrypt'))

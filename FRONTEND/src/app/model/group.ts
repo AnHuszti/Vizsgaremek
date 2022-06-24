@@ -1,7 +1,9 @@
+import { Kindergarten } from "./kindergarten";
+
 export class Group {
-    _id: string = '';
+    _id?: string = '';
     name: string = '';
-    kindergarten: string = '';
+    kindergarten: string | Kindergarten = '';
     teacherFirst: string = '';
     teacherSecond: string = '';
     nurse: string = '';

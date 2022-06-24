@@ -1,5 +1,5 @@
 export class Kindergarten {
-    _id: string = '';
+    _id?: string = '';
     name: string = '';
     address: string = '';
     numOfEmployees: number = 0;
