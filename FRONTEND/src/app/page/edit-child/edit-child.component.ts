@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { IFileUploadResponse } from 'src/app/common/file-uploader/file-uploader.component';
@@ -53,7 +54,7 @@ export class EditChildComponent implements OnInit {
 
   private isNewEntity: boolean = false
 
-  onSave(child: Child): void {
+  onSave(childForm: NgForm, child: Child): void {
     console.log(`2. log: ${child['_id']}`)
     if (!child['_id']) {
       this.isNewEntity = true

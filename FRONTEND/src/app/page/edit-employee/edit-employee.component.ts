@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { IFileUploadResponse } from 'src/app/common/file-uploader/file-uploader.component';
@@ -54,7 +55,7 @@ export class EditEmployeeComponent implements OnInit {
 
   private isNewEntity: boolean = false
 
-  onSave(employee: Employee): void {
+  onSave(employeeForm: NgForm, employee: Employee): void {
 
     if (!employee['_id']) {
       this.isNewEntity = true

@@ -2,7 +2,7 @@
     <h3 class="mt-4">Szerkesztés</h3>
 
     <div class="row justify-content-center mt-4">
-        <form (ngSubmit)="onSave(group)" *ngIf="group$ | async as group" class="row">
+        <form #groupForm="ngForm" (ngSubmit)="onSave(groupForm, group)" *ngIf="group$ | async as group" class="row">
             <div class="form-group">
                 <input [(ngModel)]="group['_id']" type="hidden" name="id" class="user-select-none">
             </div>
@@ -21,6 +21,9 @@
                         <label for="name" class="form-label">Név</label>
                         <input [(ngModel)]="group['name']" name="name" type="text" class="form-control"
                             placeholder="Név" aria-label="name" id="name" required pattern="^[A-Ű][a-ű]+ [A-Ű][a-ű]+$">
+                        <div [hidden]="groupForm.controls['name'].valid" class="error-message text-danger">
+                            Csak betűket tartalmazhat, szóeleji nagybetűkkel.
+                        </div>
                     </div>
                     <div class="col">
                         <label for="kindergarten" class="form-label">Tagóvoda</label>
@@ -48,12 +51,18 @@
                         <input [(ngModel)]="group['teacherFirst']" name="teacherFirst" type="text" class="form-control"
                             placeholder="1. Nevelő" id="teacherFirst" required
                             pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
+                        <div [hidden]="groupForm.controls['teacherFirst'].valid" class="error-message text-danger">
+                            Csak betűket, pontot és kötőjelet tartalmazhat, szóeleji nagybetűkkel.
+                        </div>
                     </div>
                     <div class="col">
                         <label for="teacherSecond" class="form-label">2. Nevelő</label>
                         <input [(ngModel)]="group['teacherSecond']" name="teacherSecond" type="text"
                             class="form-control" placeholder="2. Nevelő" id="teacherSecond" required
                             pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
+                        <div [hidden]="groupForm.controls['teacherSecond'].valid" class="error-message text-danger">
+                            Csak betűket, pontot és kötőjelet tartalmazhat, szóeleji nagybetűkkel.
+                        </div>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -61,6 +70,9 @@
                         <label for="nurse" class="form-label">Dajka</label>
                         <input [(ngModel)]="group['nurse']" name="nurse" type="text" class="form-control"
                             placeholder="Dajka" id="nurse" required pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
+                        <div [hidden]="groupForm.controls['nurse'].valid" class="error-message text-danger">
+                            Csak betűket, pontot és kötőjelet tartalmazhat, szóeleji nagybetűkkel.
+                        </div>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -68,11 +80,17 @@
                         <label for="maxHeadcount" class="form-label">Max. létszám</label>
                         <input [(ngModel)]="group['maxHeadcount']" name="maxHeadcount" type="number"
                             class="form-control" placeholder="Max. létszám" id="maxHeadcount" required>
+                        <div [hidden]="groupForm.controls['maxHeadcount'].valid" class="error-message text-danger">
+                            Csak számot tartalmazhat.
+                        </div>
                     </div>
                     <div class="col">
                         <label for="actualHeadcount" class="form-label">Aktuális létszám</label>
                         <input [(ngModel)]="group['actualHeadcount']" name="actualHeadcount" type="number"
                             class="form-control" placeholder="Aktuális létszám" id="actualHeadcount" required>
+                            <div [hidden]="groupForm.controls['actualHeadcount'].valid" class="error-message text-danger">
+                                Csak számot tartalmazhat.
+                            </div>
                     </div>
                 </div>
                 <div class="my-3 form-check">
@@ -80,7 +98,9 @@
                         id="active">
                     <label class="form-check-label" for="active">Aktív</label>
                 </div>
-                <button type="submit" class="btn-sm w-100 btn-outline-light btn__save mb-5">
+                <button type="submit" 
+                class="btn-sm w-100 btn-outline-light btn__save mb-5"
+                [disabled]="!groupForm.valid">
                     <span>Mentés </span>
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>
                 </button>
@@ -88,5 +108,3 @@
         </form>
     </div>
 </div>
-
-<!-- <ngx-edit-form></ngx-edit-form> -->

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
 import { Observable } from 'rxjs';
@@ -48,8 +49,8 @@ export class EditKindergartenComponent implements OnInit {
 
   private isNewEntity: boolean = false
 
-  onSave(kindergarten: Kindergarten): void {
-    console.log(`2. log: ${kindergarten['_id']}`)
+  onSave(kindergartenForm: NgForm, kindergarten: Kindergarten): void {
+    
     if (!kindergarten['_id']) {
       this.isNewEntity = true
       kindergarten['_id'] = undefined

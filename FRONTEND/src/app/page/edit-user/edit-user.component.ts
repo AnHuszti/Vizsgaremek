@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { User } from 'src/app/model/user';
@@ -41,7 +42,7 @@ export class EditUserComponent implements OnInit {
 
   private isNewEntity: boolean = false
 
-  onSave(user: User): void {
+  onSave(userForm: NgForm, user: User): void {
     
     if (!user['_id']) {
       this.isNewEntity = true

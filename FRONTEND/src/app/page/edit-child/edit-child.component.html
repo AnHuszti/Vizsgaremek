@@ -3,7 +3,7 @@
 
     <div class="row justify-content-center mt-4">
         <div class="col-md-6">
-            <form (ngSubmit)="onSave(child)" *ngIf="child$ | async as child">
+            <form #childForm="ngForm" (ngSubmit)="onSave(childForm, child)" *ngIf="child$ | async as child">
                 <div class="form-group">
                     <input [(ngModel)]="child['_id']" type="hidden" name="id" class="user-select-none">
                 </div>
@@ -13,12 +13,19 @@
                         <input [(ngModel)]="child['surname']" name="surname" type="text" class="form-control"
                             placeholder="Vezetéknév" aria-label="surname" id="surname" required
                             pattern="^([A-Ű][a-ű.]+[ -])*[A-Ű][a-ű]+$">
+                            <div [hidden]="childForm.controls['surname'].valid" class="error-message text-danger">
+                                Csak betűket, pontot és kötőjelet tartalmazhat, szóeleji nagybetűvel.
+                            </div>
+                            
                     </div>
                     <div class="col">
                         <label for="firstname" class="form-label">Keresztnév</label>
                         <input [(ngModel)]="child['firstname']" name="firstname" type="text" class="form-control"
                             placeholder="Keresztnév" aria-label="firstname" id="firstname" required
                             pattern="^([A-Ű][a-ű.]+[ -])*[A-Ű][a-ű]+$">
+                            <div [hidden]="childForm.controls['firstname'].valid" class="error-message text-danger">
+                                Csak betűket, pontot és kötőjelet tartalmazhat, szóeleji nagybetűvel.
+                            </div>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -59,12 +66,18 @@
                         <input [(ngModel)]="child['mothername']" name="mothername" type="text" class="form-control"
                             placeholder="Anya neve" aria-label="surname" id="mothername" required
                             pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
+                            <div [hidden]="childForm.controls['mothername'].valid" class="error-message text-danger">
+                                Csak betűket, pontot és kötőjelet tartalmazhat, szóeleji nagybetűvel.
+                            </div>
                     </div>
                     <div class="col">
                         <label for="phone" class="form-label">Telefon</label>
                         <input [(ngModel)]="child['phone']" name="phone" type="text" class="form-control"
                             placeholder="Telefon" aria-label="phone" id="phone" required
                             pattern="^\+36\(((1|20|30|70)\) [0-9]{3,}-[0-9]{4,}|([237][1-9]|[45689][0-9])\) [0-9]{3,}-[0-9]{3,})$">
+                            <div [hidden]="childForm.controls['phone'].valid" class="error-message text-danger">
+                                Minta: +36(20) 123-4567
+                            </div>
                     </div>
                 </div>
                 <div class="my-3 form-check">
@@ -72,7 +85,8 @@
                         id="active">
                     <label class="form-check-label" for="active">Aktív</label>
                 </div>
-                <button type="submit" class="btn-sm w-100 btn-outline-light btn__save mb-5">
+                <button type="submit" class="btn-sm w-100 btn-outline-light btn__save mb-5"
+                [disabled]="!childForm.valid">
                     <span>Mentés </span>
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>
                 </button>

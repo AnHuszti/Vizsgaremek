@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { SpecialClass } from 'src/app/model/special-class';
@@ -47,7 +48,7 @@ export class EditSpecialClassComponent implements OnInit {
 
   private isNewEntity: boolean = false
 
-  onSave(specialClass: SpecialClass): void {
+  onSave(specialClassForm: NgForm, specialClass: SpecialClass): void {
     
     if (!specialClass['_id']) {
       this.isNewEntity = true

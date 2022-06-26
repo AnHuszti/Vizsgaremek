@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Observable, switchMap } from 'rxjs';
 import { IFileUploadResponse } from 'src/app/common/file-uploader/file-uploader.component';
 import { Group } from 'src/app/model/group';
 import { GroupsService } from 'src/app/service/groups.service';
 import { KindergartenService } from 'src/app/service/kindergarten.service';
+import { MessageService } from 'src/app/service/message.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -44,6 +47,8 @@ export class EditGroupComponent implements OnInit {
     private groupService: GroupsService,
     private activatedRoute: ActivatedRoute,
     private kindergartenService: KindergartenService,
+    private toastr: ToastrService,
+    private messageService: MessageService
   ) { }
 
   ngOnInit(): void {
@@ -51,8 +56,11 @@ export class EditGroupComponent implements OnInit {
 
   private isNewEntity: boolean = false
 
-  onSave(group: Group): void {
-    console.log(`2. log: ${group['_id']}`)
+  onSave(groupForm: NgForm, group: Group): void {
+    if (groupForm.invalid) {
+      this.messageService.showError()
+    }
+
     if (!group['_id']) {
       this.isNewEntity = true
       group['_id'] = undefined
@@ -62,8 +70,11 @@ export class EditGroupComponent implements OnInit {
       }
 
       this.groupService.create(group).subscribe({
-        next: newGroup => this.router.navigate(['/csoportok']),
-        error: err => console.error(err)
+        next: newGroup => { 
+          this.messageService.showSuccess('Újcsoport hozzáadva.'),
+          this.router.navigate(['/csoportok'])
+        },
+        error: err => this.messageService.showError()
       })
     }
     else if (group._id && !this.isNewEntity){
@@ -74,9 +85,11 @@ export class EditGroupComponent implements OnInit {
       }
 
       this.groupService.update(group).subscribe({
-      next: updatedGroup => this.router.navigate(['/csoportok']),
-      error: err => console.error(err)
-      //alert! 
+      next: updatedGroup => {
+        this.messageService.showSuccess('Módosítás megtörtént.'),
+        this.router.navigate(['/csoportok'])
+      },
+      error: err => this.messageService.showError()
     })
     }
   }
@@ -89,4 +102,5 @@ export class EditGroupComponent implements OnInit {
   getImageSrc(group: Group): string {
     return `${environment.apiUrl}${group.image}`
   }
+
 }

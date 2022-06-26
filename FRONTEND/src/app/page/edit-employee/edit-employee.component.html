@@ -2,7 +2,7 @@
     <h3 class="mt-4">Szerkesztés</h3>
     
     <div class="row justify-content-center mt-4">
-        <form (ngSubmit)="onSave(employee)" *ngIf="employee$ | async as employee" class="row">
+        <form #employeeForm="ngForm" (ngSubmit)="onSave(employeeForm, employee)" *ngIf="employee$ | async as employee" class="row">
             <div class="form-group">
                 <input [(ngModel)]="employee['_id']" type="hidden" name="id" class="user-select-none">
             </div>
@@ -21,12 +21,20 @@
                     <div class="col">
                         <label for="surname" class="form-label">Vezetetéknév</label>
                         <input [(ngModel)]="employee['surname']" name="surname" type="text" class="form-control"
-                            placeholder="Vezetetéknév" aria-label="surname" id="surname" required pattern="^([A-Ű][a-ű.]+[ -])*[A-Ű][a-ű]+$">
+                            placeholder="Vezetetéknév" aria-label="surname" id="surname" 
+                            required pattern="^([A-Ű][a-ű.]+[ -])*[A-Ű][a-ű]+$">
+                            <div [hidden]="employeeForm.controls['surname'].valid" class="error-message text-danger">
+                                Csak betűkett, pontot és kötőjelet tartalmazhat, szóeleji nagybetűvel.
+                            </div>
                     </div>
                     <div class="col">
                         <label for="firstname" class="form-label">Keresztnév</label>
                         <input [(ngModel)]="employee['firstname']" name="firstname" type="text" class="form-control"
-                            placeholder="Keresztnév" aria-label="firstname" id="firstname" required pattern="^([A-Ű][a-ű.]+[ -])*[A-Ű][a-ű]+$">
+                            placeholder="Keresztnév" aria-label="firstname" id="firstname" 
+                            required pattern="^([A-Ű][a-ű.]+[ -])*[A-Ű][a-ű]+$">
+                            <div [hidden]="employeeForm.controls['firstname'].valid" class="error-message text-danger">
+                                Csak betűket, pontot és kötőjelet tartalmazhat, szóeleji nagybetűvel.
+                            </div>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -68,7 +76,8 @@
                         id="active">
                     <label class="form-check-label" for="active">Aktív</label>
                 </div>
-                <button type="submit" class="btn-sm w-100 btn-outline-light btn__save mb-5">
+                <button type="submit" class="btn-sm w-100 btn-outline-light btn__save mb-5"
+                [disabled]="!employeeForm.valid">
                     <span>Mentés </span>
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>
                 </button>

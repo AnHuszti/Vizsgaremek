@@ -3,7 +3,7 @@
 
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form (ngSubmit)="onSave(user)" *ngIf="user$ | async as user">
+            <form #userForm="ngForm" (ngSubmit)="onSave(userForm, user)" *ngIf="user$ | async as user">
                 <div class="form-group">
                     <input [(ngModel)]="user['_id']" type="hidden" name="id" class="user-select-none">
                 </div>
@@ -39,7 +39,8 @@
                     </div>
                 </div>
                 
-                <button type="submit" class="btn-sm w-100 btn-outline-light btn__save mb-5">
+                <button type="submit" class="btn-sm w-100 btn-outline-light btn__save mb-5"
+                [disabled]="!userForm.valid">
                     <span>Mentés </span>
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>
                 </button>
