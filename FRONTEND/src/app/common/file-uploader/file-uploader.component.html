@@ -1,12 +1,11 @@
-<!-- <input 
-name="name"
-[{ngModel}]=""
+<input
+#fileUpload
 type="file" class="file-input"
 (change)="onFileSelected($event)" 
 >
 
 <div class="file-upload">
-    <button type="button" (click)="fileUpload.click">
+    <button type="button" (click)="fileUpload.click()" class="btn-sm w-50 btn-outline-light btn__edit">
         {{fileName}}
     </button>
-</div> -->
+</div>

@@ -9,23 +9,30 @@
         </div>
         <div class="col-md-6">
             <form (ngSubmit)="onSave(employee)" *ngIf="employee$ | async as employee">
+                <div class="form-group">
+                    <input [(ngModel)]="employee['_id']" type="hidden" name="id" class="user-select-none">
+                </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="surname" class="form-label">Vezetetéknév</label>
                         <input [(ngModel)]="employee['surname']" name="surname" type="text" class="form-control"
-                            placeholder="Vezetetéknév" aria-label="surname" id="surname">
+                            placeholder="Vezetetéknév" aria-label="surname" id="surname" required pattern="^([A-Ű][a-ű.]+[ -])*[A-Ű][a-ű]+$">
                     </div>
                     <div class="col">
                         <label for="firstname" class="form-label">Keresztnév</label>
                         <input [(ngModel)]="employee['firstname']" name="firstname" type="text" class="form-control"
-                            placeholder="Keresztnév" aria-label="firstname" id="firstname">
+                            placeholder="Keresztnév" aria-label="firstname" id="firstname" required pattern="^([A-Ű][a-ű.]+[ -])*[A-Ű][a-ű]+$">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="position" class="form-label">Munkakör</label>
-                        <input [(ngModel)]="employee['position']" name="position" type="text" class="form-control" placeholder="Munkakör"
-                        id="position">
+                        <select [(ngModel)]="employee['position']" name="position" class="form-select"
+                            aria-label="Default select" required>
+                            <option selected>Válassz munkakört!</option>
+                            <option *ngFor="let position of positions" [value]="position"> {{ position }}
+                            </option>
+                        </select>
                     </div>
                     <div class="col">
                         <label for="skills" class="form-label">Egyéb kompertenciák</label>
@@ -37,7 +44,7 @@
                     <div class="col">
                         <label for="kindergarten" class="form-label">Tagóvoda</label>
                         <select [(ngModel)]="employee['kindergarten']" name="kindergarten" class="form-select"
-                            aria-label="Default select example">
+                            aria-label="Default select" required>
                             <option selected>Válassz Óvodát!</option>
                             <option *ngFor="let kindergarten of kindergartens$ | async" [value]="kindergarten['_id']"> {{ kindergarten.name}} </option>
                         </select>
@@ -45,7 +52,7 @@
                     <div class="col">
                         <label for="group" class="form-label">Csoport</label>
                         <select [(ngModel)]="employee['group']" name="group" class="form-select"
-                            aria-label="Default select example">
+                            aria-label="Default select" required>
                             <option selected>Válassz Csoportot!</option>
                             <option *ngFor="let group of groups$ | async" [value]="group['_id']"> {{ group.name}} </option>
                         </select>

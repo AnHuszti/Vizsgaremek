@@ -9,16 +9,19 @@
         </div>
         <div class="col-md-6">
             <form (ngSubmit)="onSave(group)" *ngIf="group$ | async as group">
+                <div class="form-group">
+                    <input [(ngModel)]="group['_id']" type="hidden" name="id" class="user-select-none">
+                </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="name" class="form-label">Név</label>
                         <input [(ngModel)]="group['name']" name="name" type="text" class="form-control"
-                            placeholder="Név" aria-label="name" id="name">
+                            placeholder="Név" aria-label="name" id="name" required pattern="^[A-Ű][a-ű]+ [A-Ű][a-ű]+$">
                     </div>
                     <div class="col">
                         <label for="kindergarten" class="form-label">Tagóvoda</label>
                         <select [(ngModel)]="group['kindergarten']" name="kindergarten" class="form-select"
-                            aria-label="Default select example">
+                            aria-label="Default select" required>
                             <option selected>Válassz Óvodát!</option>
                             <option *ngFor="let kindergarten of kindergartens$ | async" [value]="kindergarten['_id']"> {{ kindergarten.name}} </option>
                         </select>
@@ -28,12 +31,9 @@
                     <div class="col">
                         <label for="agegroup" class="form-label">Korcsoport</label>
                         <select [(ngModel)]="group['ageGroup']" name="agegroup" class="form-select"
-                            aria-label="Default select example">
-                            <option selected></option>
-                            <option value="kiscsoport">kiscsoport</option>
-                            <option value="középső csoport">középső csoport</option>
-                            <option value="nagycsoport">nagycsoport</option>
-                            <option value="vegyes">vegyes</option>
+                            aria-label="Default select" required>
+                            <option selected>Válassz korcsoportot!</option>
+                            <option *ngFor="let agegroup of agegroups" [value]="agegroup">{{agegroup}}</option>
                         </select>
                     </div>
                 </div>
@@ -41,31 +41,31 @@
                     <div class="col">
                         <label for="teacherFirst" class="form-label">1. Nevelő</label>
                         <input [(ngModel)]="group['teacherFirst']" name="teacherFirst" type="text" class="form-control" placeholder="1. Nevelő"
-                        id="teacherFirst">
+                        id="teacherFirst" required pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
                     </div>
                     <div class="col">
                         <label for="teacherSecond" class="form-label">2. Nevelő</label>
                         <input [(ngModel)]="group['teacherSecond']" name="teacherSecond" type="text" class="form-control" placeholder="2. Nevelő"
-                        id="teacherSecond">
+                        id="teacherSecond" required pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="nurse" class="form-label">Dajka</label>
                         <input [(ngModel)]="group['nurse']" name="nurse" type="text" class="form-control" placeholder="Dajka"
-                        id="nurse">
+                        id="nurse" required pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="maxHeadcount" class="form-label">Max. létszám</label>
                         <input [(ngModel)]="group['maxHeadcount']" name="maxHeadcount" type="number" class="form-control" placeholder="Max. létszám"
-                        id="maxHeadcount">
+                        id="maxHeadcount" required>
                     </div>
                     <div class="col">
                         <label for="actualHeadcount" class="form-label">Aktuális létszám</label>
                         <input [(ngModel)]="group['actualHeadcount']" name="actualHeadcount" type="number" class="form-control" placeholder="Aktuális létszám"
-                        id="actualHeadcount">
+                        id="actualHeadcount" required>
                     </div>
                 </div>
                 <div class="my-3 form-check">

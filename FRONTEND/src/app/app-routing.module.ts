@@ -4,7 +4,7 @@ import { EmployeeComponent } from './page/employee/employee.component';
 import { GroupsComponent } from './page/groups/groups.component';
 import { ChildComponent } from './page/child/child.component';
 import { HomeComponent } from './page/home/home.component';
-import { SpecialClassesComponent } from './page/special-classes/special-classes.component';
+import { SpecialClassComponent } from './page/special-class/special-class.component';
 import { KindergartenComponent } from './page/kindergarten/kindergarten.component';
 import { EditChildComponent } from './page/edit-child/edit-child.component';
 import { EditKindergartenComponent } from './page/edit-kindergarten/edit-kindergarten.component';
@@ -56,7 +56,7 @@ const routes: Routes = [
   },
   {
     path: 'kulonorak',
-    component: SpecialClassesComponent
+    component: SpecialClassComponent,
   },
   {
     path: 'kulonora/edit/:id',

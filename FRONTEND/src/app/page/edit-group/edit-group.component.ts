@@ -14,6 +14,8 @@ export class EditGroupComponent implements OnInit {
 
   kindergartens$ = this.kindergartenService.getAll()
 
+  agegroups = ["Kiscsoport", "Középső csoport", "Nagycsoport", "Vegyes csoport"]
+
   group$: Observable<Group> = this.activatedRoute.params.pipe(
     switchMap( params => {
       let entityFromList$: Observable<Group> =

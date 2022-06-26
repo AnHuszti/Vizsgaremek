@@ -1,0 +1,458 @@
+[
+    {
+        "name": "Logopédia",
+        "kindergarten": "Alpha",
+        "teacher": "Ritka Rita",
+        "day": "Hétfő",
+        "actualHeadcount": 7,
+        "active": true
+    },
+    {
+        "name": "Logopédia",
+        "kindergarten": "Beta",
+        "teacher": "Ritka Rita",
+        "day": "Kedd",
+        "actualHeadcount": 4,
+        "active": true
+    },
+    {
+        "name": "Logopédia",
+        "kindergarten": "Gamma",
+        "teacher": "Ritka Rita",
+        "day": "Szerda",
+        "actualHeadcount": 8,
+        "active": true
+    },
+    {
+        "name": "Logopédia",
+        "kindergarten": "Delta",
+        "teacher": "Ritka Rita",
+        "day": "Csütörtök",
+        "actualHeadcount": 3,
+        "active": true
+    },
+    {
+        "name": "Logopédia",
+        "kindergarten": "Epsilon",
+        "teacher": "Ritka Rita",
+        "day": "Péntek",
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Logopédia",
+        "kindergarten": "Zéta",
+        "teacher": "Ritka Rita",
+        "day": "Hétfő",
+        "actualHeadcount": 4,
+        "active": true
+    },
+    {
+        "name": "Logopédia",
+        "kindergarten": "Theta",
+        "teacher": "Ritka Rita",
+        "day": "Kedd",
+        "actualHeadcount": 3,
+        "active": true
+    },
+    {
+        "name": "Logopédia",
+        "kindergarten": "Iota",
+        "teacher": "Ritka Rita",
+        "day": "Szerda",
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Logopédia",
+        "kindergarten": "Kappa",
+        "teacher": "Ritka Rita",
+        "day": "Csütörtök",
+        "actualHeadcount": 3,
+        "active": true
+    },
+    {
+        "name": "Logopédia",
+        "kindergarten": "Lambda",
+        "teacher": "Ritka Rita",
+        "day": "Péntek",
+        "actualHeadcount": 6,
+        "active": true
+    },
+    {
+        "name": "Sakk",
+        "level": "kezdő",
+        "kindergarten": "Alpha",
+        "teacher": "Vezér Elek",
+        "day": "Hétfő",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Sakk",
+        "level": "kezdő",
+        "kindergarten": "Beta",
+        "teacher": "Vezér Elek",
+        "day": "Kedd",
+        "maxHeadcount": 5,
+        "actualHeadcount": 4,
+        "active": true
+    },
+    {
+        "name": "Sakk",
+        "level": "kezdő",
+        "kindergarten": "Zéta",
+        "teacher": "Vezér Elek",
+        "day": "Szerda",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Sakk",
+        "level": "kezdő",
+        "kindergarten": "Iota",
+        "teacher": "Vezér Elek",
+        "day": "Csütörtök",
+        "maxHeadcount": 5,
+        "actualHeadcount": 3,
+        "active": true
+    },
+    {
+        "name": "Sakk",
+        "level": "kezdő",
+        "kindergarten": "Kappa",
+        "teacher": "Vezér Elek",
+        "day": "Péntek",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Mozgás fejlesztés",
+        "kindergarten": "Alpha",
+        "teacher": "Futó Barbara",
+        "day": "Hétfő",
+        "actualHeadcount": 4,
+        "active": true
+    },
+    {
+        "name": "Mozgás fejlesztés",
+        "kindergarten": "Beta",
+        "teacher": "Futó Barbara",
+        "day": "Kedd",
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Mozgás fejlesztés",
+        "kindergarten": "Gamma",
+        "teacher": "Futó Barbara",
+        "day": "Szerda",
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Mozgás fejlesztés",
+        "kindergarten": "Delta",
+        "teacher": "Futó Barbara",
+        "day": "Csütörtök",
+        "actualHeadcount": 3,
+        "active": true
+    },
+    {
+        "name": "Mozgás fejlesztés",
+        "kindergarten": "Epsilon",
+        "teacher": "Futó Barbara",
+        "day": "Péntek",
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Mozgás fejlesztés",
+        "kindergarten": "Zéta",
+        "teacher": "Futó Barbara",
+        "day": "Hétfő",
+        "actualHeadcount": 4,
+        "active": true
+    },
+    {
+        "name": "Mozgás fejlesztés",
+        "kindergarten": "Theta",
+        "teacher": "Futó Barbara",
+        "day": "Kedd",
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Mozgás fejlesztés",
+        "kindergarten": "Iota",
+        "teacher": "Futó Barbara",
+        "day": "Szerda",
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Mozgás fejlesztés",
+        "kindergarten": "Kappa",
+        "teacher": "Futó Barbara",
+        "day": "Csütörtök",
+        "actualHeadcount": 3,
+        "active": true
+    },
+    {
+        "name": "Mozgás fejlesztés",
+        "kindergarten": "Lambda",
+        "teacher": "Futó Barbara",
+        "day": "Péntek",
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "kezdő",
+        "kindergarten": "Alpha",
+        "teacher": "Abigail English",
+        "day": "Hétfő",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "kezdő",
+        "kindergarten": "Beta",
+        "teacher": "Abigail English",
+        "day": "Kedd",
+        "maxHeadcount": 5,
+        "actualHeadcount": 4,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "kezdő",
+        "kindergarten": "Gamma",
+        "teacher": "Abigail English",
+        "day": "Szerda",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "kezdő",
+        "kindergarten": "Delta",
+        "teacher": "Abigail English",
+        "day": "Csütörtök",
+        "maxHeadcount": 5,
+        "actualHeadcount": 3,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "kezdő",
+        "kindergarten": "Epsilon",
+        "teacher": "Abigail English",
+        "day": "Péntek",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "kezdő",
+        "kindergarten": "Zéta",
+        "teacher": "Alice English",
+        "day": "Hétfő",
+        "maxHeadcount": 5,
+        "actualHeadcount": 4,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "kezdő",
+        "kindergarten": "Theta",
+        "teacher": "Alice English",
+        "day": "Kedd",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "kezdő",
+        "kindergarten": "Iota",
+        "teacher": "Alice English",
+        "day": "Szerda",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "kezdő",
+        "kindergarten": "Kappa",
+        "teacher": "Alice English",
+        "day": "Csütörtök",
+        "maxHeadcount": 5,
+        "actualHeadcount": 3,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "kezdő",
+        "kindergarten": "Lambda",
+        "teacher": "Alice English",
+        "day": "Péntek",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "haladó",
+        "kindergarten": "Alpha",
+        "teacher": "Abigail English",
+        "day": "Hétfő",
+        "maxHeadcount": 5,
+        "actualHeadcount": 4,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "haladó",
+        "kindergarten": "Beta",
+        "teacher": "Abigail English",
+        "day": "Kedd",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "haladó",
+        "kindergarten": "Gamma",
+        "teacher": "Abigail English",
+        "day": "Szerda",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "haladó",
+        "kindergarten": "Delta",
+        "teacher": "Abigail English",
+        "day": "Csütörtök",
+        "maxHeadcount": 5,
+        "actualHeadcount": 4,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "haladó",
+        "kindergarten": "Epsilon",
+        "teacher": "Abigail English",
+        "day": "Péntek",
+        "maxHeadcount": 5,
+        "actualHeadcount": 4,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "haladó",
+        "kindergarten": "Zéta",
+        "teacher": "Alice English",
+        "day": "Hétfő",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "haladó",
+        "kindergarten": "Theta",
+        "teacher": "Alice English",
+        "day": "Kedd",
+        "maxHeadcount": 5,
+        "actualHeadcount": 5,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "haladó",
+        "kindergarten": "Iota",
+        "teacher": "Alice English",
+        "day": "Szerda",
+        "maxHeadcount": 5,
+        "actualHeadcount": 3,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "haladó",
+        "kindergarten": "Kappa",
+        "teacher": "Alice English",
+        "day": "Csütörtök",
+        "maxHeadcount": 5,
+        "actualHeadcount": 4,
+        "active": true
+    },
+    {
+        "name": "Angol nyelv",
+        "level": "haladó",
+        "kindergarten": "Lambda",
+        "teacher": "Alice English",
+        "day": "Péntek",
+        "maxHeadcount": 5,
+        "actualHeadcount": 4,
+        "active": true
+    },
+    {
+        "name": "Néptánc",
+        "kindergarten": "Béta",
+        "teacher": "Bokréta Kata",
+        "day": "Hétfő",
+        "maxHeadcount": 10,
+        "actualHeadcount": 9,
+        "active": true
+    },
+    {
+        "name": "Néptánc",
+        "kindergarten": "Gamma",
+        "teacher": "Bokréta Kata",
+        "day": "Kedd",
+        "maxHeadcount": 10,
+        "actualHeadcount": 10,
+        "active": true
+    },
+    {
+        "name": "Néptánc",
+        "kindergarten": "Delta",
+        "teacher": "Bokréta Kata",
+        "day": "Szerda",
+        "maxHeadcount": 10,
+        "actualHeadcount": 9,
+        "active": true
+    },
+    {
+        "name": "Néptánc",
+        "kindergarten": "Théta",
+        "teacher": "Bokréta Kata",
+        "day": "Csütörtök",
+        "maxHeadcount": 10,
+        "actualHeadcount": 8,
+        "active": true
+    },
+    {
+        "name": "Néptánc",
+        "kindergarten": "Lambda",
+        "teacher": "Bokréta Kata",
+        "day": "Péntek",
+        "maxHeadcount": 10,
+        "actualHeadcount": 10,
+        "active": true
+    }    
+]
+

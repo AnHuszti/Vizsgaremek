@@ -32,22 +32,32 @@ const KindergartenSchema = mongoose.Schema({
         type: Number,
         required: true,
     },
-    employees: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Employee'
-        }
-    ],
+    image: {
+        type: String,
+        required: false,
+    },
     children: [
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Child'
         }
     ],
+    employees: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Employee'
+        }
+    ],
     groups: [
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Group'
+        }
+    ],
+    specialclasses: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'SpecialClass'
         }
     ]
 }, {

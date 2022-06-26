@@ -139,8 +139,15 @@
     }
   }
 
+  &-nav {
+    @media (max-width: 767.98px) {
+      padding-top: 3rem;
+      padding-bottom: .5rem;
+    }
+  }
+
   &-toggler {
-    top: 1rem;
+    top: .75rem;
     right: 1rem;
   }
   

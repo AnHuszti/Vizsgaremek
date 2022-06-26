@@ -1,1 +1,73 @@
-<p>edit-special-class works!</p>
+<div class="container bg__forms vh-100">
+    <h3 class="mt-3">Szerkesztés</h3>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form (ngSubmit)="onSave(specialclass)" *ngIf="specialclass$ | async as specialclass">
+                <div class="form-group">
+                    <input [(ngModel)]="specialclass['_id']" type="hidden" name="id" class="user-select-none">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="name" class="form-label">Név</label>
+                        <input [(ngModel)]="specialclass['name']" name="name" type="text" class="form-control"
+                            placeholder="Név" aria-label="name" id="name" required pattern="^[a-űA-Ű -]{3,30}$">
+                    </div>
+                    <div class="col">
+                        <label for="level" class="form-label">Szint</label>
+                        <input [(ngModel)]="specialclass['level']" name="level" type="text" class="form-control"
+                            placeholder="Szint" aria-label="level" id="level">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="kindergarten" class="form-label">Tagóvoda</label>
+                        <select [(ngModel)]="specialclass['kindergarten']" name="kindergarten" class="form-select"
+                            aria-label="Default select" required>
+                            <option selected>Válassz Óvodát!</option>
+                            <option *ngFor="let kindergarten of kindergartens$ | async" [value]="kindergarten['_id']">
+                                {{ kindergarten.name}} </option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="day" class="form-label">Nap</label>
+                        <select [(ngModel)]="specialclass['day']" name="day" class="form-select"
+                            aria-label="Default select" required>
+                            <option selected>Válassz napot!</option>
+                            <option *ngFor="let day of days" [value]="day"> {{ day }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="teacher" class="form-label">Oktató</label>
+                        <input [(ngModel)]="specialclass['teacher']" name="teacher" type="text" class="form-control"
+                            placeholder="Oktató" aria-label="teacher" id="teacher" required pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="maxHeadcount" class="form-label">Max létszám</label>
+                        <input [(ngModel)]="specialclass['maxHeadcount']" name="maxHeadcount" type="number" class="form-control"
+                            placeholder="Max létszám" aria-label="maxHeadcount" id="maxHeadcount">
+                    </div>
+                    <div class="col">
+                        <label for="actualHeadcount" class="form-label">Aktuális létszám</label>
+                        <input [(ngModel)]="specialclass['actualHeadcount']" name="actualHeadcount" type="number" class="form-control"
+                            placeholder="Aktuális létszám" aria-label="actualHeadcount" id="actualHeadcount" required>
+                    </div>
+                </div>
+                <div class="my-3 form-check">
+                    <input [(ngModel)]="specialclass['active']" name="active" type="checkbox" class="form-check-input"
+                        id="active" required>
+                    <label class="form-check-label" for="active">Aktív</label>
+                </div>
+                <button type="submit" class="btn-sm w-100 btn-outline-light btn__save mb-5">
+                    <span>Mentés </span>
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

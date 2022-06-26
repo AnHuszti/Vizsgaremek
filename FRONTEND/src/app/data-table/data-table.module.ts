@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxDataTableComponent } from './ngx-data-table/ngx-data-table.component';
+import { FilterPipe } from './pipe/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    NgxDataTableComponent
+    NgxDataTableComponent,
+    FilterPipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
-    NgxDataTableComponent
+    NgxDataTableComponent, FilterPipe
   ] // Export important!!!
 })
 export class DataTableModule { }

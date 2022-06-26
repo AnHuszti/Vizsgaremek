@@ -22,7 +22,11 @@ export class ChildComponent implements OnInit {
 
   groups$ = this.groupService.getAll()
 
-  //new = new Child()
+  phrase: string = '';
+  filterKey: string = 'surname';
+  filterKeys: string[] = ['surname', 'firstname', 'age', 'kindergarten', 'group', 'mothername', 'phone', 'active'];
+
+  isLoading = true;
 
   constructor(
     private config: ConfigService,
@@ -33,6 +37,12 @@ export class ChildComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.childService.getAll()
+       .subscribe( {
+        next: data => this.isLoading = false,
+        error: error => this.isLoading = false
+       }
+    );
   }
 
   jumpToEdit(child: Child): void {

@@ -1,13 +1,12 @@
 const fsp = require('fs').promises;
 const { join } = require('path');
-const GroupModel = require('../model/group.model');
+const SpecialClassModel = require('../model/specialclass.model');
 
 ( async () => {
-    const groupJson = await fsp.readFile(
-        join(__dirname, 'groups.json'),
+    const specialclassJson = await fsp.readFile(
+        join(__dirname, 'specialclass.json'),
         'utf8',
     );
-    const groups = JSON.parse(groupJson);
-    //console.log(groups);
-    return await GroupModel.insertMany(groups);
+    const specialclasses = JSON.parse(specialclassJson);
+    return await SpecialClassModel.insertMany(specialclasses);
 })();

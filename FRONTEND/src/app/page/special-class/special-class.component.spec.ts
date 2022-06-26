@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SpecialClassesComponent } from './special-classes.component';
+import { SpecialClassComponent } from './special-class.component';
 
-describe('SpecialClassesComponent', () => {
-  let component: SpecialClassesComponent;
-  let fixture: ComponentFixture<SpecialClassesComponent>;
+describe('SpecialClassComponent', () => {
+  let component: SpecialClassComponent;
+  let fixture: ComponentFixture<SpecialClassComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SpecialClassesComponent ]
+      declarations: [ SpecialClassComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SpecialClassesComponent);
+    fixture = TestBed.createComponent(SpecialClassComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

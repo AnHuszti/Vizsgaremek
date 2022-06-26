@@ -9,23 +9,26 @@
         </div>
         <div class="col-md-6">
             <form (ngSubmit)="onSave(child)" *ngIf="child$ | async as child">
+                <div class="form-group">
+                    <input [(ngModel)]="child['_id']" type="hidden" name="id" class="user-select-none">
+                </div>
                 <div class="row">
                     <div class="col">
                         <label for="surname" class="form-label">Vezetéknév</label>
                         <input [(ngModel)]="child['surname']" name="surname" type="text" class="form-control"
-                            placeholder="Vezetéknév" aria-label="surname" id="surname">
+                            placeholder="Vezetéknév" aria-label="surname" id="surname" required pattern="^([A-Ű][a-ű.]+[ -])*[A-Ű][a-ű]+$">
                     </div>
                     <div class="col">
                         <label for="firstname" class="form-label">Keresztnév</label>
                         <input [(ngModel)]="child['firstname']" name="firstname" type="text" class="form-control"
-                            placeholder="Keresztnév" aria-label="firstname" id="firstname">
+                            placeholder="Keresztnév" aria-label="firstname" id="firstname" required pattern="^([A-Ű][a-ű.]+[ -])*[A-Ű][a-ű]+$">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="age" class="form-label">Kor</label>
                         <input [(ngModel)]="child['age']" name="age" type="text" class="form-control" placeholder="Kor"
-                        id="age">
+                        id="age" required pattern="^[2-7]$">
                     </div>
                     <div class="col">
                         <label for="picture" class="form-label">Jel</label>
@@ -37,7 +40,7 @@
                     <div class="col">
                         <label for="kindergarten" class="form-label">Tagóvoda</label>
                         <select [(ngModel)]="child['kindergarten']" name="kindergarten" class="form-select"
-                        aria-label="Default select example">
+                        aria-label="Default select" required>
                         <option selected>Válassz Óvodát!</option>
                         <option *ngFor="let kindergarten of kindergartens$ | async" [value]="kindergarten['_id']"> {{ kindergarten.name}} </option>
                         </select>
@@ -45,7 +48,7 @@
                     <div class="col">
                         <label for="group" class="form-label">Csoport</label>
                         <select [(ngModel)]="child['group']" name="group" class="form-select"
-                        aria-label="Default select example">
+                        aria-label="Default select" required>
                         <option selected>Válassz Csoportot!</option>
                         <option *ngFor="let group of groups$ | async" [value]="group['_id']"> {{ group.name}} </option>
                         </select>
@@ -55,12 +58,13 @@
                     <div class="col">
                         <label for="mothername" class="form-label">Anya neve</label>
                         <input [(ngModel)]="child['mothername']" name="mothername" type="text" class="form-control"
-                            placeholder="Anya neve" aria-label="surname" id="mothername">
+                            placeholder="Anya neve" aria-label="surname" id="mothername" required pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
                     </div>
                     <div class="col">
                         <label for="phone" class="form-label">Telefon</label>
                         <input [(ngModel)]="child['phone']" name="phone" type="text" class="form-control"
-                            placeholder="Telefon" aria-label="phone" id="phone">
+                            placeholder="Telefon" aria-label="phone" id="phone" required 
+                            pattern="^\+36\(((1|20|30|70)\) [0-9]{3,}-[0-9]{4,}|([237][1-9]|[45689][0-9])\) [0-9]{3,}-[0-9]{3,})$">
                     </div>
                 </div>
                 <div class="my-3 form-check">
@@ -76,5 +80,3 @@
         </div>
     </div>
 </div>
-
-<!-- <ngx-edit-form></ngx-edit-form> -->

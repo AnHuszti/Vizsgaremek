@@ -13,7 +13,7 @@ import { KindergartenComponent } from './page/kindergarten/kindergarten.componen
 import { EmployeeComponent } from './page/employee/employee.component';
 import { GroupsComponent } from './page/groups/groups.component';
 import { ChildComponent } from './page/child/child.component';
-import { SpecialClassesComponent } from './page/special-classes/special-classes.component';
+import { SpecialClassComponent } from './page/special-class/special-class.component';
 import { DataTableModule } from './data-table/data-table.module';
 import { EditChildComponent } from './page/edit-child/edit-child.component';
 import { EditGroupComponent } from './page/edit-group/edit-group.component';
@@ -39,14 +39,14 @@ import { AuthService } from './service/auth.service';
     EmployeeComponent,
     GroupsComponent,
     ChildComponent,
-    SpecialClassesComponent,
+    SpecialClassComponent,
     EditChildComponent,
     EditGroupComponent,
     EditKindergartenComponent,
     EditEmployeeComponent,
     EditSpecialClassComponent,
     FileUploaderComponent,
-    LoginComponent 
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,8 @@
-import { Output } from '@angular/core';
-import { EventEmitter } from '@angular/core';
-import { Input } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 
 export interface INgxTableColumn {
-    title: string, //header
-    key: string    //datakey
+  title: string,
+  key: string
 }
 
 @Component({
@@ -19,19 +16,21 @@ export class NgxDataTableComponent<T extends {[x: string]: any}> implements OnIn
   @Input() list: T[] = []
   // Columns
   @Input() columns: INgxTableColumn[] = []
-
+  // Buttons
   @Output() onEdit: EventEmitter<T> = new EventEmitter()
-  
   @Output() onDelete: EventEmitter<T> = new EventEmitter()
-
 
   pageSize: number = 20
 
-  startSlice: number = 0 
-  
+  startSlice: number = 0
+
   endSlice: number = 20
 
   page: number = 1
+
+  /* phrase: string = '';
+  
+  filterKey: string = ''; */
 
   /* sorterKey: string = 'title';
   sorterDirection: number = 1; */

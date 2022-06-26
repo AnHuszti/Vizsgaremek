@@ -17,6 +17,8 @@ export class EditEmployeeComponent implements OnInit {
 
   groups$ = this.groupService.getAll()
 
+  positions = ["óvópedagógus 1.", "óvópedagógus 2.", "dajka", "pedagógiai asszisztens", "pszichológus"]
+
   employee$: Observable<Employee> = this.activatedRoute.params.pipe(
     switchMap( params => {
       let entityFromList$: Observable<Employee> =

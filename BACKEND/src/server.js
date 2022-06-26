@@ -41,26 +41,30 @@ app.use(bodyParser.json())
 
 const authenticateJwt = require('./module/auth/authenticate')
 
-/* //upload files
+//upload files
 app.use(fileUpload())
 app.post('/upload', (req, res) => {
     let uploadFile
     let uploadPath
 
-    if (!req.files || Object.keys(req.files).length) {
-        return res.status(400)
+    if (!req.files || Object.keys(req.files).length === 0) {
+        return res.status(400).send('No files were uploaded.')
     }
 
-    //The name of the input field (i.e. "sampleFile") is used to retrieve the upload
     uploadFile = req.files.uploadFile
     uploadPath = join('./public/img', uploadFile.name)
 
-    //Use the mv( method)...
     uploadFile.mv(uploadPath, (err) => {
-        return res.status(500)
+        if (err)
+            return res.status(500).send(err)
 
+        res.json({
+            success: true, 
+            file: uploadFile.name,
+            path: uploadPath.replace(/\\/g, '/').replace('public/', '')
+        })
     })
-}) */
+})
 
 //Children
 app.use('/children', /* authenticateJwt, */ require('./controller/child/child-router'))
@@ -73,6 +77,9 @@ app.use('/groups', /* authenticateJwt, */ require('./controller/group/group-rout
 
 //Kindergartens
 app.use('/kindergartens', /* authenticateJwt, */ require('./controller/kindergarten/kindergarten-router'))
+
+//Special classes
+app.use('/specialclasses', /* authenticateJwt, */ require('./controller/specialclass/specialclass-router'))
 
 //Login
 app.use('/login', require('./controller/login/login-router'))

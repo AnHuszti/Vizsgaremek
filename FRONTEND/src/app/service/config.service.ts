@@ -22,6 +22,7 @@ export class ConfigService {
 
   kindergartenTableColumns: INgxTableColumn[] = [
     //{key: '_id', title: '#'},
+    //{key: 'image', title: 'LOGO'},
     {key: 'name', title: 'NÉV'},
     {key: 'address', title: 'TELEPHELY'}, 
     {key: 'numOfEmployees', title: 'ALKALMAZOTTAK SZÁMA'},
@@ -45,7 +46,7 @@ export class ConfigService {
   groupsTableColumns: INgxTableColumn[] = [
     // {key: '_id', title: '#'},
     {key: 'name', title: 'NÉV'},
-    {key: 'kindergarten', title: 'TAGÓVODA'}, // inkább telephely???
+    {key: 'kindergarten', title: 'TAGÓVODA'},
     {key: 'ageGroup', title: 'KORCSOPORT'},
     {key: 'teacherFirst', title: '1. NEVELŐ'},
     {key: 'teacherSecond', title: '2. NEVELŐ'},
@@ -60,21 +61,22 @@ export class ConfigService {
     {key: 'surname', title: 'VEZETÉKNÉV'},
     {key: 'firstname', title: 'KERESZTNÉV'},
     {key: 'age', title: 'KOR'},
-    {key: 'kindergarten', title: 'TAGÓVODA'}, // inkább telephely???
+    {key: 'kindergarten', title: 'TAGÓVODA'}, 
     {key: 'group', title: 'CSOPORT'},
     {key: 'mothername', title: 'ANYA NEVE'},
     {key: 'phone', title: 'TELEFON'},
-    //{key: 'specialClasses', title: 'KÜLÖNÓRÁK'},
+    //{key: 'specialClass', title: 'KÜLÖNÓRÁK'},
     {key: 'picture', title: 'JEL'},
     {key: 'active', title: 'AKTÍV'},  
   ]
   
-  specialClassesTableColumns: INgxTableColumn[] = [
+  specialClassTableColumns: INgxTableColumn[] = [
     // {key: '_id', title: '#'},
     {key: 'name', title: 'NÉV'},
-    // {key: 'specification', title: 'SPECIFIKÁCIÓ'}, maybe unnecessary
     {key: 'level', title: 'SZINT'},
-    {key: 'teacher', title: 'NEVELŐ'},
+    {key: 'kindergarten', title: 'TAGÓVODA'},
+    {key: 'teacher', title: 'OKTATÓ'},
+    {key: 'day', title: 'NAP'},
     {key: 'maxHeadcount', title: 'MAX LÉTSZÁM'},
     {key: 'actualHeadcount', title: 'AKTUÁLIS LÉTSZÁM'},
     {key: 'active', title: 'AKTÍV'},

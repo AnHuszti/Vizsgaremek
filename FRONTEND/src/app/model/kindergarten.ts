@@ -6,4 +6,5 @@ export class Kindergarten {
     numOfGroups: number = 0;
     maxHeadcountOfChildren: number = 0;
     actualHeadcountOfChildren: number = 0;
+    image?: string = '';
 }

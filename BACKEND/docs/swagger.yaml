@@ -230,6 +230,342 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /groups:
+    get:
+      description: Return a list of groups
+      security: 
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Success
+          content: 
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Group'
+    post:
+      description: Creates a new group
+      security: 
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Group'
+      responses:
+        '201':
+          description: Group has been created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /groups/{_id}:
+    get:
+      description: Get a group
+      security: 
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content: 
+            application/json:
+              schema: 
+                type: object
+                items: 
+                  $ref: '#/components/schemas/Group'
+        '404':
+          description: Group based on id isn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    patch:
+      description: Updates a group
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Group'
+      responses:
+        '200':
+          description: Group has been updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Group'
+        '501':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      description: Removes a group
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Group has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+        '404':
+          description: Group based on id isn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /kindergatens:
+    get:
+      description: Return a list of kindergatens
+      security: 
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Success
+          content: 
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Kindergarten'
+    post:
+      description: Creates a new kindergarten
+      security: 
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Kindergarten'
+      responses:
+        '201':
+          description: Kindergarten has been created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Kindergarten'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /kindergatens/{_id}:
+    get:
+      description: Get a kindergarten
+      security: 
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content: 
+            application/json:
+              schema: 
+                type: object
+                items: 
+                  $ref: '#/components/schemas/Kindergarten'
+        '404':
+          description: Kindergarten based on id isn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    patch:
+      description: Updates a kindergarten
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Kindergarten'
+      responses:
+        '200':
+          description: Kindergarten has been updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Kindergarten'
+        '501':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      description: Removes a kindergarten
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Kindergarten has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+        '404':
+          description: Kindergarten based on id isn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /specialclasses:
+    get:
+      description: Return a list of special classes
+      security: 
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Success
+          content: 
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  $ref: '#/components/schemas/SpecialClass'
+    post:
+      description: Creates a new special class
+      security: 
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SpecialClass'
+      responses:
+        '201':
+          description: Special class has been created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SpecialClass'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /specialclasses/{_id}:
+    get:
+      description: Get a special class
+      security: 
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content: 
+            application/json:
+              schema: 
+                type: object
+                items: 
+                  $ref: '#/components/schemas/SpecialClass'
+        '404':
+          description: Special class based on id isn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    patch:
+      description: Updates a special class
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SpecialClass'
+      responses:
+        '200':
+          description: Special class has been updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SpecialClass'
+        '501':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      description: Removes a special class
+      parameters:
+        - in: path
+          name: _id
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Special class has been deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                example: {}
+        '404':
+          description: Special class based on id isn't exist
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   securitySchemes:
     bearerAuth:
@@ -253,11 +589,11 @@ components:
         firstname: 
           type: string
         kindergarten: 
-          type: mongoose.Schema.Types.ObjectId
-          ref: 'Kindergarten'
+          type: object
+          $ref: '#/components/schemas/Kindergarten'
         group: 
-          type: mongoose.Schema.Types.ObjectId
-          ref: 'Group'
+          type: object
+          $ref: '#/components/schemas/Group'
         age:
           type: number
         mothername: 
@@ -280,18 +616,101 @@ components:
           type: string
         firstname: 
           type: string
-        kindergarten: 
-          type: mongoose.Schema.Types.ObjectId
-          ref: 'Kindergarten'
         position:
           type: string
+        kindergarten: 
+          type: object
+          $ref: '#/components/schemas/Kindergarten'
         group: 
-          type: mongoose.Schema.Types.ObjectId
-          ref: 'Group'
+          type: object
+          $ref: '#/components/schemas/Group'
         skills: 
           type: string
         image:
           type: string
+        active: 
+          type: boolean
+    Group:
+      type: object
+      required:
+        - name
+        - kindergarten
+        - teacherFirst
+        - teacherSecond
+        - nurse
+        - ageGroup
+        - maxHeadcount
+        - actualHeadcount
+      properties:
+        name:
+          type: string
+        kindergarten: 
+          type: object
+          $ref: '#/components/schemas/Kindergarten'
+        teacherFirst:
+          type: string
+        teacherSecond:
+          type: string
+        nurse:
+          type: string
+        ageGroup:
+          type: string
+        maxHeadcount:
+          type: number
+        actualHeadcount:
+          type: number
+        picture:
+          type: string
+        active: 
+          type: boolean
+    Kindergarten:
+      type: object
+      required:
+        - name
+        - address
+        - numOfEmployees
+        - numOfGroups
+        - maxHeadcountOfChildren
+        - actualHeadcountOfChildren
+      properties:
+        name: 
+          type: string
+        address: 
+          type: string
+        numOfEmployees: 
+          type: number
+        numOfGroups: 
+          type: number
+        maxHeadcountOfChildren:
+          type: number
+        actualHeadcountOfChildren:
+          type: number
+        image:
+          type: string
+    SpecialClass:
+      type: object
+      required:
+        - name
+        - kindergarten
+        - teacher
+        - day
+        - actualHeadcount
+      properties:
+        name:
+          type: string
+        level:
+          type: string
+        kindergarten: 
+          type: object
+          $ref: '#/components/schemas/Kindergarten'
+        teacher:
+          type: string
+        day:
+          type: string
+        maxHeadcount:
+          type: number
+        actualHeadcount:
+          type: number
         active: 
           type: boolean
     Error:

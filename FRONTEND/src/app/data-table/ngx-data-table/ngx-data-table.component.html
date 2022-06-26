@@ -1,7 +1,7 @@
-<nav aria-label="Page navigation example">
+<nav>
   <ul class="pagination mt-4">
     <li class="page-item">
-      <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(page-1)" aria-label="Previous">
+      <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(page-1)" [disabled]="page === 1" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
       </button>
     </li>
@@ -9,62 +9,57 @@
       <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(pageNum)">{{ pageNum }}</button>
     </li>
     <li class="page-item">
-      <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(page+1)" aria-label="Next">
+      <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(page+1)" [disabled]="page === pageList.length" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
       </button>
     </li>
   </ul>
 </nav>
-    
-    <div class="table-responsive">
-      <table class="table table-light table-striped table-sm">
-        <thead>
-          <tr>
-            <th *ngFor="let col of columns" scope="col" >
-              {{ col.title }}
-            </th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let row of list | slice:startSlice:endSlice">
-            <td *ngFor="let col of columns">
-              {{ row[col.key]}}
-            </td>
-            <td>
-              <div class="btn-group">
-                <button type="submit" class="btn__edit btn-sm btn-outline-light"
-                  (click)="raiseEdit(row)">
-                  Szerk.
-                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                </button>
-                <button type="button" class="btn-sm btn-danger"
-                (click)="deleteRow(row)">
-                  Törlés
-                  <i class="fa fa-trash" aria-hidden="true"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
-    <nav aria-label="Page navigation example">
-      <ul class="pagination mt-4">
-        <li class="page-item">
-          <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(page-1)" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </button>
-        </li>
-        <li *ngFor="let pageNum of pageList" class="page-item">
-          <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(pageNum)">{{ pageNum }}</button>
-        </li>
-        <li class="page-item">
-          <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(page+1)" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </button>
-        </li>
-      </ul>
-    </nav>
-  
+<div class="table-responsive">
+  <table class="table table-light table-striped table-sm">
+    <thead>
+      <tr>
+        <th *ngFor="let col of columns" scope="col">
+          {{ col.title }}
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of list | slice:startSlice:endSlice">
+        <td *ngFor="let col of columns">
+          {{ row[col.key] }}
+        </td>
+        <td>
+          <div class="btn-group">
+            <button type="submit" class="btn__edit btn-sm btn-outline-light px-md-4" (click)="raiseEdit(row)">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btn-sm btn-danger px-md-4" (click)="deleteRow(row)">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<nav aria-label="Page navigation">
+  <ul class="pagination mt-4">
+    <li class="page-item">
+      <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(page-1)" [disabled]="page === 1" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </button>
+    </li>
+    <li *ngFor="let pageNum of pageList" class="page-item">
+      <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(pageNum)">{{ pageNum }}</button>
+    </li>
+    <li class="page-item">
+      <button class="page-link btn__paginate btn-sm" (click)="jumpToPage(page+1)" [disabled]="page === pageList.length" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </button>
+    </li>
+  </ul>
+</nav>

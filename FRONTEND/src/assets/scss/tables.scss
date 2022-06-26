@@ -38,12 +38,17 @@
 .btn {
 
     &__edit, &__new {
+        background-color: colors.$lightgrey-bg-color;
         color: colors.$dark-font-color;
     }
 
     &__paginate {
         color: colors.$active-font-color;
         padding: 0.1rem 0.5rem;
+
+        &:disabled {
+            background-color: colors.$lightgrey-bg-color;
+        }
     }
 
     &__save {
@@ -56,6 +61,15 @@ th {
     //background-color: #fff !important;
     border: none;
 }
+
+.file-input {
+    display: none;
+
+    &__preview {
+        height: 8rem;
+    }
+}
+
 
 /* .img {
     &__sign {

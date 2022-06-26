@@ -1,3 +1,5 @@
+@use 'colors';
+
 header h1 {
     font-family: myHeaderFont, Helvetica, Arial, sans-serif;
     font-size: 30px !important;
@@ -11,6 +13,7 @@ th {
 h1, h3 {
     font-family: myH1Font, Helvetica, Arial, sans-serif;
     font-size: 40px !important;
+    color: colors.$dark-font-color;
 }
 
 button {
