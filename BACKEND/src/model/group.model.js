@@ -7,10 +7,6 @@ const GroupSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    /* kindergarten: {
-        type: String,
-        required: true,
-    }, */
     kindergarten: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Kindergarten',
@@ -32,11 +28,6 @@ const GroupSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    /* ageGroup: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'AgeGroup',
-        reqired: true
-    }, */
     maxHeadcount: {
         type: Number,
         required: true,
@@ -48,6 +39,10 @@ const GroupSchema = mongoose.Schema({
     active: {
         type: Boolean,
         default: true,
+    },
+    image: {
+        type: String,
+        required: false,
     },
     children: [
         {

@@ -80,7 +80,7 @@ export class EditKindergartenComponent implements OnInit {
   }
   
   uploadSuccess(event: IFileUploadResponse): void {
-    console.log('hiba?')
+   
     this.uploadedFilePath = event.path
   }
 

@@ -12,6 +12,8 @@ import { EditGroupComponent } from './page/edit-group/edit-group.component';
 import { EditEmployeeComponent } from './page/edit-employee/edit-employee.component';
 import { EditSpecialClassComponent } from './page/edit-special-class/edit-special-class.component';
 import { LoginComponent } from './page/login/login.component';
+import { UserComponent } from './page/user/user.component';
+import { EditUserComponent } from './page/edit-user/edit-user.component';
 
 const routes: Routes = [
   {
@@ -61,6 +63,14 @@ const routes: Routes = [
   {
     path: 'kulonora/edit/:id',
     component: EditSpecialClassComponent,
+  },
+  {
+    path: 'felhasznalok',
+    component: UserComponent,
+  },
+  {
+    path: 'felhasznalo/edit/:id',
+    component: EditUserComponent,
   },
 ];
 

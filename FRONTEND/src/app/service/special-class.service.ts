@@ -1,7 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
-import { Observable } from 'rxjs';
 import { SpecialClass } from '../model/special-class';
 import { BaseService } from './base.service';
 

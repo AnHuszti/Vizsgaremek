@@ -13,7 +13,7 @@ module.exports = (model, populateList = []) => {
             throw new Error(error)
         },
         createOne: async (body) => {
-            //console.log(body);
+            console.log(`router: ${body}`);
             const newEntity = new model(body);
             const error = newEntity.validateSync();
             if (!error) {

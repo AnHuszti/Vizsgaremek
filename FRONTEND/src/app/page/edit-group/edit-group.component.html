@@ -1,17 +1,21 @@
 <div class="container bg__forms vh-100">
     <h3 class="mt-4">Szerkesztés</h3>
-    
+
     <div class="row justify-content-center mt-4">
-        <div class="col-md-2">
-            <div class="">
-                <img class="" src="" alt="picture" srcset="">
+        <form (ngSubmit)="onSave(group)" *ngIf="group$ | async as group" class="row">
+            <div class="form-group">
+                <input [(ngModel)]="group['_id']" type="hidden" name="id" class="user-select-none">
             </div>
-        </div>
-        <div class="col-md-6">
-            <form (ngSubmit)="onSave(group)" *ngIf="group$ | async as group">
+            <div class="col-md-2 p-4 m-2 border-end">
                 <div class="form-group">
-                    <input [(ngModel)]="group['_id']" type="hidden" name="id" class="user-select-none">
+                    <div class="border mb-2">
+                        <img [src]="getImageSrc(group)" class="file-input__preview p-2 mb-2">
+                    </div>
+                    <app-file-uploader (uploaded)="uploadSuccess($event)"></app-file-uploader>
                 </div>
+            </div>
+
+            <div class="col-md-6">
                 <div class="row mb-3">
                     <div class="col">
                         <label for="name" class="form-label">Név</label>
@@ -23,7 +27,8 @@
                         <select [(ngModel)]="group['kindergarten']" name="kindergarten" class="form-select"
                             aria-label="Default select" required>
                             <option selected>Válassz Óvodát!</option>
-                            <option *ngFor="let kindergarten of kindergartens$ | async" [value]="kindergarten['_id']"> {{ kindergarten.name}} </option>
+                            <option *ngFor="let kindergarten of kindergartens$ | async" [value]="kindergarten['_id']">
+                                {{ kindergarten.name}} </option>
                         </select>
                     </div>
                 </div>
@@ -40,32 +45,34 @@
                 <div class="row mb-3">
                     <div class="col">
                         <label for="teacherFirst" class="form-label">1. Nevelő</label>
-                        <input [(ngModel)]="group['teacherFirst']" name="teacherFirst" type="text" class="form-control" placeholder="1. Nevelő"
-                        id="teacherFirst" required pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
+                        <input [(ngModel)]="group['teacherFirst']" name="teacherFirst" type="text" class="form-control"
+                            placeholder="1. Nevelő" id="teacherFirst" required
+                            pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
                     </div>
                     <div class="col">
                         <label for="teacherSecond" class="form-label">2. Nevelő</label>
-                        <input [(ngModel)]="group['teacherSecond']" name="teacherSecond" type="text" class="form-control" placeholder="2. Nevelő"
-                        id="teacherSecond" required pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
+                        <input [(ngModel)]="group['teacherSecond']" name="teacherSecond" type="text"
+                            class="form-control" placeholder="2. Nevelő" id="teacherSecond" required
+                            pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="nurse" class="form-label">Dajka</label>
-                        <input [(ngModel)]="group['nurse']" name="nurse" type="text" class="form-control" placeholder="Dajka"
-                        id="nurse" required pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
+                        <input [(ngModel)]="group['nurse']" name="nurse" type="text" class="form-control"
+                            placeholder="Dajka" id="nurse" required pattern="^([A-Ű][a-ű.]+[ -])+[A-Ű][a-ű]+$">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
                         <label for="maxHeadcount" class="form-label">Max. létszám</label>
-                        <input [(ngModel)]="group['maxHeadcount']" name="maxHeadcount" type="number" class="form-control" placeholder="Max. létszám"
-                        id="maxHeadcount" required>
+                        <input [(ngModel)]="group['maxHeadcount']" name="maxHeadcount" type="number"
+                            class="form-control" placeholder="Max. létszám" id="maxHeadcount" required>
                     </div>
                     <div class="col">
                         <label for="actualHeadcount" class="form-label">Aktuális létszám</label>
-                        <input [(ngModel)]="group['actualHeadcount']" name="actualHeadcount" type="number" class="form-control" placeholder="Aktuális létszám"
-                        id="actualHeadcount" required>
+                        <input [(ngModel)]="group['actualHeadcount']" name="actualHeadcount" type="number"
+                            class="form-control" placeholder="Aktuális létszám" id="actualHeadcount" required>
                     </div>
                 </div>
                 <div class="my-3 form-check">
@@ -77,8 +84,8 @@
                     <span>Mentés </span>
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>
                 </button>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
 </div>
 

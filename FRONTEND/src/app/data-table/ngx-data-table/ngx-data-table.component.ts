@@ -2,7 +2,9 @@ import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 
 export interface INgxTableColumn {
   title: string,
-  key: string
+  key: string,
+  pipes?: any[],
+  pipeArgs?: any[]
 }
 
 @Component({

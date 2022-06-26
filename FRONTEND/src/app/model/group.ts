@@ -10,5 +10,6 @@ export class Group {
     ageGroup: string = '';
     maxHeadcount: number = 0;
     actualHeadcount: number = 0;
-    active: boolean = true
+    active: boolean = true;
+    image?: string = ''
 }

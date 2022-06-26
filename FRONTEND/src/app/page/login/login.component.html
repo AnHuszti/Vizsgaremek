@@ -1,24 +1,27 @@
 <main class="form-signin w-100 m-auto">
-    <form (ngSubmit)="onLogin()">
-      <img class="mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+  <form (ngSubmit)="onLogin()">
+    <div class="d-flex flex-column align-items-center">
+      <img class="mb-4 summalogo__login"
+        src="../../../assets/images/summaLogo/summaLogo_color_empty.png" alt="logo">
       <h1 class="h3 mb-3 fw-normal">Bejelentkezés</h1>
-  
-      <div class="form-floating">
-        <input [(ngModel)]="loginData.email" name="email" email type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email cím</label>
-      </div>
-      <div class="form-floating">
-        <input [(ngModel)]="loginData.password" name="password" type="password" class="form-control" id="floatingPassword" placeholder="jelszó">
-        <label for="floatingPassword">Jelszó</label>
-      </div>
-  
-      <!-- <div class="checkbox mb-3">
+    </div>
+    <div class="form-floating">
+      <input [(ngModel)]="loginData.email" name="email" email type="email" class="form-control" id="floatingInput"
+        placeholder="name@example.com">
+      <label for="floatingInput">Email cím</label>
+    </div>
+    <div class="form-floating">
+      <input [(ngModel)]="loginData.password" name="password" type="password" class="form-control" id="floatingPassword"
+        placeholder="jelszó">
+      <label for="floatingPassword">Jelszó</label>
+    </div>
+
+    <!-- <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div> -->
-      <button class="w-100 btn-outline-light btn-md btn__save" type="submit">Belépés</button>
-      <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p> -->
-    </form>
-  </main>
-  
+    <button class="w-100 btn-outline-light btn-md btn__save" type="submit">Belépés</button>
+    <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p> -->
+  </form>
+</main>

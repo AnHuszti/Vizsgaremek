@@ -21,20 +21,11 @@ const ChildSchema = mongoose.Schema({
         ref: 'Kindergarten',
         reqired: true
     },
-    /* kindergarten: {
-        type: String,
-        required: true,
-        enum: ["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zéta", "Théta", "Iota", "Kappa", "Lambda"],
-    }, */
     group: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Group',
         required: true
     },
-    /* group: {
-        type: String,
-        required: true,
-    }, */
     age: {
         type: Number,
         required: true,

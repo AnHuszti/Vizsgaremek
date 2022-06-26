@@ -1,8 +1,8 @@
 export class User {
     _id?: string = '';
+    surname: string = '';
+    firstname: string = '';
     email: string = '';
     password?: string = '';
-    lastName: string = '';
-    firstName: string = '';
-    role?: string = '';
+    role?: number = 1;
 }

@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
+import { IFileUploadResponse } from 'src/app/common/file-uploader/file-uploader.component';
 import { Child } from 'src/app/model/child';
 import { ChildService } from 'src/app/service/child.service';
 import { GroupsService } from 'src/app/service/groups.service';
 import { KindergartenService } from 'src/app/service/kindergarten.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-edit-child',
@@ -35,6 +37,8 @@ export class EditChildComponent implements OnInit {
    newEntity$: Observable<Child> = new Observable(entity => {
     entity.next(new Child())
   })
+
+  uploadedFilePath: string = ''
 
   constructor(
     private router: Router,
@@ -67,6 +71,15 @@ export class EditChildComponent implements OnInit {
       //alert! 
     })
     }
+  }
+
+  uploadSuccess(event: IFileUploadResponse): void {
+    
+    this.uploadedFilePath = event.path
+  }
+
+  getImageSrc(child: Child): string {
+    return `${environment.apiUrl}${child.picture}`
   }
 
 }

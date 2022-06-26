@@ -1,0 +1,49 @@
+<div class="container bg__forms vh-100">
+    <h3 class="mt-3">Szerkesztés</h3>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form (ngSubmit)="onSave(user)" *ngIf="user$ | async as user">
+                <div class="form-group">
+                    <input [(ngModel)]="user['_id']" type="hidden" name="id" class="user-select-none">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="surname" class="form-label">Vezetéknév</label>
+                        <input [(ngModel)]="user['surname']" name="surname" type="text" class="form-control"
+                            placeholder="Vezetéknév" aria-label="surname" id="surname" required pattern="^([A-Ű][a-ű.]+[ -])*[A-Ű][a-ű]+$">
+                    </div>
+                    <div class="col">
+                        <label for="firstname" class="form-label">Keresztnév</label>
+                        <input [(ngModel)]="user['firstname']" name="firstname" type="text" class="form-control"
+                            placeholder="Keresztnév" aria-label="firstname" id="firstname" required pattern="^([A-Ű][a-ű.]+[ -])*[A-Ű][a-ű]+$">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="email" class="form-label">Email</label>
+                        <input [(ngModel)]="user['email']" name="email" type="email" email class="form-control"
+                            placeholder="Email" aria-label="email" id="email" required>
+                    </div>
+                    <div class="col">
+                        <label for="password" class="form-label">Jelszó</label>
+                        <input [(ngModel)]="user['password']" name="password" type="password" class="form-control"
+                            placeholder="Jelszó" aria-label="password" id="password">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="role" class="form-label">Jogosultság</label>
+                        <input [(ngModel)]="user['role']" name="role" type="number" class="form-control"
+                            placeholder="Jogosultság" aria-label="role" id="role">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-sm w-100 btn-outline-light btn__save mb-5">
+                    <span>Mentés </span>
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

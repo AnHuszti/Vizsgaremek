@@ -1,6 +1,22 @@
 @use 'modules/colors';
 @use 'modules/fonts';
 
+.summalogo {
+
+  &__header {
+    height: 3rem;
+  }
+
+  &__login {
+    height: 10rem;
+  }
+}
+/* 
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+} */
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;

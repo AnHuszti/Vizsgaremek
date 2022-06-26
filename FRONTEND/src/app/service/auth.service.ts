@@ -55,9 +55,11 @@ export class AuthService {
   }
 
   login(loginData: ILoginData): void {
+    console.log(`authservice: ${loginData.password}`)
     this.http.post<IAuthModel>(this.loginUrl, loginData).subscribe({
       next: (response: IAuthModel) => {
         this.user$.next(response.user);
+        console.log(response.user);
         this.access_token$.next(response.accessToken);
         sessionStorage.setItem('login', JSON.stringify(response)); // accesstoken to sessionstorage because page reload
       },

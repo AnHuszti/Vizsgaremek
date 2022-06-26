@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin():void {
+    console.log(`component: ${this.loginData}`);
     this.auth.login(this.loginData);
   }
 

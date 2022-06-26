@@ -6,11 +6,9 @@ export class Employee {
     surname: string = '';
     firstname: string = '';
     position: string = '';
-    //kindergarten: string = '';
     kindergarten: string | Kindergarten = '';
-    //group?: string = '';
     group?: string | Group = '';
     skills?: string = '';
-    image?: string = ''
     active: boolean = true;
+    image?: string = ''
 }

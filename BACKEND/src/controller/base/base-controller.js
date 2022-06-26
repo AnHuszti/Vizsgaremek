@@ -22,7 +22,7 @@ module.exports = (model, populateList = []) => {
             .catch(err => next(new createError.InternalServerError(err.message)))
         },
         createOne(req, res, next) {
-            console.log(`controller: ${req.body.name}`);
+            console.log(`controller: ${req.body.surname}`);
             return service.createOne(req.body)
             .then(entity => res.json(entity))
             .catch(err => next(new createError.InternalServerError(err.message)))

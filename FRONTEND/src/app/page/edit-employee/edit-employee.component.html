@@ -2,16 +2,21 @@
     <h3 class="mt-4">Szerkesztés</h3>
     
     <div class="row justify-content-center mt-4">
-        <div class="col-md-2">
-            <div class="">
-                <img class="" src="" alt="picture" srcset="">
+        <form (ngSubmit)="onSave(employee)" *ngIf="employee$ | async as employee" class="row">
+            <div class="form-group">
+                <input [(ngModel)]="employee['_id']" type="hidden" name="id" class="user-select-none">
             </div>
-        </div>
-        <div class="col-md-6">
-            <form (ngSubmit)="onSave(employee)" *ngIf="employee$ | async as employee">
+            <div class="col-md-2 p-4 m-2 border-end">
                 <div class="form-group">
-                    <input [(ngModel)]="employee['_id']" type="hidden" name="id" class="user-select-none">
+                    <div class="border mb-2">
+                    <img [src]="getImageSrc(employee)" class="file-input__preview p-2 mb-2" alt="Kép helye">
+                    </div>
+                    <app-file-uploader (uploaded)="uploadSuccess($event)"></app-file-uploader>
                 </div>
+            </div>
+            
+            
+            <div class="col-md-6">
                 <div class="row mb-3">
                     <div class="col">
                         <label for="surname" class="form-label">Vezetetéknév</label>
@@ -67,8 +72,8 @@
                     <span>Mentés </span>
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>
                 </button>
+            </div>
             </form>
-        </div>
     </div>
 </div>
 

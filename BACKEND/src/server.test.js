@@ -6,7 +6,10 @@ const Kindergarten = require('./model/kindergarten.model')
 const Group = require('./model/group.model')
 const Employee = require('./model/employee.model')
 const Child = require('./model/child.model')
+const SpecialClass = require('./model/specialclass.model')
+const User = require('./model/user.model')
 const { response } = require('jest-mock-req-res') //to mock
+const { Test } = require('supertest')
 
 describe('REST API integration test', () => {
     beforeEach(done => {
@@ -16,53 +19,85 @@ describe('REST API integration test', () => {
             pass,
         }).then(conn => {
             console.log('Connection is successfull!')
-            done()
-        }).catch(err => {
-            throw new Error(err.message)
-        })
-    })
 
-    afterEach( done => {
-        mongoose.connection.close( () => done())
-    })
+            supertest(app).post('/login')
+                .set('Content-Type', 'application/json')
+                .send({
+                    email: 'test@pass.com',
+                    password: 'testpass'
+                })
+                .end((err, res) => {
+                    token = res.body.accessToken;
 
-    test('GET /kindergartens', done => {
-        supertest(app).get('/kindergartens').expect(200)
-        .then( response => {
-            expect(Array.isArray(response.body)).toBeTruthy()
-            done()
+                    done()
+                })
+            })
+                .catch(err => {
+                    throw new Error(err.message)
+                })
         })
-    })
 
-    test('GET /groups', done => {
-        supertest(app).get('/groups').expect(200)
-        .then( response => {
-            expect(Array.isArray(response.body)).toBeTruthy()
-            done()
+        afterEach(done => {
+            mongoose.connection.close(() => done())
         })
-    })
 
-    test('GET /employees', done => {
-        supertest(app).get('/employees').expect(200)
-        .then( response => {
-            expect(Array.isArray(response.body)).toBeTruthy()
-            done()
+        test('GET /kindergartens', done => {
+            supertest(app).get('/kindergartens')
+            .set('Authorization', `Bearer ${token}`)
+            .expect(200)
+                .then(response => {
+                    expect(Array.isArray(response.body)).toBeTruthy()
+                    done()
+                })
         })
-    })
 
-    test('GET /children', done => {
-        supertest(app).get('/children').expect(200)
-        .then( response => {
-            expect(Array.isArray(response.body)).toBeTruthy()
-            done()
+        test('GET /groups', done => {
+            supertest(app).get('/groups')
+            .set('Authorization', `Bearer ${token}`)
+            .expect(200)
+                .then(response => {
+                    expect(Array.isArray(response.body)).toBeTruthy()
+                    done()
+                })
+        })
+
+        test('GET /employees', done => {
+            supertest(app).get('/employees')
+            .set('Authorization', `Bearer ${token}`)
+            .expect(200)
+                .then(response => {
+                    expect(Array.isArray(response.body)).toBeTruthy()
+                    done()
+                })
+        })
+
+        test('GET /children', done => {
+            supertest(app).get('/children')
+            .set('Authorization', `Bearer ${token}`)
+            .expect(200)
+                .then(response => {
+                    expect(Array.isArray(response.body)).toBeTruthy()
+                    done()
+                })
+        })
+
+        test('GET /specialclass', done => {
+            supertest(app).get('/specialclass')
+            .set('Authorization', `Bearer ${token}`)
+            .expect(200)
+                .then(response => {
+                    expect(Array.isArray(response.body)).toBeTruthy()
+                    done()
+                })
+        })
+
+        test('GET /user', done => {
+            supertest(app).get('/user')
+            .set('Authorization', `Bearer ${token}`)
+            .expect(200)
+                .then(response => {
+                    expect(Array.isArray(response.body)).toBeTruthy()
+                    done()
+                })
         })
     })
-    
-    test('GET /specialclass', done => {
-        supertest(app).get('/specialclass').expect(200)
-        .then( response => {
-            expect(Array.isArray(response.body)).toBeTruthy()
-            done()
-        })
-    })
-})

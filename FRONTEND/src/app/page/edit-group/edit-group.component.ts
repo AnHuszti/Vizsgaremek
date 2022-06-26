@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
+import { IFileUploadResponse } from 'src/app/common/file-uploader/file-uploader.component';
 import { Group } from 'src/app/model/group';
 import { GroupsService } from 'src/app/service/groups.service';
 import { KindergartenService } from 'src/app/service/kindergarten.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-edit-group',
@@ -34,6 +36,8 @@ export class EditGroupComponent implements OnInit {
     entity.next(new Group())
   })
 
+  uploadedFilePath: string = ''
+
 
   constructor(
     private router: Router,
@@ -51,6 +55,12 @@ export class EditGroupComponent implements OnInit {
     console.log(`2. log: ${group['_id']}`)
     if (!group['_id']) {
       this.isNewEntity = true
+      group['_id'] = undefined
+
+      if (this.uploadedFilePath) {
+        group.image = this.uploadedFilePath
+      }
+
       this.groupService.create(group).subscribe({
         next: newGroup => this.router.navigate(['/csoportok']),
         error: err => console.error(err)
@@ -58,11 +68,25 @@ export class EditGroupComponent implements OnInit {
     }
     else if (group._id && !this.isNewEntity){
       this.isNewEntity = false
+
+      if (this.uploadedFilePath) {
+        group.image = this.uploadedFilePath
+      }
+
       this.groupService.update(group).subscribe({
       next: updatedGroup => this.router.navigate(['/csoportok']),
       error: err => console.error(err)
       //alert! 
     })
     }
+  }
+
+  uploadSuccess(event: IFileUploadResponse): void {
+   
+    this.uploadedFilePath = event.path
+  }
+
+  getImageSrc(group: Group): string {
+    return `${environment.apiUrl}${group.image}`
   }
 }

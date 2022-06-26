@@ -6,9 +6,9 @@ module.exports = (req, res, next) => {
     if(authHeader) {
         //Bearer: ffiztfzkkjio98hj7.87tguz
         const token = authHeader.split(' ')[1]
-        jwt.verify(token, 'secrettext', (err, user) => {
+        jwt.verify(token, `${process.env.ACCESS_TOKEN_SECRET}`, (err, user) => {
             if (err) {
-                res.send(403)
+                return res.sendStatus(403)
             }
 
             req.user = user

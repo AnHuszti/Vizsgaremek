@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
+import { IFileUploadResponse } from 'src/app/common/file-uploader/file-uploader.component';
 import { Employee } from 'src/app/model/employee';
 import { EmployeeService } from 'src/app/service/employee.service';
 import { GroupsService } from 'src/app/service/groups.service';
 import { KindergartenService } from 'src/app/service/kindergarten.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-edit-employee',
@@ -37,6 +39,8 @@ export class EditEmployeeComponent implements OnInit {
     entity.next(new Employee())
   })
 
+  uploadedFilePath: string = ''
+
   constructor(
     private router: Router,
     private employeeService: EmployeeService,
@@ -55,6 +59,11 @@ export class EditEmployeeComponent implements OnInit {
     if (!employee['_id']) {
       this.isNewEntity = true
       employee['_id'] = undefined
+
+      if (this.uploadedFilePath) {
+        employee.image = this.uploadedFilePath
+      }
+
       this.employeeService.create(employee).subscribe({
         next: newEmployee => this.router.navigate(['/alkalmazottak']),
         error: err => console.error(err)
@@ -62,6 +71,11 @@ export class EditEmployeeComponent implements OnInit {
     }
     else if (employee._id && !this.isNewEntity){
       this.isNewEntity = false
+
+      if (this.uploadedFilePath) {
+        employee.image = this.uploadedFilePath
+      }
+
       this.employeeService.update(employee).subscribe({
       next: updatedEmployee => this.router.navigate(['/alkalmazottak']),
       error: err => console.error(err)
@@ -70,4 +84,12 @@ export class EditEmployeeComponent implements OnInit {
     }
   }
 
+  uploadSuccess(event: IFileUploadResponse): void {
+   
+    this.uploadedFilePath = event.path
+  }
+
+  getImageSrc(employee: Employee): string {
+    return `${environment.apiUrl}${employee.image}`
+  }
 }

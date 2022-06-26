@@ -28,6 +28,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './page/login/login.component';
 import { JwtInterceptor } from './service/jwt.interceptor';
 import { AuthService } from './service/auth.service';
+import { UserComponent } from './page/user/user.component';
+import { EditUserComponent } from './page/edit-user/edit-user.component';
+
 
 @NgModule({
   declarations: [
@@ -47,6 +50,8 @@ import { AuthService } from './service/auth.service';
     EditSpecialClassComponent,
     FileUploaderComponent,
     LoginComponent,
+    UserComponent,
+    EditUserComponent,
   ],
   imports: [
     BrowserModule,

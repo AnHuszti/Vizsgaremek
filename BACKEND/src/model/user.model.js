@@ -1,8 +1,27 @@
 const mongoose = require('mongoose')
+const idValidator = require('mongoose-id-validator');
 //const bcrypt = require('bcrypt')
 const SALT_WORK_FACTOR = 10 // password strength
 
 const UserSchema = mongoose.Schema({
+    surname: {
+        type: String,
+        required: true,
+        validate: {
+            validator: function (v) {
+                return /^[a-űA-ű\.\-]{2,25}$/.test(v);
+            }
+        }
+    },
+    firstname: {
+        type: String,
+        required: true,
+        validate: {
+            validator: function (v) {
+                return /^[a-űA-ű\.\-]{2,25}$/.test(v);
+            }
+        }
+    },
     email: {
         type: String,
         required: true,
@@ -10,46 +29,11 @@ const UserSchema = mongoose.Schema({
             unique: true
         }
     },
-    lastName: String,
-    firstName: String,
-    //role: Number
+    role: Number
 })
 
 UserSchema.plugin(require('mongoose-bcrypt'))
 
-
-
-/* UserSchema.pre('save', function(next) {
-    const user = this
-    if (!user.isModified('password')) {   
-        return next()
-    }
-    // Titkosítás:
-    bcrypt.genSalt(SALT_WORK_FACTOR, (err, salt) => {
-        if (err) {
-            return next(err)
-        }
-        bcrypt.hash(user.password, salt, (err, hash) => {
-            if (err) {
-                return next(err)
-            }
-
-            user.password = hash
-            next()
-        })
-    })
-})
-
-//Bejelentkező password összehasonlítása a userhez tartozó jelszóval:
-UserSchema.methods.comparePassword = function(candidatePassword, cb) {
-    // cb = callback
-    bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
-        if (err) {
-            return cb(err)
-        }
-
-        cb(null, isMatch)
-    })
-} */
+UserSchema.plugin(idValidator)
 
 module.exports = mongoose.model('User', UserSchema)

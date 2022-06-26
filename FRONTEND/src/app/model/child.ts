@@ -10,6 +10,6 @@ export class Child {
     group: string | Group = '';
     mothername: string = '';
     phone: string = '';
-    picture: string = ''; // final: image or icon
+    picture?: string = '';
     active: boolean = true;
 }
