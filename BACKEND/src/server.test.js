@@ -29,7 +29,7 @@ describe('REST API integration test', () => {
                 .set('Content-Type', 'application/json')
                 .send({
                     email: 'test@mail.com',
-                    password: 'testpw'
+                    password: 'testpw000'
                 })
                 .end((err, res) => {
                     token = res.body.accessToken;

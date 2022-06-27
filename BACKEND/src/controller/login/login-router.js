@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 router.post('/', async (req, res, next) => {
-    console.log(`router:${req.body.email}${req.body.password}`);
+    
     const { email, password } = req.body
     const user = await User.findOne({email})
     
@@ -15,15 +15,14 @@ router.post('/', async (req, res, next) => {
         return next(new createError.Unauthorized('Invalid email or password'));
     }
     
-    console.log(`router2: ${req.body.password}`);
     const valid = user.verifyPasswordSync(password)
     
     if (valid) {
-        console.log(valid);
+        
         const accessToken = jwt.sign({
             _id: user._id,
             email: user.email,
-            role: 1,
+            role: user.role,
         }, `${process.env.ACCESS_TOKEN_SECRET}`, {
             expiresIn: '1h'
         })
