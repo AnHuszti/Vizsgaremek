@@ -10,6 +10,14 @@
   &__login {
     height: 10rem;
   }
+
+  &__home {
+    height: 10rem;
+
+    @media (min-width: 768px) {
+      height: 20rem;
+    }
+  }
 }
 /* 
 .form-signin {
