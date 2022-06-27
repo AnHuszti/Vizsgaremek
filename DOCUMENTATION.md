@@ -18,7 +18,7 @@ A `code . -r`, majd az `npm i` parancsok futtatása következik.
 - Ha még nincsen fenn a célgépen, akkor telepíteni kell az Angular keretrendszert az `npm i -g @angular/cli` paranccsal.
 - A terminálban ki kell adni az `ng build` parancsot   
 - A /frontend/dist/frontend mappa tartalmát be kell másolni a /backend/public mappába   
-- A terminálon be kell lépni a /backend mappába és futtatni az `npm run build` parancsot 
+- A terminálon be kell lépni a /backend mappába és futtatni az `npm run deploy` parancsot 
 ​
 ## **3. Az alkalmazás konfigurálása**
 ​
@@ -37,20 +37,21 @@ A megadott Docker container indítása és inicializálása:
 ​
 _Megjegyzés_:  
 A belépéshez egy érvényes e-mail-cím és jelszó páros:  
-​
+
 E-mail | Jelszó
+-------- | ---------
 admin@minta.com | lkasadji
 user@minta.com | ahfimmo
-​
+
 ## **5. A végpontok dokumentációja**
 ​
 Swagger 
 - Az alábbi URL-t kell beírni a böngészőbe: https://localhost:3000/api-docs
 ​
-A többi végpont a https://localhost:4200 linken található alkalmazásból elérhető a megfelelő gombokra / menüpontokra kattintással:
+A többi végpont a https://localhost:3000 linken található alkalmazásból elérhető a megfelelő gombokra / menüpontokra kattintással:
 - Login: Bejelentkezés gombra kattintva
 - Logout: Kijelentkezés gombra kattintva
-- Tagóvodák, Alkalmazottak, Csoportok, Gyerekek, Kölnórák, Felhasználók: A baloldali Sidebaron található menüből
+- Tagóvodák, Alkalmazottak, Csoportok, Gyerekek, Különórák, Felhasználók: A baloldali Sidebaron található menüből
 - Minden kategória szerkesztőoldalát az adott kategória táblázatában található szerkesztő gombokra kattintva ill. a táblázatt feletti "új ..." gombra kattintva érjük el.
 ​
 
