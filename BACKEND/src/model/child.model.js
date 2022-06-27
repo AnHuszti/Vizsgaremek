@@ -1,16 +1,16 @@
 const mongoose = require('mongoose')
-//const idValidator = require('mongoose-id-validator')
+const idValidator = require('mongoose-id-validator')
 
 
 const ChildSchema = mongoose.Schema({
     surname: {
         type: String,
         required: true,
-        /* validate: {
+        validate: {
             validator: function(value) {
                 return /^[a-űA-Ű \-\.]{3,25}$/.test(value)
             }
-        } */
+        }
     },
     firstname: {
         type: String,
@@ -50,6 +50,6 @@ const ChildSchema = mongoose.Schema({
     timestamps: true
 })
 
-//ChildSchema.plugin(idValidator)
+ChildSchema.plugin(idValidator)
 
 module.exports = mongoose.model('Child', ChildSchema)

@@ -9,10 +9,6 @@ const EmployeeSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    /* kindergarten: {
-        type: String,
-        required: true,
-    }, */
     kindergarten: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Kindergarten',
@@ -22,10 +18,6 @@ const EmployeeSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    /* group: {
-        type: String,
-        required: false,
-    }, */
     group: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Group'

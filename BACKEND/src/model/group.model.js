@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-//const idValidator = require('mongoose-id-validator')
 
 
 const GroupSchema = mongoose.Schema({

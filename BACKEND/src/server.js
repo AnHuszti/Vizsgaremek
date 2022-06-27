@@ -11,16 +11,8 @@ const YAML = require('yamljs')
 
 const swaggerDocument = YAML.load('./docs/swagger.yaml')
 
-//mongoose.Promise = global.Promise -> talán nem kell
 
 const app = express()
-
-/* if (!config.has('database')) {
-    logger.error('No database config found.')
-    process.exit()
-} */
-
-// mongodb+srv://dbUser:SFYyPNUtcFEVYDnX@projectcluster.rrbspej.mongodb.net/?retryWrites=true&w=majority
 
 const { host, user, pass } = config.get('database')
 mongoose.connect(`mongodb+srv://${host}`, {
@@ -41,7 +33,6 @@ app.use(bodyParser.json())
 
 const authenticateJwt = require('./module/auth/authenticate')
 
-//upload files
 app.use(fileUpload())
 app.post('/upload', (req, res) => {
     let uploadFile
@@ -84,15 +75,10 @@ app.use('/login', require('./controller/login/login-router'))
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 
-app.use('/', (req, res) => {
+app.use('/', (req, res, next) => {
     res.send('api server')
 })
 
-
-/* app.use('/', (req, res, next) => {
-    console.log(req.url) //debughoz
-    res.send('api server')
-}) */
 
 app.use((err, req, res, next) => {
     res.status = 500

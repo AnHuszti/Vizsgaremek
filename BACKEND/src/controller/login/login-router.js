@@ -5,7 +5,7 @@ const createError = require('http-errors')
 
 const router = express.Router();
 
-//post
+
 router.post('/', async (req, res, next) => {
     console.log(`router:${req.body.email}${req.body.password}`);
     const { email, password } = req.body

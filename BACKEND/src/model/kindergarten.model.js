@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-// const idValidator = require('mongoose-id-validator')
+const idValidator = require('mongoose-id-validator')
 
 
 const KindergartenSchema = mongoose.Schema({
@@ -63,5 +63,7 @@ const KindergartenSchema = mongoose.Schema({
 }, {
     timestamps: true
 })
+
+KindergartenSchema.plugin(idValidator)
 
 module.exports = mongoose.model('Kindergarten', KindergartenSchema)
