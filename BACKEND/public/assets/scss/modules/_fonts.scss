@@ -1,0 +1,45 @@
+@use 'colors';
+
+header h1 {
+    font-family: myHeaderFont, Helvetica, Arial, sans-serif;
+    font-size: 30px !important;
+}
+
+th {
+    font-family: myGeneralFont, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+h1, h3 {
+    font-family: myH1Font, Helvetica, Arial, sans-serif;
+    font-size: 40px !important;
+    color: colors.$dark-font-color;
+}
+
+button {
+    font-family: myH1Font, Helvetica, Arial, sans-serif;
+    font-size: 18px !important;
+}
+
+li, table, form {
+    font-family: myGeneralFont, Helvetica, Arial, sans-serif;
+    //font-size: 40px !important;
+}
+
+@font-face {
+    font-family: myHeaderFont;
+    src: url(../../fonts/Amatic_SC/AmaticSC-Regular.ttf);
+    //font-weight: 100;
+  }
+
+@font-face {
+    font-family: myH1Font;
+    src: url(../../fonts/Amatic_SC/AmaticSC-Bold.ttf);
+    //font-weight: 100;
+  }
+
+@font-face {
+    font-family: myGeneralFont;
+    src: url(../../fonts/Barlow/Barlow-Light.ttf);
+    //font-weight: 100;
+  }

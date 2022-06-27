@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const idValidator = require('mongoose-id-validator');
-//const bcrypt = require('bcrypt')
-const SALT_WORK_FACTOR = 10 // password strength
+
+const SALT_WORK_FACTOR = 10
 
 const UserSchema = mongoose.Schema({
     surname: {
