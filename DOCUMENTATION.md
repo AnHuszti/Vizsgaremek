@@ -40,8 +40,8 @@ A belépéshez egy érvényes e-mail-cím és jelszó páros:
 
 E-mail | Jelszó
 -------- | ---------
-admin@minta.com | lkasadji
-user@minta.com | ahfimmo
+admin@test.com | adminpw
+user@test.com | userpw
 
 ## **5. A végpontok dokumentációja**
 ​
