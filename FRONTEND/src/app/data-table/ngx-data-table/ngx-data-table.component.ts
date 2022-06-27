@@ -30,19 +30,21 @@ export class NgxDataTableComponent<T extends {[x: string]: any}> implements OnIn
 
   page: number = 1
 
-  /* phrase: string = '';
-  
-  filterKey: string = ''; */
-
-  /* sorterKey: string = 'title';
-  sorterDirection: number = 1; */
-
-  //entity: string = 
-
   get pageList(): number[] {
     const pageSize = Math.ceil(this.list.length / this.pageSize)
     return new Array(pageSize).fill(0).map((item, index) => index + 1)
   } 
+
+  /* phrase: string = ''; 
+  filterKey: string = ''; */
+
+  sorterKey: string = '';
+  sorterDirection: number = -1; 
+
+  onColumnSelect(key: string): void {
+    this.sorterKey = key
+    this.sorterDirection = this.sorterDirection * -1
+  }
 
   constructor() { }
 

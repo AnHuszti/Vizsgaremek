@@ -4,6 +4,7 @@ import { NgxDataTableComponent } from './ngx-data-table/ngx-data-table.component
 import { ModifyPipe } from './pipe/modify.pipe';
 import { FilterPipe } from './pipe/filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { SorterPipe } from './pipe/sorter.pipe';
 
 
 
@@ -11,7 +12,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     NgxDataTableComponent,
     ModifyPipe,
-    FilterPipe
+    FilterPipe,
+    SorterPipe
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,6 @@ import { FormsModule } from '@angular/forms';
   exports: [
     NgxDataTableComponent,
     ModifyPipe,
-    FilterPipe
-  ] // Export important!!!
+  ]
 })
 export class DataTableModule { }

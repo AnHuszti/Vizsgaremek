@@ -22,12 +22,15 @@
       <tr>
         <th *ngFor="let col of columns" scope="col">
           {{ col.title }}
+          <a (click)="onColumnSelect(col.key)">
+            <i class="fa fa-sort" aria-hidden="true"></i>
+          </a>
         </th>
         <th></th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let row of list | slice:startSlice:endSlice">
+      <tr *ngFor="let row of list | slice:startSlice:endSlice | sorter:sorterKey:sorterDirection">
         <td *ngFor="let col of columns">
           {{ row[col.key] | modify:col.pipes:col.pipeArgs }}
         </td>
