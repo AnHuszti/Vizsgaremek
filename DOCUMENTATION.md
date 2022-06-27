@@ -18,7 +18,7 @@ A `code . -r`, majd az `npm i` parancsok futtatása következik.
 - Ha még nincsen fenn a célgépen, akkor telepíteni kell az Angular keretrendszert az `npm i -g @angular/cli` paranccsal.
 - A terminálban ki kell adni az `ng build` parancsot   
 - A /frontend/dist/frontend mappa tartalmát be kell másolni a /backend/public mappába   
-- A terminálon be kell lépni a /backend mappába és futtatni az `npm run build` parancsot 
+- A terminálon be kell lépni a /backend mappába és futtatni az `npm run deploy` parancsot 
 ​
 ## **3. Az alkalmazás konfigurálása**
 ​
@@ -47,7 +47,7 @@ user@minta.com | ahfimmo
 Swagger 
 - Az alábbi URL-t kell beírni a böngészőbe: https://localhost:3000/api-docs
 ​
-A többi végpont a https://localhost:4200 linken található alkalmazásból elérhető a megfelelő gombokra / menüpontokra kattintással:
+A többi végpont a https://localhost:3000 linken található alkalmazásból elérhető a megfelelő gombokra / menüpontokra kattintással:
 - Login: Bejelentkezés gombra kattintva
 - Logout: Kijelentkezés gombra kattintva
 - Tagóvodák, Alkalmazottak, Csoportok, Gyerekek, Kölnórák, Felhasználók: A baloldali Sidebaron található menüből
