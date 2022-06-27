@@ -24,14 +24,11 @@ Egy mobiloptimalizált, látványos felületen az óvoda központ lefontontosabb
 
 **Elfogadási kritérium:**  
 Az oldalra navigálva megjelennek a telephelyek adatai.  
-Az adatok: telephely neve, telephely címe, alkalmazottak száma, férőhelyek száma, aktuális gyerek létszám. Kártyás nézetben kép is feltüntethető.
+Az adatok: telephely neve, telephely címe, alkalmazottak száma, férőhelyek száma, aktuális gyerek létszám.
 
 **Megjegyzések:**
 
-
-1# szcenárió | 2# szcenárió
------------- | -------------
-A Telephelyek / Tagóvodák menüpontra kattintással megjelenik az összes telephely adata lista formátumban egy helyen. | A Telephelyek / Tagóvodák menüpontra való kattintással megjelenik az összes telephely adata kártyás formátumban egy helyen. 
+A Telephelyek / Tagóvodák menüpontra kattintással megjelenik az összes telephely adata lista formátumban egy helyen. 
 
 ---
 **2. agilis felhasználói történet:**
@@ -85,9 +82,7 @@ Az adatok: név, munkakör(óvópedagógus, dajka, pedagógiai asszisztens, egy�
 
 **Megjegyzések:**
 
-1# szcenárió | 2# szcenárió
------------- | -------------
-Az Alkalmazottak menüpontra kattintással megjelennek az alkalmazottak adatai lista formátumban egy helyen. | Az Alkalmazottak menüpontra való kattintással megjelennek az alkalmazottak adatai kártyás formátumban egy helyen. 
+Az Alkalmazottak menüpontra kattintással megjelennek az alkalmazottak adatai lista formátumban egy helyen.
 
 ---
 **2. agilis felhasználói történet:**
@@ -120,24 +115,6 @@ Az Alkalmazottak menüpontra kattintással megjelennek az alkalmazottak adatai l
 
 **5. agilis felhasználói történet:**
 
-> _Az alkalmazottak munkakörök / kategóriák szerint listázhatók_
-
-**Elfogadási kritérium:**  
-A kategória kiválasztásával frissül a listaoldal, ahol csak a szűrt adatok láthatók.
-
----
-
-**6. agilis felhasználói történet:**
-
-> _Bármilyen kulcsszóra lehet keresni egy választott kategórián belül._
-
-**Elfogadási kritérium:**  
-A kategória kiválasztásával és a kulcsszónak megfelelően frissül a listaoldal, ahol csak a szűrt adatok láthatók.
-
----
-
-**7. agilis felhasználói történet:**
-
 > _Tulajdonságok szerint sorba rendezhetők a rekordok._
 
 **Elfogadási kritérium:**  
@@ -146,7 +123,7 @@ A kategória kiválasztásával és a kulcsszónak megfelelően frissül a lista
 
 ---
 
-**8. agilis felhasználói történet:**
+**6. agilis felhasználói történet:**
 
 > _Az alkalmazottakat listázó oldal lapozható._
 
@@ -156,7 +133,7 @@ A kategória kiválasztásával és a kulcsszónak megfelelően frissül a lista
 
 ---
 
-**9. agilis felhasználói történet:**
+**7. agilis felhasználói történet:**
 
 > _A felvett adatok helyességének ellenőrzése automatikusan megtörténik._
 
@@ -174,7 +151,7 @@ A kategória kiválasztásával és a kulcsszónak megfelelően frissül a lista
 > _A csoportokat listázó aloldalon megjelennek a csoportok legfontosabb adatai._
 
 **Elfogadási kritérium:**  
-Az aktuális tanév csoportjainak fő adatait jeleníti meg lista formátumban. Az adatok a következők: név, telephely, óvópedagógus, dajka, maximális létszám, aktuális létszám, korcsoport, terem
+Az aktuális tanév csoportjainak fő adatait jeleníti meg lista formátumban. Az adatok a következők: név, telephely, óvópedagógus, dajka, maximális létszám, aktuális létszám, korcsoport
 
 ---
 
@@ -334,15 +311,6 @@ Az aloldal megjeleníti az összes különóra fő adatait lista formátumban. A
 
 **5. agilis felhasználói történet:**
 
-> _A rekordok kategóriák szerint listázhatók._
-
-**Elfogadási kritérium:**  
-A kategória kiválasztásával frissül a listaoldal, ahol csak a szűrt adatok láthatók.
-
----
-
-**6. agilis felhasználói történet:**
-
 > _Tulajdonságok szerint sorba rendezhetők a különórák._
 
 **Elfogadási kritérium:**  
@@ -351,7 +319,7 @@ A kategória kiválasztásával frissül a listaoldal, ahol csak a szűrt adatok
 
 ---
 
-**7. agilis felhasználói történet:**
+**6. agilis felhasználói történet:**
 
 > _A rekordokat felsoroló oldal lapozható._
 
@@ -361,7 +329,7 @@ A kategória kiválasztásával frissül a listaoldal, ahol csak a szűrt adatok
 
 ---
 
-**8. agilis felhasználói történet:**
+**7. agilis felhasználói történet:**
 
 > _A felvett adatok helyességének ellenőrzése automatikusan megtörténik._
 
@@ -384,6 +352,7 @@ magas
 - Az egyes aloldalakon statisztikák, kimutatások készítése a legfontosabb adatokból.
 - Az aloldalak lista nézete mellett kártya nézet kialakítása.
 - Eseményeket tartalmazó aloldal létrehozása
+- Kereső létrehozása a listázó oldalakon
 - Bejelentkezési felület létrehozása.
 
 ---
