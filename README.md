@@ -353,6 +353,7 @@ magas
 - Az aloldalak lista nézete mellett kártya nézet kialakítása.
 - Eseményeket tartalmazó aloldal létrehozása
 - Kereső létrehozása a listázó oldalakon
+- Szűrés lehetősége a listázó oldalakon
 - Bejelentkezési felület létrehozása.
 
 ---
