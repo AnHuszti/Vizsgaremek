@@ -80,7 +80,6 @@ export class EditEmployeeComponent implements OnInit {
       this.employeeService.update(employee).subscribe({
       next: updatedEmployee => this.router.navigate(['/alkalmazottak']),
       error: err => console.error(err)
-      //alert! 
     })
     }
   }

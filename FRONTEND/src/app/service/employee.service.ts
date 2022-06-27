@@ -10,20 +10,10 @@ import { BaseService } from './base.service';
 })
 export class EmployeeService extends BaseService<Employee> {
 
-  //apiUrl = environment.apiUrl;
-
   constructor(
     http: HttpClient 
   ) {
     super(http, 'employees')
   }
 
-
-  /* getAll(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(`${this.apiUrl}employees`)
-  }
-
-  getOne(id: string): Observable<Employee> {
-    return this.http.get<Employee>(`${this.apiUrl}employees/${id}`)
-  } */
 }

@@ -75,7 +75,7 @@ export class EditKindergartenComponent implements OnInit {
       this.kindergartenService.update(kindergarten).subscribe({
       next: updatedKindergarten => this.router.navigate(['/tagovodak']),
       error: err => console.error(err)
-      //alert! 
+     
     })
     }
   }

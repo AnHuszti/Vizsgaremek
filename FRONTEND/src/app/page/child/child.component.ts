@@ -22,10 +22,10 @@ export class ChildComponent implements OnInit {
 
   groups$ = this.groupService.getAll()
 
-  phrase: string = '';
+  /* phrase: string = '';
   filterKey: string = 'surname';
   filterKeys: string[] = ['surname', 'firstname', 'age', 'kindergarten', 'group', 'mothername', 'phone', 'active'];
-
+ */
   isLoading = true;
 
   constructor(
@@ -53,20 +53,13 @@ export class ChildComponent implements OnInit {
     if (child['_id']) {
       this.childService.delete(child['_id']).subscribe({
         next: ()  => {
-          //this.messageService.showDelete(`${child['surname']} ${child['firstname']} alkalmazott törölve`)
+          //this.messageService.showDelete(`${child['surname']} ${child['firstname']} Gyermek törölve`)
           this.list$ = this.childService.getAll()
         },
         error: err => console.error(err)
-        //alert      
+              
       })
     }
   }
   
-  /* jumpToEdit(child: Child): void {
-    if (child._id != "0") {
-      this.router.navigate(['/gyermek/edit', child._id])
-    } else {
-      this.router.navigate(['/gyermek/edit', 0])
-    }
-  } */
 }

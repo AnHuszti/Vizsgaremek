@@ -20,7 +20,7 @@
   <table class="table table-light table-striped table-sm">
     <thead>
       <tr>
-        <th *ngFor="let col of columns" scope="col">
+        <th *ngFor="let col of columns" scope="col" class="py-lg-3" >
           {{ col.title }}
           <a (click)="onColumnSelect(col.key)">
             <i class="fa fa-sort" aria-hidden="true"></i>

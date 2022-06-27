@@ -15,7 +15,6 @@ export class EmployeeComponent implements OnInit {
 
   columns = this.config.employeeTableColumns
 
-  // list$: Observable<Employee[]> = this.employeeService.getAll()
   list$ = this.employeeService.getAll()
 
   kindergartens$ = this.kindergartenService.getAll()
@@ -41,8 +40,7 @@ export class EmployeeComponent implements OnInit {
           //this.messageService.showDelete(`${employee['surname']} ${employee['firstname']} alkalmazott törölve`)
           this.list$ = this.employeeService.getAll()
         },
-        error: err => console.error(err)
-        //alert      
+        error: err => console.error(err)      
       })
     }
   }

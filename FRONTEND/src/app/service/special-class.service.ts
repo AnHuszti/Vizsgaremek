@@ -8,13 +8,9 @@ import { BaseService } from './base.service';
 })
 export class SpecialClassService extends BaseService<SpecialClass> {
 
-  
-
   constructor(
     http: HttpClient
   ) {
     super(http, 'specialclasses')
    }
-
-
 }

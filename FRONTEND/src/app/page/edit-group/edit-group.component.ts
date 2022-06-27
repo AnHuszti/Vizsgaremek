@@ -57,9 +57,9 @@ export class EditGroupComponent implements OnInit {
   private isNewEntity: boolean = false
 
   onSave(groupForm: NgForm, group: Group): void {
-    if (groupForm.invalid) {
+    /* if (groupForm.invalid) {
       this.messageService.showError()
-    }
+    } */ // don't work
 
     if (!group['_id']) {
       this.isNewEntity = true
@@ -71,10 +71,11 @@ export class EditGroupComponent implements OnInit {
 
       this.groupService.create(group).subscribe({
         next: newGroup => { 
-          this.messageService.showSuccess('Újcsoport hozzáadva.'),
+          //this.messageService.showSuccess('Újcsoport hozzáadva.'), //don't work
           this.router.navigate(['/csoportok'])
         },
-        error: err => this.messageService.showError()
+        error: err => console.error(err)
+        //error: err => this.messageService.showError()
       })
     }
     else if (group._id && !this.isNewEntity){
@@ -86,10 +87,11 @@ export class EditGroupComponent implements OnInit {
 
       this.groupService.update(group).subscribe({
       next: updatedGroup => {
-        this.messageService.showSuccess('Módosítás megtörtént.'),
+        //this.messageService.showSuccess('Módosítás megtörtént.'), //don't work
         this.router.navigate(['/csoportok'])
       },
-      error: err => this.messageService.showError()
+      error: err => console.error(err)      
+      //error: err => this.messageService.showError()
     })
     }
   }

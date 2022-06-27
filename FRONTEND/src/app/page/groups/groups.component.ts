@@ -35,8 +35,7 @@ export class GroupsComponent implements OnInit {
           //this.messageService.showDelete(`${group['name']} csoport törölve`)
           this.list$ = this.groupsService.getAll()
         },
-        error: err => console.error(err)
-        //alert      
+        error: err => console.error(err)      
       })
     }
   }

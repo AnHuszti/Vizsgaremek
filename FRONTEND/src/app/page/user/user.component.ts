@@ -35,8 +35,7 @@ export class UserComponent implements OnInit {
           //this.messageService.showDelete(`${user['surname']} ${user['firstname']} csoport törölve`)
           this.list$ = this.userService.getAll()
         },
-        error: err => console.error(err)
-        //alert      
+        error: err => console.error(err)  
       })
     }
   }
