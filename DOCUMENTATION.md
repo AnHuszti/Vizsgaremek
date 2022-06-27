@@ -50,7 +50,7 @@ Swagger
 A többi végpont a https://localhost:3000 linken található alkalmazásból elérhető a megfelelő gombokra / menüpontokra kattintással:
 - Login: Bejelentkezés gombra kattintva
 - Logout: Kijelentkezés gombra kattintva
-- Tagóvodák, Alkalmazottak, Csoportok, Gyerekek, Kölnórák, Felhasználók: A baloldali Sidebaron található menüből
+- Tagóvodák, Alkalmazottak, Csoportok, Gyerekek, Különórák, Felhasználók: A baloldali Sidebaron található menüből
 - Minden kategória szerkesztőoldalát az adott kategória táblázatában található szerkesztő gombokra kattintva ill. a táblázatt feletti "új ..." gombra kattintva érjük el.
 ​
 
