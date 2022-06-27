@@ -7,6 +7,7 @@ import { Employee } from 'src/app/model/employee';
 import { EmployeeService } from 'src/app/service/employee.service';
 import { GroupsService } from 'src/app/service/groups.service';
 import { KindergartenService } from 'src/app/service/kindergarten.service';
+import { MessageService } from 'src/app/service/message.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -47,7 +48,8 @@ export class EditEmployeeComponent implements OnInit {
     private employeeService: EmployeeService,
     private activatedRoute: ActivatedRoute,
     private kindergartenService: KindergartenService,
-    private groupService: GroupsService
+    private groupService: GroupsService,
+    private messageService: MessageService
   ) { }
 
   ngOnInit(): void {
@@ -56,8 +58,11 @@ export class EditEmployeeComponent implements OnInit {
   private isNewEntity: boolean = false
 
   onSave(employeeForm: NgForm, employee: Employee): void {
+    if (!employeeForm.valid) {
+      this.messageService.showError()
+    }
 
-    if (!employee['_id']) {
+    else if (!employee['_id']) {
       this.isNewEntity = true
       employee['_id'] = undefined
 
@@ -66,7 +71,11 @@ export class EditEmployeeComponent implements OnInit {
       }
 
       this.employeeService.create(employee).subscribe({
-        next: newEmployee => this.router.navigate(['/alkalmazottak']),
+        next: newEmployee => {
+          this.messageService.showSuccess('Új alkalmazott hozzáadva.'),
+          setTimeout( () =>
+        {this.router.navigate(['/alkalmazottak'])}, 3000)
+    },
         error: err => console.error(err)
       })
     }
@@ -78,7 +87,11 @@ export class EditEmployeeComponent implements OnInit {
       }
 
       this.employeeService.update(employee).subscribe({
-      next: updatedEmployee => this.router.navigate(['/alkalmazottak']),
+      next: updatedEmployee => {
+        this.messageService.showSuccess('Módosítás megtörtént.'),
+        setTimeout( () =>
+        {this.router.navigate(['/alkalmazottak'])}, 3000)
+    },
       error: err => console.error(err)
     })
     }

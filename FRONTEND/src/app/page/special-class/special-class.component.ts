@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SpecialClass } from 'src/app/model/special-class';
 import { ConfigService } from 'src/app/service/config.service';
+import { MessageService } from 'src/app/service/message.service';
 import { SpecialClassService } from 'src/app/service/special-class.service';
 
 @Component({
@@ -18,7 +19,8 @@ export class SpecialClassComponent implements OnInit {
   constructor(
     private config: ConfigService,
     private specialClassService: SpecialClassService,
-    private router: Router
+    private router: Router,
+    private messageService: MessageService
   ) { }
 
   ngOnInit(): void {
@@ -32,11 +34,10 @@ export class SpecialClassComponent implements OnInit {
     if (specialClass['_id']) {
       this.specialClassService.delete(specialClass['_id']).subscribe({
         next: ()  => {
-          //this.messageService.showDelete(`${specialClass['name']} csoport törölve`)
+          this.messageService.showDelete(`${specialClass['name']} csoport törölve`)
           this.list$ = this.specialClassService.getAll()
         },
-        error: err => console.error(err)
-        //alert      
+        error: err => console.error(err)     
       })
     }
   }

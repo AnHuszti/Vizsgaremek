@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { SpecialClass } from 'src/app/model/special-class';
 import { KindergartenService } from 'src/app/service/kindergarten.service';
+import { MessageService } from 'src/app/service/message.service';
 import { SpecialClassService } from 'src/app/service/special-class.service';
 
 @Component({
@@ -41,6 +42,7 @@ export class EditSpecialClassComponent implements OnInit {
     private specialClassService: SpecialClassService,
     private activatedRoute: ActivatedRoute,
     private kindergartenService: KindergartenService,
+    private messageService: MessageService
   ) { }
 
   ngOnInit(): void {
@@ -49,21 +51,31 @@ export class EditSpecialClassComponent implements OnInit {
   private isNewEntity: boolean = false
 
   onSave(specialClassForm: NgForm, specialClass: SpecialClass): void {
-    
-    if (!specialClass['_id']) {
+    if (!specialClassForm.valid) {
+      this.messageService.showError()
+    }
+
+    else if (!specialClass['_id']) {
       this.isNewEntity = true
       specialClass['_id'] = undefined
       this.specialClassService.create(specialClass).subscribe({
-        next: newSpecialClass => this.router.navigate(['/kulonorak']),
+        next: newSpecialClass => {
+          this.messageService.showSuccess('Új különóra hozzáadva.'),
+          setTimeout( () =>
+        {this.router.navigate(['/kulonorak'])}, 3000)
+    },
         error: err => console.error(err)
       })
     }
     else if (specialClass._id && !this.isNewEntity){
       this.isNewEntity = false
       this.specialClassService.update(specialClass).subscribe({
-      next: updatedSpecialClass => this.router.navigate(['/kulonorak']),
+      next: updatedSpecialClass => {
+        this.messageService.showSuccess('Módosítás megtörtént.'),
+        setTimeout( () =>
+        {this.router.navigate(['/kulonorak'])}, 3000)
+    },
       error: err => console.error(err)
-      //alert! 
     })
     }
   }

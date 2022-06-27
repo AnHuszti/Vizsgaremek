@@ -50,8 +50,11 @@ export class EditKindergartenComponent implements OnInit {
   private isNewEntity: boolean = false
 
   onSave(kindergartenForm: NgForm, kindergarten: Kindergarten): void {
-    
-    if (!kindergarten['_id']) {
+    if (!kindergartenForm.valid) {
+      this.messageService.showError()
+    }
+
+    else if (!kindergarten['_id']) {
       this.isNewEntity = true
       kindergarten['_id'] = undefined
 
@@ -60,7 +63,11 @@ export class EditKindergartenComponent implements OnInit {
       }
 
       this.kindergartenService.create(kindergarten).subscribe({
-        next: newKindergarten => this.router.navigate(['/tagovodak']),
+        next: newKindergarten => {
+          this.messageService.showSuccess('Új tagóvoda hozzáadva.'),
+          setTimeout( () =>
+        {this.router.navigate(['/tagovodak'])}, 3000)
+    },
         error: err => console.error(err)
       })
     }
@@ -73,7 +80,11 @@ export class EditKindergartenComponent implements OnInit {
       }
 
       this.kindergartenService.update(kindergarten).subscribe({
-      next: updatedKindergarten => this.router.navigate(['/tagovodak']),
+      next: updatedKindergarten => {
+        this.messageService.showSuccess('Módosítás megtörtént.'),
+        setTimeout( () =>
+        {this.router.navigate(['/tagovodak'])}, 3000)
+    },
       error: err => console.error(err)
      
     })

@@ -57,11 +57,11 @@ export class EditGroupComponent implements OnInit {
   private isNewEntity: boolean = false
 
   onSave(groupForm: NgForm, group: Group): void {
-    /* if (groupForm.invalid) {
+    if (!groupForm.valid) {
       this.messageService.showError()
-    } */ // don't work
+    }
 
-    if (!group['_id']) {
+    else if (!group['_id']) {
       this.isNewEntity = true
       group['_id'] = undefined
 
@@ -71,14 +71,15 @@ export class EditGroupComponent implements OnInit {
 
       this.groupService.create(group).subscribe({
         next: newGroup => { 
-          //this.messageService.showSuccess('Újcsoport hozzáadva.'), //don't work
-          this.router.navigate(['/csoportok'])
-        },
+          this.messageService.showSuccess('Új csoport hozzáadva.'),
+          setTimeout( () =>
+        {this.router.navigate(['/csoportok'])}, 3000)
+    },
         error: err => console.error(err)
         //error: err => this.messageService.showError()
       })
     }
-    else if (group._id && !this.isNewEntity){
+    else if (group._id && !this.isNewEntity) {
       this.isNewEntity = false
 
       if (this.uploadedFilePath) {
@@ -87,9 +88,10 @@ export class EditGroupComponent implements OnInit {
 
       this.groupService.update(group).subscribe({
       next: updatedGroup => {
-        //this.messageService.showSuccess('Módosítás megtörtént.'), //don't work
-        this.router.navigate(['/csoportok'])
-      },
+        this.messageService.showSuccess('Módosítás megtörtént.'),
+        setTimeout( () =>
+        {this.router.navigate(['/csoportok'])}, 3000)
+    },
       error: err => console.error(err)      
       //error: err => this.messageService.showError()
     })

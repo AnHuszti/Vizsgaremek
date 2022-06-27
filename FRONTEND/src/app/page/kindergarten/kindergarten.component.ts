@@ -39,7 +39,6 @@ export class KindergartenComponent implements OnInit {
           this.list$ = this.kindergartenService.getAll()
         },
         error: err => console.error(err)
-        //alert      
       })
     }
   }

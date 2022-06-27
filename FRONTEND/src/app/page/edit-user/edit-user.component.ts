@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { User } from 'src/app/model/user';
+import { MessageService } from 'src/app/service/message.service';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -35,6 +36,7 @@ export class EditUserComponent implements OnInit {
     private router: Router,
     private userService: UserService,
     private activatedRoute: ActivatedRoute,
+    private messageService: MessageService
   ) { }
 
   ngOnInit(): void {
@@ -44,20 +46,32 @@ export class EditUserComponent implements OnInit {
 
   onSave(userForm: NgForm, user: User): void {
     
-    if (!user['_id']) {
+    if (!userForm.valid) {
+      this.messageService.showError()
+    }
+
+    else if (!user['_id']) {
       this.isNewEntity = true
       user['_id'] = undefined
       this.userService.create(user).subscribe({
-        next: newUser => this.router.navigate(['/felhasznalok']),
+        next: newUser => {
+          this.messageService.showSuccess('Új felhasználó hozzáadva.'),
+          setTimeout( () =>
+        {this.router.navigate(['/felhasznalok'])}, 3000)
+    },
         error: err => console.error(err)
       })
     }
     else if (user._id && !this.isNewEntity){
       this.isNewEntity = false
       this.userService.update(user).subscribe({
-      next: updatedUser => this.router.navigate(['/felhasznalok']),
+      next: updatedUser => { 
+        this.messageService.showSuccess('Módosítás megtörtént.'),
+        setTimeout( () =>
+        {this.router.navigate(['/felhasznalok'])}, 3000)
+    },
       error: err => console.error(err)
-      //alert! 
+     
     })
     }
   }

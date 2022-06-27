@@ -4,6 +4,7 @@ import { Employee } from 'src/app/model/employee';
 import { ConfigService } from 'src/app/service/config.service';
 import { EmployeeService } from 'src/app/service/employee.service';
 import { KindergartenService } from 'src/app/service/kindergarten.service';
+import { MessageService } from 'src/app/service/message.service';
 
 @Component({
   selector: 'app-employee',
@@ -23,7 +24,8 @@ export class EmployeeComponent implements OnInit {
     private config: ConfigService,
     private employeeService: EmployeeService,
     private kindergartenService: KindergartenService,
-    private router: Router
+    private router: Router,
+    private messageService: MessageService
   ) { }
 
   ngOnInit(): void {
@@ -37,7 +39,7 @@ export class EmployeeComponent implements OnInit {
     if (employee['_id']) {
       this.employeeService.delete(employee['_id']).subscribe({
         next: ()  => {
-          //this.messageService.showDelete(`${employee['surname']} ${employee['firstname']} alkalmazott törölve`)
+          this.messageService.showDelete(`${employee['surname']} ${employee['firstname']} alkalmazott törölve`)
           this.list$ = this.employeeService.getAll()
         },
         error: err => console.error(err)      

@@ -5,6 +5,7 @@ import { ChildService } from 'src/app/service/child.service';
 import { ConfigService } from 'src/app/service/config.service';
 import { GroupsService } from 'src/app/service/groups.service';
 import { KindergartenService } from 'src/app/service/kindergarten.service';
+import { MessageService } from 'src/app/service/message.service';
 
 @Component({
   selector: 'app-child',
@@ -33,7 +34,8 @@ export class ChildComponent implements OnInit {
     private childService: ChildService,
     private kindergartenService: KindergartenService,
     private groupService: GroupsService,
-    private router: Router
+    private router: Router,
+    private messageService: MessageService
   ) {}
 
   ngOnInit(): void {
@@ -53,7 +55,7 @@ export class ChildComponent implements OnInit {
     if (child['_id']) {
       this.childService.delete(child['_id']).subscribe({
         next: ()  => {
-          //this.messageService.showDelete(`${child['surname']} ${child['firstname']} Gyermek törölve`)
+          this.messageService.showDelete(`${child['surname']} ${child['firstname']} Gyermek törölve`)
           this.list$ = this.childService.getAll()
         },
         error: err => console.error(err)

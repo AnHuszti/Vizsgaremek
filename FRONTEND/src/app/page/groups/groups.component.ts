@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Group } from 'src/app/model/group';
 import { ConfigService } from 'src/app/service/config.service';
 import { GroupsService } from 'src/app/service/groups.service';
+import { MessageService } from 'src/app/service/message.service';
 
 @Component({
   selector: 'app-groups',
@@ -18,7 +19,8 @@ export class GroupsComponent implements OnInit {
   constructor(
     private config: ConfigService,
     private groupsService: GroupsService,
-    private router: Router
+    private router: Router,
+    private messageService: MessageService
   ) { }
 
   ngOnInit(): void {
@@ -32,7 +34,7 @@ export class GroupsComponent implements OnInit {
     if (group['_id']) {
       this.groupsService.delete(group['_id']).subscribe({
         next: ()  => {
-          //this.messageService.showDelete(`${group['name']} csoport törölve`)
+          this.messageService.showDelete(`${group['name']} csoport törölve`)
           this.list$ = this.groupsService.getAll()
         },
         error: err => console.error(err)      
